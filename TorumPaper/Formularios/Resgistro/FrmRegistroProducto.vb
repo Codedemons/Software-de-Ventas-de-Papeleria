@@ -87,7 +87,7 @@ Public Partial Class FrmRegistroProducto
 			MsgBox("Debe Ingresar todos los datos de Forma Correcta")
 		End If
 		
-		Dim Registro As String = "INSERT INTO `tipoproducto`(`claveTipoProducto`, `descripcionTipoProducto`) VALUES (02,'que tal');"
+		Dim Registro As String = ""
 				If CtrlConexion.insertarRegistro(Registro)
 					MsgBox("Se realizó el registro")
 				Else
