@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{3747D7B6-E050-4E70-B0F6-C275CDA46B26}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <MyType>WindowsForms</MyType>
+    <RootNamespace>TorumPaper</RootNamespace>
+    <AssemblyName>TorumPaper</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <DefineConstants>DEBUG=1,TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <DefineConstants>TRACE=1</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\ClsAdicionalConfig.vb" />
+    <Compile Include="Formularios\ClsTorumPaper.vb" />
+    <Compile Include="Formularios\Eliminar\FrmEliminarPedidos.Designer.vb">
+      <DependentUpon>FrmEliminarPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Eliminar\FrmEliminarPedidos.vb" />
+    <Compile Include="Formularios\Eliminar\FrmEliminarProductos.Designer.vb">
+      <DependentUpon>FrmEliminarProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Eliminar\FrmEliminarProductos.vb" />
+    <Compile Include="Formularios\Eliminar\FrmEliminarProveedor.Designer.vb">
+      <DependentUpon>FrmEliminarProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Eliminar\FrmEliminarProveedor.vb" />
+    <Compile Include="Formularios\Listas\FrmBuscarPedido.Designer.vb">
+      <DependentUpon>FrmBuscarPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listas\FrmBuscarPedido.vb" />
+    <Compile Include="Formularios\Listas\FrmBuscarProducto.Designer.vb">
+      <DependentUpon>FrmBuscarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listas\FrmBuscarProducto.vb" />
+    <Compile Include="Formularios\Listas\FrmBuscarProveedores.Designer.vb">
+      <DependentUpon>FrmBuscarProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listas\FrmBuscarProveedores.vb" />
+    <Compile Include="Formularios\Resgistro\FrmRegistroProducto.Designer.vb">
+      <DependentUpon>FrmRegistroProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Resgistro\FrmRegistroProducto.vb" />
+    <Compile Include="Formularios\Resgistro\FrmRegistroProveedor.Designer.vb">
+      <DependentUpon>FrmRegistroProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Resgistro\FrmRegistroProveedor.vb" />
+    <Compile Include="Formularios\Resgistro\FrmRegistroPedido.Designer.vb">
+      <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Resgistro\FrmRegistroPedido.vb" />
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb" />
+    <Compile Include="Program.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios" />
+    <Folder Include="Formularios\Listas" />
+    <Folder Include="Formularios\Eliminar" />
+    <Folder Include="Formularios\Ventas" />
+    <Folder Include="Formularios\Resgistro" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\Eliminar\FrmEliminarPedidos.resx">
+      <DependentUpon>FrmEliminarPedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Eliminar\FrmEliminarProductos.resx">
+      <DependentUpon>FrmEliminarProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Eliminar\FrmEliminarProveedor.resx">
+      <DependentUpon>FrmEliminarProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listas\FrmBuscarPedido.resx">
+      <DependentUpon>FrmBuscarPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listas\FrmBuscarProducto.resx">
+      <DependentUpon>FrmBuscarProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listas\FrmBuscarProveedores.resx">
+      <DependentUpon>FrmBuscarProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroProducto.resx">
+      <DependentUpon>FrmRegistroProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroProveedor.resx">
+      <DependentUpon>FrmRegistroProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroPedido.resx">
+      <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

@@ -1,0 +1,17 @@
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\bin\Debug\TorumPaper.exe.config
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\bin\Debug\TorumPaper.exe
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\bin\Debug\TorumPaper.pdb
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.vbprojResolveAssemblyReference.cache
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.MainForm.resources
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.vbproj.GenerateResource.Cache
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.exe
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.pdb
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.FrmEliminarPedidos.resources
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.FrmEliminarProductos.resources
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.FrmEliminarProveedor.resources
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.FrmBuscarPedido.resources
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.FrmBuscarProducto.resources
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.FrmBuscarProveedores.resources
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.FrmRegistroProducto.resources
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.FrmRegistroProveedor.resources
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\TorumPaper\obj\Debug\TorumPaper.FrmRegistroPedido.resources
