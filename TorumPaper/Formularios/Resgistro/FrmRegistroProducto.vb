@@ -7,11 +7,13 @@
 ' To change this template use Tools | Options | Coding | Edit Standard Headers.
 '
 Public Partial Class FrmRegistroProducto
-	Private Ctrl As ClsAdicionalConfig		
+	Private Ctrl As ClsAdicionalConfig	
+	Private CtrlConexion As ClsTorumPaper
 	Public Sub New()
 		' The Me.InitializeComponent call is required for Windows Forms designer support.
 		Me.InitializeComponent()
 		Ctrl = New ClsAdicionalConfig
+		CtrlConexion = New ClsTorumPaper
 		'
 		' TODO : Add constructor code after InitializeComponents
 		'
@@ -80,9 +82,17 @@ Public Partial Class FrmRegistroProducto
 				(Ctrl.txtVacio(txtPrecio))   And (Ctrl.txtVacio(txtSmin))		 And
 				(Ctrl.txtVacio(txtSmax))     And (Ctrl.txtVacio(txtSdispo)) Then
 			MsgBox(txtClaveProducto.Text)
-			Ctrl.Modificbtn(btnRegistrar)
+			Ctrl.Modificbtn(btnRegistrar)	
 		Else
 			MsgBox("Debe Ingresar todos los datos de Forma Correcta")
 		End If
+		
+		Dim Registro As String = "INSERT INTO `tipoproducto`(`claveTipoProducto`, `descripcionTipoProducto`) VALUES (02,'que tal');"
+				If CtrlConexion.insertarRegistro(Registro)
+					MsgBox("Se realizó el registro")
+				Else
+					MsgBox("No se pudo")
+				End If	
+		
 	End Sub
 End Class

@@ -45,6 +45,7 @@ Partial Class FrmRegistroProducto
 		Me.txtSdispo = New System.Windows.Forms.TextBox()
 		Me.btnLimpiar = New System.Windows.Forms.Button()
 		Me.btnRegistrar = New System.Windows.Forms.Button()
+		Me.comboBox1 = New System.Windows.Forms.ComboBox()
 		Me.SuspendLayout
 		'
 		'txtClaveProducto
@@ -187,11 +188,20 @@ Partial Class FrmRegistroProducto
 		Me.btnRegistrar.UseVisualStyleBackColor = false
 		AddHandler Me.btnRegistrar.Click, AddressOf Me.BtnRegistrarClick
 		'
+		'comboBox1
+		'
+		Me.comboBox1.FormattingEnabled = true
+		Me.comboBox1.Location = New System.Drawing.Point(138, 107)
+		Me.comboBox1.Name = "comboBox1"
+		Me.comboBox1.Size = New System.Drawing.Size(121, 21)
+		Me.comboBox1.TabIndex = 59
+		'
 		'FrmRegistroProducto
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(528, 437)
+		Me.Controls.Add(Me.comboBox1)
 		Me.Controls.Add(Me.btnLimpiar)
 		Me.Controls.Add(Me.btnRegistrar)
 		Me.Controls.Add(Me.txtSdispo)
@@ -206,10 +216,10 @@ Partial Class FrmRegistroProducto
 		Me.ForeColor = System.Drawing.Color.LightGray
 		Me.Name = "FrmRegistroProducto"
 		Me.Text = "RegistroProducto"
-		AddHandler Click, AddressOf Me.TxtClaveProductoClick
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private comboBox1 As System.Windows.Forms.ComboBox
 	Private btnRegistrar As System.Windows.Forms.Button
 	Private btnLimpiar As System.Windows.Forms.Button
 	Private txtSdispo As System.Windows.Forms.TextBox

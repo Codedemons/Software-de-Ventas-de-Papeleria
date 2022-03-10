@@ -42,10 +42,10 @@ Partial Class FrmEliminarProductos
 		Me.txtPrecio = New System.Windows.Forms.TextBox()
 		Me.txtDescripcion = New System.Windows.Forms.TextBox()
 		Me.txtMarca = New System.Windows.Forms.TextBox()
-		Me.txtTipo = New System.Windows.Forms.TextBox()
 		Me.txtClaveProducto = New System.Windows.Forms.TextBox()
 		Me.btnBuscar = New System.Windows.Forms.Button()
 		Me.txtSdispo = New System.Windows.Forms.TextBox()
+		Me.cmbTipo = New System.Windows.Forms.ComboBox()
 		Me.SuspendLayout
 		'
 		'lblTitulo
@@ -151,18 +151,6 @@ Partial Class FrmEliminarProductos
 		Me.txtMarca.Text = "Marca"
 		AddHandler Me.txtMarca.Click, AddressOf Me.TxtMarcaClick
 		'
-		'txtTipo
-		'
-		Me.txtTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.txtTipo.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.txtTipo.ForeColor = System.Drawing.Color.LightGray
-		Me.txtTipo.Location = New System.Drawing.Point(73, 108)
-		Me.txtTipo.Name = "txtTipo"
-		Me.txtTipo.Size = New System.Drawing.Size(354, 30)
-		Me.txtTipo.TabIndex = 34
-		Me.txtTipo.Text = "Tipo"
-		AddHandler Me.txtTipo.Click, AddressOf Me.TxtTipoClick
-		'
 		'txtClaveProducto
 		'
 		Me.txtClaveProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
@@ -201,11 +189,24 @@ Partial Class FrmEliminarProductos
 		Me.txtSdispo.Text = "Stock Disponible"
 		AddHandler Me.txtSdispo.Click, AddressOf Me.TxtSdispoClick
 		'
+		'cmbTipo
+		'
+		Me.cmbTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbTipo.Font = New System.Drawing.Font("Agency FB", 15!, System.Drawing.FontStyle.Bold)
+		Me.cmbTipo.ForeColor = System.Drawing.Color.LightGray
+		Me.cmbTipo.FormattingEnabled = true
+		Me.cmbTipo.Location = New System.Drawing.Point(73, 106)
+		Me.cmbTipo.Name = "cmbTipo"
+		Me.cmbTipo.Size = New System.Drawing.Size(354, 32)
+		Me.cmbTipo.TabIndex = 61
+		Me.cmbTipo.Text = "Tipos"
+		'
 		'FrmEliminarProductos
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(626, 405)
+		Me.Controls.Add(Me.cmbTipo)
 		Me.Controls.Add(Me.txtSdispo)
 		Me.Controls.Add(Me.btnBuscar)
 		Me.Controls.Add(Me.btnLimpiar)
@@ -215,7 +216,6 @@ Partial Class FrmEliminarProductos
 		Me.Controls.Add(Me.txtPrecio)
 		Me.Controls.Add(Me.txtDescripcion)
 		Me.Controls.Add(Me.txtMarca)
-		Me.Controls.Add(Me.txtTipo)
 		Me.Controls.Add(Me.txtClaveProducto)
 		Me.Controls.Add(Me.lblTitulo)
 		Me.ForeColor = System.Drawing.Color.White
@@ -225,10 +225,10 @@ Partial Class FrmEliminarProductos
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private cmbTipo As System.Windows.Forms.ComboBox
 	Private txtSdispo As System.Windows.Forms.TextBox
 	Private btnBuscar As System.Windows.Forms.Button
 	Private txtClaveProducto As System.Windows.Forms.TextBox
-	Private txtTipo As System.Windows.Forms.TextBox
 	Private txtMarca As System.Windows.Forms.TextBox
 	Private txtDescripcion As System.Windows.Forms.TextBox
 	Private txtPrecio As System.Windows.Forms.TextBox

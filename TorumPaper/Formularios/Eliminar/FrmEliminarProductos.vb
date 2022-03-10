@@ -28,9 +28,6 @@ Public Partial Class FrmEliminarProductos
 		Ctrl.Modifictxt(txtClaveProducto)
 	End Sub
 	
-	Sub TxtTipoClick(sender As Object, e As EventArgs)
-		Ctrl.Modifictxt(txtTipo)
-	End Sub
 
 	Sub TxtMarcaClick(sender As Object, e As EventArgs)
 		Ctrl.Modifictxt(txtMarca)
@@ -59,8 +56,6 @@ Public Partial Class FrmEliminarProductos
 	Sub BtnLimpiarClick(sender As Object, e As EventArgs)
 		txtClaveProducto.ForeColor = Color.LightGray
 		txtClaveProducto.Text = "Clave"	
-		txtTipo.ForeColor = Color.LightGray
-		txtTipo.Text = "Tipo"
 		txtMarca.ForeColor = Color.LightGray
 		txtMarca.Text = "Marca"
 		txtDescripcion.ForeColor = Color.LightGray
