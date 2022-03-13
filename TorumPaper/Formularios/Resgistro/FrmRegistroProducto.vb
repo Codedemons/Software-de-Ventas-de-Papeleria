@@ -26,10 +26,6 @@ Public Partial Class FrmRegistroProducto
 		Ctrl.Modifictxt(txtClaveProducto)
 	End Sub
 	
-	Sub TxtTipoClick(sender As Object, e As EventArgs)
-		Ctrl.Modifictxt(txtTipo)
-	End Sub
-	
 	Sub TxtMarcaClick(sender As Object, e As EventArgs)
 		Ctrl.Modifictxt(txtMarca)
 	End Sub
@@ -57,8 +53,6 @@ Public Partial Class FrmRegistroProducto
 	Sub BtnLimpiarClick(sender As Object, e As EventArgs)
 		txtClaveProducto.ForeColor = Color.LightGray
 		txtClaveProducto.Text = "Clave"	
-		txtTipo.ForeColor = Color.LightGray
-		txtTipo.Text = "Tipo"
 		txtMarca.ForeColor = Color.LightGray
 		txtMarca.Text = "Marca"
 		txtDescripcion.ForeColor = Color.LightGray
@@ -76,23 +70,6 @@ Public Partial Class FrmRegistroProducto
 	
 	
 	Sub BtnRegistrarClick(sender As Object, e As EventArgs)
-		
-		If (Ctrl.txtVacio(txtClaveProducto)) And (Ctrl.txtVacio(txtTipo)) 		 And 
-				(Ctrl.txtVacio(txtMarca)) 	 And (Ctrl.txtVacio(txtDescripcion)) And 
-				(Ctrl.txtVacio(txtPrecio))   And (Ctrl.txtVacio(txtSmin))		 And
-				(Ctrl.txtVacio(txtSmax))     And (Ctrl.txtVacio(txtSdispo)) Then
-			MsgBox(txtClaveProducto.Text)
-			Ctrl.Modificbtn(btnRegistrar)	
-		Else
-			MsgBox("Debe Ingresar todos los datos de Forma Correcta")
-		End If
-		
-		Dim Registro As String = "INSERT INTO `tipoproducto`(`claveTipoProducto`, `descripcionTipoProducto`) VALUES (02,'que tal');"
-				If CtrlConexion.insertarRegistro(Registro)
-					MsgBox("Se realizó el registro")
-				Else
-					MsgBox("No se pudo")
-				End If	
 		
 	End Sub
 End Class

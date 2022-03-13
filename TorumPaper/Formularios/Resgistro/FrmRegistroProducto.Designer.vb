@@ -36,7 +36,6 @@ Partial Class FrmRegistroProducto
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmRegistroProducto))
 		Me.txtClaveProducto = New System.Windows.Forms.TextBox()
 		Me.LblTitulo = New System.Windows.Forms.Label()
-		Me.txtTipo = New System.Windows.Forms.TextBox()
 		Me.txtMarca = New System.Windows.Forms.TextBox()
 		Me.txtDescripcion = New System.Windows.Forms.TextBox()
 		Me.txtPrecio = New System.Windows.Forms.TextBox()
@@ -45,7 +44,7 @@ Partial Class FrmRegistroProducto
 		Me.txtSdispo = New System.Windows.Forms.TextBox()
 		Me.btnLimpiar = New System.Windows.Forms.Button()
 		Me.btnRegistrar = New System.Windows.Forms.Button()
-		Me.comboBox1 = New System.Windows.Forms.ComboBox()
+		Me.cmbTipo = New System.Windows.Forms.ComboBox()
 		Me.SuspendLayout
 		'
 		'txtClaveProducto
@@ -71,18 +70,6 @@ Partial Class FrmRegistroProducto
 		Me.LblTitulo.TabIndex = 30
 		Me.LblTitulo.Text = "REGISTRO DE PRODUCTOS"
 		Me.LblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter
-		'
-		'txtTipo
-		'
-		Me.txtTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.txtTipo.Font = New System.Drawing.Font("Agency FB", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.txtTipo.ForeColor = System.Drawing.Color.LightGray
-		Me.txtTipo.Location = New System.Drawing.Point(87, 97)
-		Me.txtTipo.Name = "txtTipo"
-		Me.txtTipo.Size = New System.Drawing.Size(354, 33)
-		Me.txtTipo.TabIndex = 35
-		Me.txtTipo.Text = "Tipo"
-		AddHandler Me.txtTipo.Click, AddressOf Me.TxtTipoClick
 		'
 		'txtMarca
 		'
@@ -188,20 +175,24 @@ Partial Class FrmRegistroProducto
 		Me.btnRegistrar.UseVisualStyleBackColor = false
 		AddHandler Me.btnRegistrar.Click, AddressOf Me.BtnRegistrarClick
 		'
-		'comboBox1
+		'cmbTipo
 		'
-		Me.comboBox1.FormattingEnabled = true
-		Me.comboBox1.Location = New System.Drawing.Point(138, 107)
-		Me.comboBox1.Name = "comboBox1"
-		Me.comboBox1.Size = New System.Drawing.Size(121, 21)
-		Me.comboBox1.TabIndex = 59
+		Me.cmbTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbTipo.Font = New System.Drawing.Font("Agency FB", 15!, System.Drawing.FontStyle.Bold)
+		Me.cmbTipo.ForeColor = System.Drawing.Color.LightGray
+		Me.cmbTipo.FormattingEnabled = true
+		Me.cmbTipo.Location = New System.Drawing.Point(87, 97)
+		Me.cmbTipo.Name = "cmbTipo"
+		Me.cmbTipo.Size = New System.Drawing.Size(354, 32)
+		Me.cmbTipo.TabIndex = 62
+		Me.cmbTipo.Text = "Tipos"
 		'
 		'FrmRegistroProducto
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(528, 437)
-		Me.Controls.Add(Me.comboBox1)
+		Me.Controls.Add(Me.cmbTipo)
 		Me.Controls.Add(Me.btnLimpiar)
 		Me.Controls.Add(Me.btnRegistrar)
 		Me.Controls.Add(Me.txtSdispo)
@@ -210,7 +201,6 @@ Partial Class FrmRegistroProducto
 		Me.Controls.Add(Me.txtPrecio)
 		Me.Controls.Add(Me.txtDescripcion)
 		Me.Controls.Add(Me.txtMarca)
-		Me.Controls.Add(Me.txtTipo)
 		Me.Controls.Add(Me.LblTitulo)
 		Me.Controls.Add(Me.txtClaveProducto)
 		Me.ForeColor = System.Drawing.Color.LightGray
@@ -219,7 +209,7 @@ Partial Class FrmRegistroProducto
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
-	Private comboBox1 As System.Windows.Forms.ComboBox
+	Private cmbTipo As System.Windows.Forms.ComboBox
 	Private btnRegistrar As System.Windows.Forms.Button
 	Private btnLimpiar As System.Windows.Forms.Button
 	Private txtSdispo As System.Windows.Forms.TextBox
@@ -228,7 +218,6 @@ Partial Class FrmRegistroProducto
 	Private txtPrecio As System.Windows.Forms.TextBox
 	Private LblTitulo As System.Windows.Forms.Label
 	Private txtClaveProducto As System.Windows.Forms.TextBox
-	Private txtTipo As System.Windows.Forms.TextBox
 	Private txtMarca As System.Windows.Forms.TextBox
 	Private txtDescripcion As System.Windows.Forms.TextBox
 End Class

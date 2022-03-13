@@ -95,6 +95,10 @@
       <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Resgistro\FrmRegistroPedido.vb" />
+    <Compile Include="Formularios\Ventas\FrmVentas.Designer.vb">
+      <DependentUpon>FrmVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\FrmVentas.vb" />
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
@@ -112,6 +116,7 @@
     <Folder Include="Formularios" />
     <Folder Include="Formularios\Listas" />
     <Folder Include="Formularios\Eliminar" />
+    <Folder Include="Formularios\Modificacion" />
     <Folder Include="Formularios\Ventas" />
     <Folder Include="Formularios\Resgistro" />
   </ItemGroup>
@@ -142,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroPedido.resx">
       <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\FrmVentas.resx">
+      <DependentUpon>FrmVentas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>

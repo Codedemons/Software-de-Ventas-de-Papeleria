@@ -25,6 +25,8 @@ Public Class ClsTorumPaper
 			Return True
 		Catch e As Exception
 			Return False
+			
+			
 		End Try
 		Return False
 	End Function
