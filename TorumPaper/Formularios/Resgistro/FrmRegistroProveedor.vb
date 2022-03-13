@@ -46,7 +46,19 @@ Public Partial Class FrmRegistroProveedor
 		txtTelefono.Text = "Telefono"
 	End Sub
 	
+	Public Erorr As String = ""
 	Sub BtnRegistrarClick(sender As Object, e As EventArgs)
-		
+		Dim cadCon As String= "server=localhost;user id=root; password=; database=torumpaper; pooling=false"
+		Dim conn As New Mysql.Data.MySqlClient.MySqlConnection(cadCon) 
+		Dim da As New Mysql.Data.MySqlClient.MySqlDataAdapter("SELECT * FROM partes",conn)
+		Try
+			conn.Open()
+			MsgBox("Logrado")
+			conn.Close()	
+		Catch ex As Exception
+			Me.Erorr = "Error en la Conexion" & ex.Message
+		Finally
+			conn.Close
+		End Try	
 	End Sub
 End Class
