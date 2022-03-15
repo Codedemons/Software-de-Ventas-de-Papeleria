@@ -15,4 +15,6 @@ Public Partial Class FrmPedidos
 		' TODO : Add constructor code after InitializeComponents
 		'
 	End Sub
+	
+	
 End Class
