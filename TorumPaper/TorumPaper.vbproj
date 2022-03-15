@@ -116,7 +116,9 @@
     <Folder Include="Formularios" />
     <Folder Include="Formularios\Listas" />
     <Folder Include="Formularios\Eliminar" />
-    <Folder Include="Formularios\Modificacion" />
+    <Folder Include="Formularios\Pedidos" />
+    <Folder Include="Formularios\Proveedores" />
+    <Folder Include="Formularios\Productos" />
     <Folder Include="Formularios\Ventas" />
     <Folder Include="Formularios\Resgistro" />
   </ItemGroup>
