@@ -54,6 +54,10 @@ Partial Class MainForm
 		Me.registrarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.mostrarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.TSMIEliminarPedidos = New System.Windows.Forms.ToolStripMenuItem()
+		Me.toolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+		Me.toolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+		Me.toolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+		Me.toolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
 		Me.pnlBarraTitulo.SuspendLayout
 		CType(Me.pblogo,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.PnlContenido.SuspendLayout
@@ -155,7 +159,7 @@ Partial Class MainForm
 		Me.msMenu.GripMargin = New System.Windows.Forms.Padding(10)
 		Me.msMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
 		Me.msMenu.ImageScalingSize = New System.Drawing.Size(26, 26)
-		Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolsToolStripMenuItem1, Me.toolStripMenuItem1, Me.proveedorToolStripMenuItem, Me.pedidosToolStripMenuItem})
+		Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolsToolStripMenuItem1, Me.toolStripMenuItem1, Me.proveedorToolStripMenuItem, Me.toolStripMenuItem2, Me.pedidosToolStripMenuItem})
 		Me.msMenu.Location = New System.Drawing.Point(0, 0)
 		Me.msMenu.Margin = New System.Windows.Forms.Padding(400)
 		Me.msMenu.Name = "msMenu"
@@ -164,7 +168,6 @@ Partial Class MainForm
 		Me.msMenu.Size = New System.Drawing.Size(138, 420)
 		Me.msMenu.TabIndex = 0
 		Me.msMenu.Text = "MenuPaper"
-		
 		'
 		'toolsToolStripMenuItem1
 		'
@@ -186,7 +189,7 @@ Partial Class MainForm
 		Me.registrarToolStripMenuItem.Image = CType(resources.GetObject("registrarToolStripMenuItem.Image"),System.Drawing.Image)
 		Me.registrarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
 		Me.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem"
-		Me.registrarToolStripMenuItem.Size = New System.Drawing.Size(162, 32)
+		Me.registrarToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
 		Me.registrarToolStripMenuItem.Text = "Registrar"
 		AddHandler Me.registrarToolStripMenuItem.Click, AddressOf Me.RegistrarToolStripMenuItemClick
 		'
@@ -195,7 +198,7 @@ Partial Class MainForm
 		Me.mostrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
 		Me.mostrarToolStripMenuItem.Image = CType(resources.GetObject("mostrarToolStripMenuItem.Image"),System.Drawing.Image)
 		Me.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem"
-		Me.mostrarToolStripMenuItem.Size = New System.Drawing.Size(162, 32)
+		Me.mostrarToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
 		Me.mostrarToolStripMenuItem.Text = "Mostrar"
 		AddHandler Me.mostrarToolStripMenuItem.Click, AddressOf Me.MostrarToolStripMenuItemClick
 		'
@@ -204,7 +207,7 @@ Partial Class MainForm
 		Me.TSMIEliminarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
 		Me.TSMIEliminarProducto.Image = CType(resources.GetObject("TSMIEliminarProducto.Image"),System.Drawing.Image)
 		Me.TSMIEliminarProducto.Name = "TSMIEliminarProducto"
-		Me.TSMIEliminarProducto.Size = New System.Drawing.Size(162, 32)
+		Me.TSMIEliminarProducto.Size = New System.Drawing.Size(143, 26)
 		Me.TSMIEliminarProducto.Text = "Eliminar"
 		AddHandler Me.TSMIEliminarProducto.Click, AddressOf Me.TSMIEliminarProductoClick
 		'
@@ -268,7 +271,7 @@ Partial Class MainForm
 		Me.registrarToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
 		Me.registrarToolStripMenuItem2.Image = CType(resources.GetObject("registrarToolStripMenuItem2.Image"),System.Drawing.Image)
 		Me.registrarToolStripMenuItem2.Name = "registrarToolStripMenuItem2"
-		Me.registrarToolStripMenuItem2.Size = New System.Drawing.Size(143, 26)
+		Me.registrarToolStripMenuItem2.Size = New System.Drawing.Size(162, 32)
 		Me.registrarToolStripMenuItem2.Text = "Registrar"
 		AddHandler Me.registrarToolStripMenuItem2.Click, AddressOf Me.RegistrarToolStripMenuItem2Click
 		'
@@ -277,7 +280,7 @@ Partial Class MainForm
 		Me.mostrarToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
 		Me.mostrarToolStripMenuItem2.Image = CType(resources.GetObject("mostrarToolStripMenuItem2.Image"),System.Drawing.Image)
 		Me.mostrarToolStripMenuItem2.Name = "mostrarToolStripMenuItem2"
-		Me.mostrarToolStripMenuItem2.Size = New System.Drawing.Size(143, 26)
+		Me.mostrarToolStripMenuItem2.Size = New System.Drawing.Size(162, 32)
 		Me.mostrarToolStripMenuItem2.Text = "Mostrar"
 		AddHandler Me.mostrarToolStripMenuItem2.Click, AddressOf Me.MostrarToolStripMenuItem2Click
 		'
@@ -286,9 +289,44 @@ Partial Class MainForm
 		Me.TSMIEliminarPedidos.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
 		Me.TSMIEliminarPedidos.Image = CType(resources.GetObject("TSMIEliminarPedidos.Image"),System.Drawing.Image)
 		Me.TSMIEliminarPedidos.Name = "TSMIEliminarPedidos"
-		Me.TSMIEliminarPedidos.Size = New System.Drawing.Size(143, 26)
+		Me.TSMIEliminarPedidos.Size = New System.Drawing.Size(162, 32)
 		Me.TSMIEliminarPedidos.Text = "Eliminar"
 		AddHandler Me.TSMIEliminarPedidos.Click, AddressOf Me.TSMIEliminarPedidosClick
+		'
+		'toolStripMenuItem2
+		'
+		Me.toolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripMenuItem3, Me.toolStripMenuItem4, Me.toolStripMenuItem5})
+		Me.toolStripMenuItem2.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.toolStripMenuItem2.ForeColor = System.Drawing.Color.Black
+		Me.toolStripMenuItem2.Image = CType(resources.GetObject("toolStripMenuItem2.Image"),System.Drawing.Image)
+		Me.toolStripMenuItem2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.toolStripMenuItem2.Name = "toolStripMenuItem2"
+		Me.toolStripMenuItem2.Size = New System.Drawing.Size(117, 30)
+		Me.toolStripMenuItem2.Text = "Pedidos"
+		'
+		'toolStripMenuItem3
+		'
+		Me.toolStripMenuItem3.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
+		Me.toolStripMenuItem3.Image = CType(resources.GetObject("toolStripMenuItem3.Image"),System.Drawing.Image)
+		Me.toolStripMenuItem3.Name = "toolStripMenuItem3"
+		Me.toolStripMenuItem3.Size = New System.Drawing.Size(162, 32)
+		Me.toolStripMenuItem3.Text = "Registrar"
+		'
+		'toolStripMenuItem4
+		'
+		Me.toolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
+		Me.toolStripMenuItem4.Image = CType(resources.GetObject("toolStripMenuItem4.Image"),System.Drawing.Image)
+		Me.toolStripMenuItem4.Name = "toolStripMenuItem4"
+		Me.toolStripMenuItem4.Size = New System.Drawing.Size(162, 32)
+		Me.toolStripMenuItem4.Text = "Mostrar"
+		'
+		'toolStripMenuItem5
+		'
+		Me.toolStripMenuItem5.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
+		Me.toolStripMenuItem5.Image = CType(resources.GetObject("toolStripMenuItem5.Image"),System.Drawing.Image)
+		Me.toolStripMenuItem5.Name = "toolStripMenuItem5"
+		Me.toolStripMenuItem5.Size = New System.Drawing.Size(162, 32)
+		Me.toolStripMenuItem5.Text = "Eliminar"
 		'
 		'MainForm
 		'
@@ -310,6 +348,10 @@ Partial Class MainForm
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private toolStripMenuItem5 As System.Windows.Forms.ToolStripMenuItem
+	Private toolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
+	Private toolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
+	Private toolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
 	Private btnMini As System.Windows.Forms.Button
 	Private btnClose As System.Windows.Forms.Button
 	Private TSMIEliminarPedidos As System.Windows.Forms.ToolStripMenuItem
