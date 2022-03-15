@@ -114,42 +114,10 @@ Public Partial Class MainForm
     #End Region
     
     #Region "Menu"
-	Sub RegistrarToolStripMenuItemClick(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmRegistroProducto)()	
-	End Sub
+	'Sub RegistrarToolStripMenuItemClick(sender As Object, e As EventArgs)
+	'	AbrirFormEnPanel(Of FrmRegistroProducto)()	
+	'End Sub
 	
-	Sub TSMIEliminarProductoClick(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmEliminarProductos)()	
-	End Sub
-	
-	Sub TSMIEliminarProveedorClick(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmEliminarProveedor)()			
-	End Sub
-	
-	Sub TSMIEliminarPedidosClick(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmEliminarPedidos)()	
-	End Sub
-	
-	Sub RegistrarToolStripMenuItem1Click(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmRegistroProveedor)()	
-	End Sub
-	
-	Sub MostrarToolStripMenuItemClick(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmBuscarProducto)()	
-	End Sub
-	
-	Sub MostrarToolStripMenuItem1Click(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmBuscarProveedores)()	
-	End Sub
-	
-	Sub MostrarToolStripMenuItem2Click(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmBuscarPedido)()	
-	End Sub
-	
-	Sub RegistrarToolStripMenuItem2Click(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmRegistroPedido)()	
-	End Sub
-
 	#End Region
 	
 	

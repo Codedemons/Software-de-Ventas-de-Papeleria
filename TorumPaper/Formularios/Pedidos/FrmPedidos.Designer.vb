@@ -172,9 +172,9 @@ Partial Class FrmPedidos
 		Me.txtPrecio.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.txtPrecio.Font = New System.Drawing.Font("Agency FB", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
 		Me.txtPrecio.ForeColor = System.Drawing.Color.Gainsboro
-		Me.txtPrecio.Location = New System.Drawing.Point(352, 190)
+		Me.txtPrecio.Location = New System.Drawing.Point(354, 190)
 		Me.txtPrecio.Name = "txtPrecio"
-		Me.txtPrecio.Size = New System.Drawing.Size(302, 33)
+		Me.txtPrecio.Size = New System.Drawing.Size(300, 33)
 		Me.txtPrecio.TabIndex = 78
 		Me.txtPrecio.Text = "Precio Pedido"
 		'
