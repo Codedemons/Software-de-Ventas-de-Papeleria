@@ -83,6 +83,22 @@
       <DependentUpon>FrmBuscarProveedores.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Listas\FrmBuscarProveedores.vb" />
+    <Compile Include="Formularios\Pedidos\FrmPedidos.Designer.vb">
+      <DependentUpon>FrmPedidos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Pedidos\FrmPedidos.vb" />
+    <Compile Include="Formularios\Productos\FrmProductos.Designer.vb">
+      <DependentUpon>FrmProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Productos\FrmProductos.vb" />
+    <Compile Include="Formularios\Productos\FrmTipoProducto.Designer.vb">
+      <DependentUpon>FrmTipoProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Productos\FrmTipoProducto.vb" />
+    <Compile Include="Formularios\Proveedores\FrmProveedores.Designer.vb">
+      <DependentUpon>FrmProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Proveedores\FrmProveedores.vb" />
     <Compile Include="Formularios\Resgistro\FrmRegistroProducto.Designer.vb">
       <DependentUpon>FrmRegistroProducto.vb</DependentUpon>
     </Compile>
@@ -140,6 +156,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Listas\FrmBuscarProveedores.resx">
       <DependentUpon>FrmBuscarProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Pedidos\FrmPedidos.resx">
+      <DependentUpon>FrmPedidos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Productos\FrmProductos.resx">
+      <DependentUpon>FrmProductos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Productos\FrmTipoProducto.resx">
+      <DependentUpon>FrmTipoProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Proveedores\FrmProveedores.resx">
+      <DependentUpon>FrmProveedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroProducto.resx">
       <DependentUpon>FrmRegistroProducto.vb</DependentUpon>
