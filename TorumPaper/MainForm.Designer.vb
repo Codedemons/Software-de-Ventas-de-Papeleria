@@ -74,7 +74,7 @@ Partial Class MainForm
 		Me.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
 		Me.pnlBarraTitulo.Location = New System.Drawing.Point(0, 0)
 		Me.pnlBarraTitulo.Name = "pnlBarraTitulo"
-		Me.pnlBarraTitulo.Size = New System.Drawing.Size(642, 40)
+		Me.pnlBarraTitulo.Size = New System.Drawing.Size(720, 40)
 		Me.pnlBarraTitulo.TabIndex = 0
 		AddHandler Me.pnlBarraTitulo.MouseDown, AddressOf Me.PnlBarraTituloMouseDown
 		'
@@ -87,7 +87,7 @@ Partial Class MainForm
 		Me.btnMini.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128,Byte),Integer), CType(CType(128,Byte),Integer), CType(CType(255,Byte),Integer))
 		Me.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btnMini.Image = CType(resources.GetObject("btnMini.Image"),System.Drawing.Image)
-		Me.btnMini.Location = New System.Drawing.Point(538, 0)
+		Me.btnMini.Location = New System.Drawing.Point(616, 0)
 		Me.btnMini.Name = "btnMini"
 		Me.btnMini.Size = New System.Drawing.Size(52, 40)
 		Me.btnMini.TabIndex = 5
@@ -103,7 +103,7 @@ Partial Class MainForm
 		Me.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(128,Byte),Integer), CType(CType(128,Byte),Integer))
 		Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"),System.Drawing.Image)
-		Me.btnClose.Location = New System.Drawing.Point(590, 0)
+		Me.btnClose.Location = New System.Drawing.Point(668, 0)
 		Me.btnClose.Name = "btnClose"
 		Me.btnClose.Size = New System.Drawing.Size(52, 40)
 		Me.btnClose.TabIndex = 4
@@ -148,7 +148,7 @@ Partial Class MainForm
 		Me.PnlContenido.ImeMode = System.Windows.Forms.ImeMode.Off
 		Me.PnlContenido.Location = New System.Drawing.Point(0, 40)
 		Me.PnlContenido.Name = "PnlContenido"
-		Me.PnlContenido.Size = New System.Drawing.Size(642, 420)
+		Me.PnlContenido.Size = New System.Drawing.Size(720, 420)
 		Me.PnlContenido.TabIndex = 1
 		'
 		'msMenu
@@ -189,7 +189,7 @@ Partial Class MainForm
 		Me.registrarToolStripMenuItem.Image = CType(resources.GetObject("registrarToolStripMenuItem.Image"),System.Drawing.Image)
 		Me.registrarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
 		Me.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem"
-		Me.registrarToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
+		Me.registrarToolStripMenuItem.Size = New System.Drawing.Size(162, 32)
 		Me.registrarToolStripMenuItem.Text = "Registrar"
 		AddHandler Me.registrarToolStripMenuItem.Click, AddressOf Me.RegistrarToolStripMenuItemClick
 		'
@@ -198,7 +198,7 @@ Partial Class MainForm
 		Me.mostrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
 		Me.mostrarToolStripMenuItem.Image = CType(resources.GetObject("mostrarToolStripMenuItem.Image"),System.Drawing.Image)
 		Me.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem"
-		Me.mostrarToolStripMenuItem.Size = New System.Drawing.Size(143, 26)
+		Me.mostrarToolStripMenuItem.Size = New System.Drawing.Size(162, 32)
 		Me.mostrarToolStripMenuItem.Text = "Mostrar"
 		AddHandler Me.mostrarToolStripMenuItem.Click, AddressOf Me.MostrarToolStripMenuItemClick
 		'
@@ -207,7 +207,7 @@ Partial Class MainForm
 		Me.TSMIEliminarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
 		Me.TSMIEliminarProducto.Image = CType(resources.GetObject("TSMIEliminarProducto.Image"),System.Drawing.Image)
 		Me.TSMIEliminarProducto.Name = "TSMIEliminarProducto"
-		Me.TSMIEliminarProducto.Size = New System.Drawing.Size(143, 26)
+		Me.TSMIEliminarProducto.Size = New System.Drawing.Size(162, 32)
 		Me.TSMIEliminarProducto.Text = "Eliminar"
 		AddHandler Me.TSMIEliminarProducto.Click, AddressOf Me.TSMIEliminarProductoClick
 		'
@@ -332,7 +332,7 @@ Partial Class MainForm
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.ClientSize = New System.Drawing.Size(642, 460)
+		Me.ClientSize = New System.Drawing.Size(720, 460)
 		Me.Controls.Add(Me.PnlContenido)
 		Me.Controls.Add(Me.pnlBarraTitulo)
 		Me.ForeColor = System.Drawing.Color.White
