@@ -52,6 +52,7 @@ Partial Class FrmPedidos
 		Me.label1 = New System.Windows.Forms.Label()
 		Me.cmbBusqueda = New System.Windows.Forms.ComboBox()
 		Me.btnBuscar = New System.Windows.Forms.Button()
+		Me.dateTimePicker1 = New System.Windows.Forms.DateTimePicker()
 		CType(Me.numUDCantidadPedido,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.dataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
@@ -162,7 +163,7 @@ Partial Class FrmPedidos
 		Me.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnRegistrar.Location = New System.Drawing.Point(673, 282)
 		Me.btnRegistrar.Name = "btnRegistrar"
-		Me.btnRegistrar.Size = New System.Drawing.Size(172, 60)
+		Me.btnRegistrar.Size = New System.Drawing.Size(172, 57)
 		Me.btnRegistrar.TabIndex = 79
 		Me.btnRegistrar.Text = "   Registrar"
 		Me.btnRegistrar.UseVisualStyleBackColor = false
@@ -217,9 +218,9 @@ Partial Class FrmPedidos
 		Me.btnEliminar.ForeColor = System.Drawing.Color.White
 		Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"),System.Drawing.Image)
 		Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnEliminar.Location = New System.Drawing.Point(673, 345)
+		Me.btnEliminar.Location = New System.Drawing.Point(673, 350)
 		Me.btnEliminar.Name = "btnEliminar"
-		Me.btnEliminar.Size = New System.Drawing.Size(172, 55)
+		Me.btnEliminar.Size = New System.Drawing.Size(172, 51)
 		Me.btnEliminar.TabIndex = 90
 		Me.btnEliminar.Text = "Eliminar"
 		Me.btnEliminar.UseVisualStyleBackColor = false
@@ -231,9 +232,9 @@ Partial Class FrmPedidos
 		Me.btnActualizar.ForeColor = System.Drawing.Color.White
 		Me.btnActualizar.Image = CType(resources.GetObject("btnActualizar.Image"),System.Drawing.Image)
 		Me.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnActualizar.Location = New System.Drawing.Point(673, 402)
+		Me.btnActualizar.Location = New System.Drawing.Point(673, 415)
 		Me.btnActualizar.Name = "btnActualizar"
-		Me.btnActualizar.Size = New System.Drawing.Size(172, 60)
+		Me.btnActualizar.Size = New System.Drawing.Size(172, 47)
 		Me.btnActualizar.TabIndex = 91
 		Me.btnActualizar.Text = "   Actualizar"
 		Me.btnActualizar.UseVisualStyleBackColor = false
@@ -257,7 +258,7 @@ Partial Class FrmPedidos
 		Me.cmbBusqueda.FormattingEnabled = true
 		Me.cmbBusqueda.Location = New System.Drawing.Point(141, 247)
 		Me.cmbBusqueda.Name = "cmbBusqueda"
-		Me.cmbBusqueda.Size = New System.Drawing.Size(513, 33)
+		Me.cmbBusqueda.Size = New System.Drawing.Size(255, 33)
 		Me.cmbBusqueda.TabIndex = 93
 		Me.cmbBusqueda.Text = "Buscar Por"
 		'
@@ -275,12 +276,21 @@ Partial Class FrmPedidos
 		Me.btnBuscar.Text = "  Buscar"
 		Me.btnBuscar.UseVisualStyleBackColor = false
 		'
+		'dateTimePicker1
+		'
+		Me.dateTimePicker1.CalendarFont = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.dateTimePicker1.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.dateTimePicker1.Location = New System.Drawing.Point(402, 247)
+		Me.dateTimePicker1.Name = "dateTimePicker1"
+		Me.dateTimePicker1.Size = New System.Drawing.Size(252, 33)
+		Me.dateTimePicker1.TabIndex = 95
+		'
 		'FrmPedidos
 		'
-		Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
-		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(867, 465)
+		Me.Controls.Add(Me.dateTimePicker1)
 		Me.Controls.Add(Me.btnBuscar)
 		Me.Controls.Add(Me.cmbBusqueda)
 		Me.Controls.Add(Me.label1)
@@ -306,6 +316,7 @@ Partial Class FrmPedidos
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private dateTimePicker1 As System.Windows.Forms.DateTimePicker
 	Private btnBuscar As System.Windows.Forms.Button
 	Private cmbBusqueda As System.Windows.Forms.ComboBox
 	Private label1 As System.Windows.Forms.Label

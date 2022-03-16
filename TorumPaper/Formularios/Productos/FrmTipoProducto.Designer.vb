@@ -33,16 +33,31 @@ Partial Class FrmTipoProducto
 	''' not be able to load this method if it was changed manually.
 	''' </summary>
 	Private Sub InitializeComponent()
+		Me.lblTitulo = New System.Windows.Forms.Label()
 		Me.SuspendLayout
+		'
+		'lblTitulo
+		'
+		Me.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top
+		Me.lblTitulo.Font = New System.Drawing.Font("Agency FB", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.lblTitulo.ForeColor = System.Drawing.Color.White
+		Me.lblTitulo.Location = New System.Drawing.Point(0, 0)
+		Me.lblTitulo.Name = "lblTitulo"
+		Me.lblTitulo.Size = New System.Drawing.Size(867, 69)
+		Me.lblTitulo.TabIndex = 89
+		Me.lblTitulo.Text = "Tipos de Productos  TorumPaper"
+		Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'FrmTipoProducto
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.ClientSize = New System.Drawing.Size(704, 422)
+		Me.ClientSize = New System.Drawing.Size(867, 465)
+		Me.Controls.Add(Me.lblTitulo)
 		Me.Name = "FrmTipoProducto"
 		Me.Text = "FrmTipoProducto"
 		Me.ResumeLayout(false)
 	End Sub
+	Private lblTitulo As System.Windows.Forms.Label
 End Class

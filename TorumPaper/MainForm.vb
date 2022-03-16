@@ -118,8 +118,31 @@ Public Partial Class MainForm
 	'	AbrirFormEnPanel(Of FrmRegistroProducto)()	
 	'End Sub
 	
-	#End Region
+	Sub BtnPedidosClick(sender As Object, e As EventArgs)
+		AbrirFormEnPanel(Of FrmPedidos)()	
+	End Sub
 	
+	Sub BtnProductosClick(sender As Object, e As EventArgs)
+		AbrirFormEnPanel(Of FrmRegistroPedido)()	
+	End Sub
+	
+	Sub BtnTProductosClick(sender As Object, e As EventArgs)
+		
+	End Sub
+	
+	Sub BtnVentasClick(sender As Object, e As EventArgs)
+		
+	End Sub
+	
+	Sub BtnProveedoresClick(sender As Object, e As EventArgs)
+		
+	End Sub
+	
+	Sub BtnEmpleadosClick(sender As Object, e As EventArgs)
+		
+	End Sub
+	
+	#End Region
 	
 	
 	

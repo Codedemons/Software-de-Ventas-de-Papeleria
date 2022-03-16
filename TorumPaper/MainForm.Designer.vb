@@ -33,7 +33,6 @@ Partial Class MainForm
 	''' not be able to load this method if it was changed manually.
 	''' </summary>
 	Private Sub InitializeComponent()
-		Me.components = New System.ComponentModel.Container()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
 		Me.pnlBarraTitulo = New System.Windows.Forms.Panel()
 		Me.btnMini = New System.Windows.Forms.Button()
@@ -43,7 +42,6 @@ Partial Class MainForm
 		Me.PnlContenido = New System.Windows.Forms.Panel()
 		Me.pnlMenu = New System.Windows.Forms.Panel()
 		Me.pbLogoMenu = New System.Windows.Forms.PictureBox()
-		Me.btnMenu = New System.Windows.Forms.PictureBox()
 		Me.Panel6 = New System.Windows.Forms.Panel()
 		Me.btnEmpleados = New System.Windows.Forms.Button()
 		Me.Panel5 = New System.Windows.Forms.Panel()
@@ -56,14 +54,11 @@ Partial Class MainForm
 		Me.Panel10 = New System.Windows.Forms.Panel()
 		Me.btnTProductos = New System.Windows.Forms.Button()
 		Me.btnProductos = New System.Windows.Forms.Button()
-		Me.tmMOSTRAR = New System.Windows.Forms.Timer(Me.components)
-		Me.tmOCULTAR = New System.Windows.Forms.Timer(Me.components)
 		Me.pnlBarraTitulo.SuspendLayout
 		CType(Me.pblogo,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.PnlContenido.SuspendLayout
 		Me.pnlMenu.SuspendLayout
 		CType(Me.pbLogoMenu,System.ComponentModel.ISupportInitialize).BeginInit
-		CType(Me.btnMenu,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
 		'pnlBarraTitulo
@@ -76,7 +71,7 @@ Partial Class MainForm
 		Me.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
 		Me.pnlBarraTitulo.Location = New System.Drawing.Point(0, 0)
 		Me.pnlBarraTitulo.Name = "pnlBarraTitulo"
-		Me.pnlBarraTitulo.Size = New System.Drawing.Size(883, 40)
+		Me.pnlBarraTitulo.Size = New System.Drawing.Size(1070, 40)
 		Me.pnlBarraTitulo.TabIndex = 0
 		AddHandler Me.pnlBarraTitulo.MouseDown, AddressOf Me.PnlBarraTituloMouseDown
 		'
@@ -89,7 +84,7 @@ Partial Class MainForm
 		Me.btnMini.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128,Byte),Integer), CType(CType(128,Byte),Integer), CType(CType(255,Byte),Integer))
 		Me.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btnMini.Image = CType(resources.GetObject("btnMini.Image"),System.Drawing.Image)
-		Me.btnMini.Location = New System.Drawing.Point(779, 0)
+		Me.btnMini.Location = New System.Drawing.Point(966, 0)
 		Me.btnMini.Name = "btnMini"
 		Me.btnMini.Size = New System.Drawing.Size(52, 40)
 		Me.btnMini.TabIndex = 5
@@ -105,7 +100,7 @@ Partial Class MainForm
 		Me.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(128,Byte),Integer), CType(CType(128,Byte),Integer))
 		Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"),System.Drawing.Image)
-		Me.btnClose.Location = New System.Drawing.Point(831, 0)
+		Me.btnClose.Location = New System.Drawing.Point(1018, 0)
 		Me.btnClose.Name = "btnClose"
 		Me.btnClose.Size = New System.Drawing.Size(52, 40)
 		Me.btnClose.TabIndex = 4
@@ -150,14 +145,13 @@ Partial Class MainForm
 		Me.PnlContenido.ImeMode = System.Windows.Forms.ImeMode.Off
 		Me.PnlContenido.Location = New System.Drawing.Point(0, 40)
 		Me.PnlContenido.Name = "PnlContenido"
-		Me.PnlContenido.Size = New System.Drawing.Size(883, 503)
+		Me.PnlContenido.Size = New System.Drawing.Size(1070, 510)
 		Me.PnlContenido.TabIndex = 1
 		'
 		'pnlMenu
 		'
 		Me.pnlMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(110,Byte),Integer))
 		Me.pnlMenu.Controls.Add(Me.pbLogoMenu)
-		Me.pnlMenu.Controls.Add(Me.btnMenu)
 		Me.pnlMenu.Controls.Add(Me.Panel6)
 		Me.pnlMenu.Controls.Add(Me.btnEmpleados)
 		Me.pnlMenu.Controls.Add(Me.Panel5)
@@ -173,31 +167,19 @@ Partial Class MainForm
 		Me.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left
 		Me.pnlMenu.Location = New System.Drawing.Point(0, 0)
 		Me.pnlMenu.Name = "pnlMenu"
-		Me.pnlMenu.Size = New System.Drawing.Size(200, 503)
+		Me.pnlMenu.Size = New System.Drawing.Size(200, 510)
 		Me.pnlMenu.TabIndex = 0
 		'
 		'pbLogoMenu
 		'
+		Me.pbLogoMenu.Dock = System.Windows.Forms.DockStyle.Top
 		Me.pbLogoMenu.Image = CType(resources.GetObject("pbLogoMenu.Image"),System.Drawing.Image)
-		Me.pbLogoMenu.Location = New System.Drawing.Point(4, 0)
+		Me.pbLogoMenu.Location = New System.Drawing.Point(0, 0)
 		Me.pbLogoMenu.Name = "pbLogoMenu"
-		Me.pbLogoMenu.Size = New System.Drawing.Size(165, 120)
+		Me.pbLogoMenu.Size = New System.Drawing.Size(200, 120)
 		Me.pbLogoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
 		Me.pbLogoMenu.TabIndex = 28
 		Me.pbLogoMenu.TabStop = false
-		'
-		'btnMenu
-		'
-		Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-		Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
-		Me.btnMenu.Image = CType(resources.GetObject("btnMenu.Image"),System.Drawing.Image)
-		Me.btnMenu.Location = New System.Drawing.Point(166, 3)
-		Me.btnMenu.Name = "btnMenu"
-		Me.btnMenu.Size = New System.Drawing.Size(32, 32)
-		Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-		Me.btnMenu.TabIndex = 27
-		Me.btnMenu.TabStop = false
-		
 		'
 		'Panel6
 		'
@@ -225,6 +207,7 @@ Partial Class MainForm
 		Me.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 		Me.btnEmpleados.UseVisualStyleBackColor = true
+		AddHandler Me.btnEmpleados.Click, AddressOf Me.BtnEmpleadosClick
 		'
 		'Panel5
 		'
@@ -252,6 +235,7 @@ Partial Class MainForm
 		Me.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 		Me.btnPedidos.UseVisualStyleBackColor = true
+		AddHandler Me.btnPedidos.Click, AddressOf Me.BtnPedidosClick
 		'
 		'pnlProveedores
 		'
@@ -279,6 +263,7 @@ Partial Class MainForm
 		Me.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 		Me.btnProveedores.UseVisualStyleBackColor = true
+		AddHandler Me.btnProveedores.Click, AddressOf Me.BtnProveedoresClick
 		'
 		'Panel3
 		'
@@ -306,6 +291,7 @@ Partial Class MainForm
 		Me.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 		Me.btnVentas.UseVisualStyleBackColor = true
+		AddHandler Me.btnVentas.Click, AddressOf Me.BtnVentasClick
 		'
 		'Panel2
 		'
@@ -341,6 +327,7 @@ Partial Class MainForm
 		Me.btnTProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnTProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 		Me.btnTProductos.UseVisualStyleBackColor = true
+		AddHandler Me.btnTProductos.Click, AddressOf Me.BtnTProductosClick
 		'
 		'btnProductos
 		'
@@ -360,20 +347,13 @@ Partial Class MainForm
 		Me.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 		Me.btnProductos.UseVisualStyleBackColor = true
-		'
-		'tmMOSTRAR
-		'
-		Me.tmMOSTRAR.Interval = 15
-		'
-		'tmOCULTAR
-		'
-		Me.tmOCULTAR.Interval = 15
+		AddHandler Me.btnProductos.Click, AddressOf Me.BtnProductosClick
 		'
 		'MainForm
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.ClientSize = New System.Drawing.Size(883, 543)
+		Me.ClientSize = New System.Drawing.Size(1070, 550)
 		Me.Controls.Add(Me.PnlContenido)
 		Me.Controls.Add(Me.pnlBarraTitulo)
 		Me.ForeColor = System.Drawing.Color.White
@@ -386,12 +366,9 @@ Partial Class MainForm
 		Me.PnlContenido.ResumeLayout(false)
 		Me.pnlMenu.ResumeLayout(false)
 		CType(Me.pbLogoMenu,System.ComponentModel.ISupportInitialize).EndInit
-		CType(Me.btnMenu,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
-	Friend tmOCULTAR As System.Windows.Forms.Timer
-	Friend tmMOSTRAR As System.Windows.Forms.Timer
 	Private pbLogoMenu As System.Windows.Forms.PictureBox
 	Friend btnTProductos As System.Windows.Forms.Button
 	Friend Panel10 As System.Windows.Forms.Panel
@@ -405,7 +382,6 @@ Partial Class MainForm
 	Friend Panel5 As System.Windows.Forms.Panel
 	Friend btnEmpleados As System.Windows.Forms.Button
 	Friend Panel6 As System.Windows.Forms.Panel
-	Friend btnMenu As System.Windows.Forms.PictureBox
 	Private pnlMenu As System.Windows.Forms.Panel
 	Private btnMini As System.Windows.Forms.Button
 	Private btnClose As System.Windows.Forms.Button
