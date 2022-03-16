@@ -114,29 +114,24 @@ Public Partial Class MainForm
     #End Region
     
     #Region "Menu"
-	'Sub RegistrarToolStripMenuItemClick(sender As Object, e As EventArgs)
-	'	AbrirFormEnPanel(Of FrmRegistroProducto)()	
-	'End Sub
-	
 	Sub BtnPedidosClick(sender As Object, e As EventArgs)
 		AbrirFormEnPanel(Of FrmPedidos)()	
 	End Sub
-	
 	Sub BtnProductosClick(sender As Object, e As EventArgs)
 		AbrirFormEnPanel(Of FrmProductos)()	
 	End Sub
-	
 	Sub BtnVentasClick(sender As Object, e As EventArgs)
 		AbrirFormEnPanel(Of FrmVerVentas)()	
 	End Sub
-	
 	Sub BtnProveedoresClick(sender As Object, e As EventArgs)
 		AbrirFormEnPanel(Of FrmProveedores)()	
 	End Sub
-	
-	
+	Sub BtnTProductosClick(sender As Object, e As EventArgs)
+		AbrirFormEnPanel(Of FrmTipoProducto)()	
+	End Sub
 	#End Region
 	
 	
 	
+
 End Class

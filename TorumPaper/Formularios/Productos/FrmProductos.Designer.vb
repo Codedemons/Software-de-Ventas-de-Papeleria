@@ -46,17 +46,17 @@ Partial Class FrmProductos
 		Me.txtDescripcion = New System.Windows.Forms.TextBox()
 		Me.txtClaveProducto = New System.Windows.Forms.TextBox()
 		Me.lblTitulo = New System.Windows.Forms.Label()
-		Me.btnBuscar = New System.Windows.Forms.Button()
-		Me.lbltBuscar = New System.Windows.Forms.Label()
-		Me.btnActualizar = New System.Windows.Forms.Button()
-		Me.btnEliminar = New System.Windows.Forms.Button()
-		Me.dGVProductos = New System.Windows.Forms.DataGridView()
-		Me.btnLimpiar = New System.Windows.Forms.Button()
-		Me.btnRegistrar = New System.Windows.Forms.Button()
 		Me.comboBox4 = New System.Windows.Forms.ComboBox()
 		Me.comboBox5 = New System.Windows.Forms.ComboBox()
 		Me.textBox1 = New System.Windows.Forms.TextBox()
 		Me.comboBox6 = New System.Windows.Forms.ComboBox()
+		Me.btnRegistrar = New System.Windows.Forms.Button()
+		Me.btnLimpiar = New System.Windows.Forms.Button()
+		Me.dGVProductos = New System.Windows.Forms.DataGridView()
+		Me.btnEliminar = New System.Windows.Forms.Button()
+		Me.btnActualizar = New System.Windows.Forms.Button()
+		Me.lbltBuscar = New System.Windows.Forms.Label()
+		Me.btnBuscar = New System.Windows.Forms.Button()
 		CType(Me.numericUpDown2,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.numericUpDown1,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.numUDCantidadPedido,System.ComponentModel.ISupportInitialize).BeginInit
@@ -203,97 +203,6 @@ Partial Class FrmProductos
 		Me.lblTitulo.Text = "Productos TorumPaper"
 		Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
-		'btnBuscar
-		'
-		Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.btnBuscar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.btnBuscar.ForeColor = System.Drawing.Color.White
-		Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"),System.Drawing.Image)
-		Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnBuscar.Location = New System.Drawing.Point(673, 72)
-		Me.btnBuscar.Name = "btnBuscar"
-		Me.btnBuscar.Size = New System.Drawing.Size(172, 47)
-		Me.btnBuscar.TabIndex = 103
-		Me.btnBuscar.Text = "  Buscar"
-		Me.btnBuscar.UseVisualStyleBackColor = false
-		'
-		'lbltBuscar
-		'
-		Me.lbltBuscar.Font = New System.Drawing.Font("Agency FB", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.lbltBuscar.ForeColor = System.Drawing.Color.White
-		Me.lbltBuscar.Location = New System.Drawing.Point(29, 240)
-		Me.lbltBuscar.Name = "lbltBuscar"
-		Me.lbltBuscar.Size = New System.Drawing.Size(98, 37)
-		Me.lbltBuscar.TabIndex = 101
-		Me.lbltBuscar.Text = "Buscar"
-		Me.lbltBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'btnActualizar
-		'
-		Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.btnActualizar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.btnActualizar.ForeColor = System.Drawing.Color.White
-		Me.btnActualizar.Image = CType(resources.GetObject("btnActualizar.Image"),System.Drawing.Image)
-		Me.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnActualizar.Location = New System.Drawing.Point(654, 416)
-		Me.btnActualizar.Name = "btnActualizar"
-		Me.btnActualizar.Size = New System.Drawing.Size(191, 47)
-		Me.btnActualizar.TabIndex = 100
-		Me.btnActualizar.Text = "   Actualizar"
-		Me.btnActualizar.UseVisualStyleBackColor = false
-		'
-		'btnEliminar
-		'
-		Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.btnEliminar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.btnEliminar.ForeColor = System.Drawing.Color.White
-		Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"),System.Drawing.Image)
-		Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnEliminar.Location = New System.Drawing.Point(654, 351)
-		Me.btnEliminar.Name = "btnEliminar"
-		Me.btnEliminar.Size = New System.Drawing.Size(191, 51)
-		Me.btnEliminar.TabIndex = 99
-		Me.btnEliminar.Text = "Eliminar"
-		Me.btnEliminar.UseVisualStyleBackColor = false
-		'
-		'dGVProductos
-		'
-		Me.dGVProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.dGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		Me.dGVProductos.Location = New System.Drawing.Point(29, 283)
-		Me.dGVProductos.Name = "dGVProductos"
-		Me.dGVProductos.Size = New System.Drawing.Size(606, 180)
-		Me.dGVProductos.TabIndex = 98
-		'
-		'btnLimpiar
-		'
-		Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.btnLimpiar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.btnLimpiar.ForeColor = System.Drawing.Color.White
-		Me.btnLimpiar.Image = CType(resources.GetObject("btnLimpiar.Image"),System.Drawing.Image)
-		Me.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnLimpiar.Location = New System.Drawing.Point(673, 126)
-		Me.btnLimpiar.Name = "btnLimpiar"
-		Me.btnLimpiar.Size = New System.Drawing.Size(172, 55)
-		Me.btnLimpiar.TabIndex = 96
-		Me.btnLimpiar.Text = "    LIMPIAR"
-		Me.btnLimpiar.UseVisualStyleBackColor = false
-		
-		'
-		'btnRegistrar
-		'
-		Me.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.btnRegistrar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.btnRegistrar.ForeColor = System.Drawing.Color.White
-		Me.btnRegistrar.Image = CType(resources.GetObject("btnRegistrar.Image"),System.Drawing.Image)
-		Me.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnRegistrar.Location = New System.Drawing.Point(654, 283)
-		Me.btnRegistrar.Name = "btnRegistrar"
-		Me.btnRegistrar.Size = New System.Drawing.Size(191, 57)
-		Me.btnRegistrar.TabIndex = 95
-		Me.btnRegistrar.Text = "   Registrar"
-		Me.btnRegistrar.UseVisualStyleBackColor = false
-		'
 		'comboBox4
 		'
 		Me.comboBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
@@ -344,6 +253,96 @@ Partial Class FrmProductos
 		Me.comboBox6.Size = New System.Drawing.Size(114, 32)
 		Me.comboBox6.TabIndex = 104
 		Me.comboBox6.Text = "Stock Mínimo"
+		'
+		'btnRegistrar
+		'
+		Me.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.btnRegistrar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnRegistrar.ForeColor = System.Drawing.Color.White
+		Me.btnRegistrar.Image = CType(resources.GetObject("btnRegistrar.Image"),System.Drawing.Image)
+		Me.btnRegistrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnRegistrar.Location = New System.Drawing.Point(654, 283)
+		Me.btnRegistrar.Name = "btnRegistrar"
+		Me.btnRegistrar.Size = New System.Drawing.Size(191, 57)
+		Me.btnRegistrar.TabIndex = 95
+		Me.btnRegistrar.Text = "   Registrar"
+		Me.btnRegistrar.UseVisualStyleBackColor = false
+		'
+		'btnLimpiar
+		'
+		Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.btnLimpiar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnLimpiar.ForeColor = System.Drawing.Color.White
+		Me.btnLimpiar.Image = CType(resources.GetObject("btnLimpiar.Image"),System.Drawing.Image)
+		Me.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnLimpiar.Location = New System.Drawing.Point(673, 126)
+		Me.btnLimpiar.Name = "btnLimpiar"
+		Me.btnLimpiar.Size = New System.Drawing.Size(172, 55)
+		Me.btnLimpiar.TabIndex = 96
+		Me.btnLimpiar.Text = "    LIMPIAR"
+		Me.btnLimpiar.UseVisualStyleBackColor = false
+		'
+		'dGVProductos
+		'
+		Me.dGVProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.dGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+		Me.dGVProductos.Location = New System.Drawing.Point(29, 283)
+		Me.dGVProductos.Name = "dGVProductos"
+		Me.dGVProductos.Size = New System.Drawing.Size(606, 180)
+		Me.dGVProductos.TabIndex = 98
+		'
+		'btnEliminar
+		'
+		Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.btnEliminar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnEliminar.ForeColor = System.Drawing.Color.White
+		Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"),System.Drawing.Image)
+		Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnEliminar.Location = New System.Drawing.Point(654, 351)
+		Me.btnEliminar.Name = "btnEliminar"
+		Me.btnEliminar.Size = New System.Drawing.Size(191, 51)
+		Me.btnEliminar.TabIndex = 99
+		Me.btnEliminar.Text = "Eliminar"
+		Me.btnEliminar.UseVisualStyleBackColor = false
+		'
+		'btnActualizar
+		'
+		Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.btnActualizar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnActualizar.ForeColor = System.Drawing.Color.White
+		Me.btnActualizar.Image = CType(resources.GetObject("btnActualizar.Image"),System.Drawing.Image)
+		Me.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnActualizar.Location = New System.Drawing.Point(654, 416)
+		Me.btnActualizar.Name = "btnActualizar"
+		Me.btnActualizar.Size = New System.Drawing.Size(191, 47)
+		Me.btnActualizar.TabIndex = 100
+		Me.btnActualizar.Text = "   Actualizar"
+		Me.btnActualizar.UseVisualStyleBackColor = false
+		'
+		'lbltBuscar
+		'
+		Me.lbltBuscar.Font = New System.Drawing.Font("Agency FB", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.lbltBuscar.ForeColor = System.Drawing.Color.White
+		Me.lbltBuscar.Location = New System.Drawing.Point(29, 240)
+		Me.lbltBuscar.Name = "lbltBuscar"
+		Me.lbltBuscar.Size = New System.Drawing.Size(98, 37)
+		Me.lbltBuscar.TabIndex = 101
+		Me.lbltBuscar.Text = "Buscar"
+		Me.lbltBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		'
+		'btnBuscar
+		'
+		Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.btnBuscar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnBuscar.ForeColor = System.Drawing.Color.White
+		Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"),System.Drawing.Image)
+		Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnBuscar.Location = New System.Drawing.Point(673, 72)
+		Me.btnBuscar.Name = "btnBuscar"
+		Me.btnBuscar.Size = New System.Drawing.Size(172, 47)
+		Me.btnBuscar.TabIndex = 103
+		Me.btnBuscar.Text = "  Buscar"
+		Me.btnBuscar.UseVisualStyleBackColor = false
 		'
 		'FrmProductos
 		'

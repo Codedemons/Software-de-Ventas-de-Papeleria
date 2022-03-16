@@ -207,7 +207,6 @@ Partial Class MainForm
 		Me.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 		Me.btnEmpleados.UseVisualStyleBackColor = true
-		
 		'
 		'Panel5
 		'
@@ -327,7 +326,7 @@ Partial Class MainForm
 		Me.btnTProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnTProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 		Me.btnTProductos.UseVisualStyleBackColor = true
-		
+		AddHandler Me.btnTProductos.Click, AddressOf Me.BtnTProductosClick
 		'
 		'btnProductos
 		'

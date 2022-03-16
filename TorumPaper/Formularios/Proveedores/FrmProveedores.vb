@@ -15,4 +15,18 @@ Public Partial Class FrmProveedores
 		' TODO : Add constructor code after InitializeComponents
 		'
 	End Sub
+	
+	
+	
+	Sub FrmProveedoresLoad(sender As Object, e As EventArgs)
+		
+	End Sub
+	
+	Sub BtnRegistrarClick(sender As Object, e As EventArgs)
+		
+	End Sub
+	
+	Sub TextBoxFiltroNombreProveedorTextChanged(sender As Object, e As EventArgs)
+		
+	End Sub
 End Class
