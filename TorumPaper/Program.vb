@@ -20,8 +20,8 @@ Namespace My
 		End Sub
 		
 		Protected Overrides Sub OnCreateMainForm()
-			'Me.MainForm = My.Forms.MainForm
-			Me.MainForm = My.Forms.FrmPedidos
+			Me.MainForm = My.Forms.MainForm
+			'Me.MainForm = My.Forms.FrmPedidos
 		End Sub
 	End Class
 End Namespace

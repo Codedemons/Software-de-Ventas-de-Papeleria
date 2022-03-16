@@ -33,6 +33,7 @@ Partial Class MainForm
 	''' not be able to load this method if it was changed manually.
 	''' </summary>
 	Private Sub InitializeComponent()
+		Me.components = New System.ComponentModel.Container()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
 		Me.pnlBarraTitulo = New System.Windows.Forms.Panel()
 		Me.btnMini = New System.Windows.Forms.Button()
@@ -41,9 +42,28 @@ Partial Class MainForm
 		Me.pblogo = New System.Windows.Forms.PictureBox()
 		Me.PnlContenido = New System.Windows.Forms.Panel()
 		Me.pnlMenu = New System.Windows.Forms.Panel()
+		Me.pbLogoMenu = New System.Windows.Forms.PictureBox()
+		Me.btnMenu = New System.Windows.Forms.PictureBox()
+		Me.Panel6 = New System.Windows.Forms.Panel()
+		Me.btnEmpleados = New System.Windows.Forms.Button()
+		Me.Panel5 = New System.Windows.Forms.Panel()
+		Me.btnPedidos = New System.Windows.Forms.Button()
+		Me.pnlProveedores = New System.Windows.Forms.Panel()
+		Me.btnProveedores = New System.Windows.Forms.Button()
+		Me.Panel3 = New System.Windows.Forms.Panel()
+		Me.btnVentas = New System.Windows.Forms.Button()
+		Me.Panel2 = New System.Windows.Forms.Panel()
+		Me.Panel10 = New System.Windows.Forms.Panel()
+		Me.btnTProductos = New System.Windows.Forms.Button()
+		Me.btnProductos = New System.Windows.Forms.Button()
+		Me.tmMOSTRAR = New System.Windows.Forms.Timer(Me.components)
+		Me.tmOCULTAR = New System.Windows.Forms.Timer(Me.components)
 		Me.pnlBarraTitulo.SuspendLayout
 		CType(Me.pblogo,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.PnlContenido.SuspendLayout
+		Me.pnlMenu.SuspendLayout
+		CType(Me.pbLogoMenu,System.ComponentModel.ISupportInitialize).BeginInit
+		CType(Me.btnMenu,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
 		'pnlBarraTitulo
@@ -135,11 +155,219 @@ Partial Class MainForm
 		'
 		'pnlMenu
 		'
+		Me.pnlMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(110,Byte),Integer))
+		Me.pnlMenu.Controls.Add(Me.pbLogoMenu)
+		Me.pnlMenu.Controls.Add(Me.btnMenu)
+		Me.pnlMenu.Controls.Add(Me.Panel6)
+		Me.pnlMenu.Controls.Add(Me.btnEmpleados)
+		Me.pnlMenu.Controls.Add(Me.Panel5)
+		Me.pnlMenu.Controls.Add(Me.btnPedidos)
+		Me.pnlMenu.Controls.Add(Me.pnlProveedores)
+		Me.pnlMenu.Controls.Add(Me.btnProveedores)
+		Me.pnlMenu.Controls.Add(Me.Panel3)
+		Me.pnlMenu.Controls.Add(Me.btnVentas)
+		Me.pnlMenu.Controls.Add(Me.Panel2)
+		Me.pnlMenu.Controls.Add(Me.Panel10)
+		Me.pnlMenu.Controls.Add(Me.btnTProductos)
+		Me.pnlMenu.Controls.Add(Me.btnProductos)
 		Me.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left
 		Me.pnlMenu.Location = New System.Drawing.Point(0, 0)
 		Me.pnlMenu.Name = "pnlMenu"
-		Me.pnlMenu.Size = New System.Drawing.Size(150, 503)
+		Me.pnlMenu.Size = New System.Drawing.Size(200, 503)
 		Me.pnlMenu.TabIndex = 0
+		'
+		'pbLogoMenu
+		'
+		Me.pbLogoMenu.Image = CType(resources.GetObject("pbLogoMenu.Image"),System.Drawing.Image)
+		Me.pbLogoMenu.Location = New System.Drawing.Point(4, 0)
+		Me.pbLogoMenu.Name = "pbLogoMenu"
+		Me.pbLogoMenu.Size = New System.Drawing.Size(165, 120)
+		Me.pbLogoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+		Me.pbLogoMenu.TabIndex = 28
+		Me.pbLogoMenu.TabStop = false
+		'
+		'btnMenu
+		'
+		Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+		Me.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand
+		Me.btnMenu.Image = CType(resources.GetObject("btnMenu.Image"),System.Drawing.Image)
+		Me.btnMenu.Location = New System.Drawing.Point(166, 3)
+		Me.btnMenu.Name = "btnMenu"
+		Me.btnMenu.Size = New System.Drawing.Size(32, 32)
+		Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+		Me.btnMenu.TabIndex = 27
+		Me.btnMenu.TabStop = false
+		
+		'
+		'Panel6
+		'
+		Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel6.Location = New System.Drawing.Point(3, 405)
+		Me.Panel6.Name = "Panel6"
+		Me.Panel6.Size = New System.Drawing.Size(5, 50)
+		Me.Panel6.TabIndex = 26
+		'
+		'btnEmpleados
+		'
+		Me.btnEmpleados.FlatAppearance.BorderSize = 0
+		Me.btnEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnEmpleados.ForeColor = System.Drawing.Color.White
+		Me.btnEmpleados.Image = CType(resources.GetObject("btnEmpleados.Image"),System.Drawing.Image)
+		Me.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnEmpleados.Location = New System.Drawing.Point(3, 405)
+		Me.btnEmpleados.Name = "btnEmpleados"
+		Me.btnEmpleados.Size = New System.Drawing.Size(200, 50)
+		Me.btnEmpleados.TabIndex = 25
+		Me.btnEmpleados.Text = "  Empleados"
+		Me.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnEmpleados.UseVisualStyleBackColor = true
+		'
+		'Panel5
+		'
+		Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel5.Location = New System.Drawing.Point(3, 349)
+		Me.Panel5.Name = "Panel5"
+		Me.Panel5.Size = New System.Drawing.Size(5, 50)
+		Me.Panel5.TabIndex = 24
+		'
+		'btnPedidos
+		'
+		Me.btnPedidos.FlatAppearance.BorderSize = 0
+		Me.btnPedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnPedidos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnPedidos.ForeColor = System.Drawing.Color.White
+		Me.btnPedidos.Image = CType(resources.GetObject("btnPedidos.Image"),System.Drawing.Image)
+		Me.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnPedidos.Location = New System.Drawing.Point(1, 352)
+		Me.btnPedidos.Name = "btnPedidos"
+		Me.btnPedidos.Size = New System.Drawing.Size(200, 50)
+		Me.btnPedidos.TabIndex = 23
+		Me.btnPedidos.Text = "  Pedidos"
+		Me.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnPedidos.UseVisualStyleBackColor = true
+		'
+		'pnlProveedores
+		'
+		Me.pnlProveedores.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.pnlProveedores.Location = New System.Drawing.Point(3, 293)
+		Me.pnlProveedores.Name = "pnlProveedores"
+		Me.pnlProveedores.Size = New System.Drawing.Size(5, 50)
+		Me.pnlProveedores.TabIndex = 22
+		'
+		'btnProveedores
+		'
+		Me.btnProveedores.FlatAppearance.BorderSize = 0
+		Me.btnProveedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnProveedores.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnProveedores.ForeColor = System.Drawing.Color.White
+		Me.btnProveedores.Image = CType(resources.GetObject("btnProveedores.Image"),System.Drawing.Image)
+		Me.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnProveedores.Location = New System.Drawing.Point(3, 293)
+		Me.btnProveedores.Name = "btnProveedores"
+		Me.btnProveedores.Size = New System.Drawing.Size(200, 50)
+		Me.btnProveedores.TabIndex = 21
+		Me.btnProveedores.Text = "Proveedores"
+		Me.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnProveedores.UseVisualStyleBackColor = true
+		'
+		'Panel3
+		'
+		Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel3.Location = New System.Drawing.Point(3, 237)
+		Me.Panel3.Name = "Panel3"
+		Me.Panel3.Size = New System.Drawing.Size(5, 50)
+		Me.Panel3.TabIndex = 20
+		'
+		'btnVentas
+		'
+		Me.btnVentas.FlatAppearance.BorderSize = 0
+		Me.btnVentas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnVentas.ForeColor = System.Drawing.Color.White
+		Me.btnVentas.Image = CType(resources.GetObject("btnVentas.Image"),System.Drawing.Image)
+		Me.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnVentas.Location = New System.Drawing.Point(-1, 237)
+		Me.btnVentas.Name = "btnVentas"
+		Me.btnVentas.Size = New System.Drawing.Size(200, 50)
+		Me.btnVentas.TabIndex = 19
+		Me.btnVentas.Text = "  Ventas"
+		Me.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnVentas.UseVisualStyleBackColor = true
+		'
+		'Panel2
+		'
+		Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel2.Location = New System.Drawing.Point(3, 181)
+		Me.Panel2.Name = "Panel2"
+		Me.Panel2.Size = New System.Drawing.Size(5, 50)
+		Me.Panel2.TabIndex = 18
+		'
+		'Panel10
+		'
+		Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel10.Location = New System.Drawing.Point(3, 125)
+		Me.Panel10.Name = "Panel10"
+		Me.Panel10.Size = New System.Drawing.Size(5, 50)
+		Me.Panel10.TabIndex = 16
+		'
+		'btnTProductos
+		'
+		Me.btnTProductos.FlatAppearance.BorderSize = 0
+		Me.btnTProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnTProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnTProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnTProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnTProductos.ForeColor = System.Drawing.Color.White
+		Me.btnTProductos.Image = CType(resources.GetObject("btnTProductos.Image"),System.Drawing.Image)
+		Me.btnTProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnTProductos.Location = New System.Drawing.Point(4, 181)
+		Me.btnTProductos.Name = "btnTProductos"
+		Me.btnTProductos.Size = New System.Drawing.Size(200, 50)
+		Me.btnTProductos.TabIndex = 15
+		Me.btnTProductos.Text = "  Tipos Productos"
+		Me.btnTProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnTProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnTProductos.UseVisualStyleBackColor = true
+		'
+		'btnProductos
+		'
+		Me.btnProductos.FlatAppearance.BorderSize = 0
+		Me.btnProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnProductos.ForeColor = System.Drawing.Color.White
+		Me.btnProductos.Image = CType(resources.GetObject("btnProductos.Image"),System.Drawing.Image)
+		Me.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnProductos.Location = New System.Drawing.Point(0, 126)
+		Me.btnProductos.Name = "btnProductos"
+		Me.btnProductos.Size = New System.Drawing.Size(200, 50)
+		Me.btnProductos.TabIndex = 17
+		Me.btnProductos.Text = "  Productos"
+		Me.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnProductos.UseVisualStyleBackColor = true
+		'
+		'tmMOSTRAR
+		'
+		Me.tmMOSTRAR.Interval = 15
+		'
+		'tmOCULTAR
+		'
+		Me.tmOCULTAR.Interval = 15
 		'
 		'MainForm
 		'
@@ -156,9 +384,28 @@ Partial Class MainForm
 		Me.pnlBarraTitulo.ResumeLayout(false)
 		CType(Me.pblogo,System.ComponentModel.ISupportInitialize).EndInit
 		Me.PnlContenido.ResumeLayout(false)
+		Me.pnlMenu.ResumeLayout(false)
+		CType(Me.pbLogoMenu,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.btnMenu,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Friend tmOCULTAR As System.Windows.Forms.Timer
+	Friend tmMOSTRAR As System.Windows.Forms.Timer
+	Private pbLogoMenu As System.Windows.Forms.PictureBox
+	Friend btnTProductos As System.Windows.Forms.Button
+	Friend Panel10 As System.Windows.Forms.Panel
+	Friend btnProductos As System.Windows.Forms.Button
+	Friend Panel2 As System.Windows.Forms.Panel
+	Friend btnVentas As System.Windows.Forms.Button
+	Friend Panel3 As System.Windows.Forms.Panel
+	Friend btnProveedores As System.Windows.Forms.Button
+	Friend pnlProveedores As System.Windows.Forms.Panel
+	Friend btnPedidos As System.Windows.Forms.Button
+	Friend Panel5 As System.Windows.Forms.Panel
+	Friend btnEmpleados As System.Windows.Forms.Button
+	Friend Panel6 As System.Windows.Forms.Panel
+	Friend btnMenu As System.Windows.Forms.PictureBox
 	Private pnlMenu As System.Windows.Forms.Panel
 	Private btnMini As System.Windows.Forms.Button
 	Private btnClose As System.Windows.Forms.Button
