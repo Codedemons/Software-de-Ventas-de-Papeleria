@@ -34,7 +34,7 @@ Partial Class FrmPedidos
 	''' </summary>
 	Private Sub InitializeComponent()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPedidos))
-		Me.labelCantidad = New System.Windows.Forms.Label()
+		Me.lbltCantidad = New System.Windows.Forms.Label()
 		Me.dTpFecha = New System.Windows.Forms.DateTimePicker()
 		Me.numUDCantidadPedido = New System.Windows.Forms.NumericUpDown()
 		Me.cmBTipoProducto = New System.Windows.Forms.ComboBox()
@@ -46,26 +46,26 @@ Partial Class FrmPedidos
 		Me.txtPrecio = New System.Windows.Forms.TextBox()
 		Me.txtClave = New System.Windows.Forms.TextBox()
 		Me.lblTitulo = New System.Windows.Forms.Label()
-		Me.dataGridView1 = New System.Windows.Forms.DataGridView()
+		Me.dGVPedidos = New System.Windows.Forms.DataGridView()
 		Me.btnEliminar = New System.Windows.Forms.Button()
 		Me.btnActualizar = New System.Windows.Forms.Button()
-		Me.label1 = New System.Windows.Forms.Label()
+		Me.lbltBuscar = New System.Windows.Forms.Label()
 		Me.cmbBusqueda = New System.Windows.Forms.ComboBox()
 		Me.btnBuscar = New System.Windows.Forms.Button()
-		Me.dateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+		Me.dTPBFecha = New System.Windows.Forms.DateTimePicker()
 		CType(Me.numUDCantidadPedido,System.ComponentModel.ISupportInitialize).BeginInit
-		CType(Me.dataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
+		CType(Me.dGVPedidos,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
-		'labelCantidad
+		'lbltCantidad
 		'
-		Me.labelCantidad.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.labelCantidad.ForeColor = System.Drawing.Color.White
-		Me.labelCantidad.Location = New System.Drawing.Point(354, 149)
-		Me.labelCantidad.Name = "labelCantidad"
-		Me.labelCantidad.Size = New System.Drawing.Size(100, 30)
-		Me.labelCantidad.TabIndex = 87
-		Me.labelCantidad.Text = "Cantidad"
+		Me.lbltCantidad.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.lbltCantidad.ForeColor = System.Drawing.Color.White
+		Me.lbltCantidad.Location = New System.Drawing.Point(354, 149)
+		Me.lbltCantidad.Name = "lbltCantidad"
+		Me.lbltCantidad.Size = New System.Drawing.Size(100, 30)
+		Me.lbltCantidad.TabIndex = 87
+		Me.lbltCantidad.Text = "Cantidad"
 		'
 		'dTpFecha
 		'
@@ -202,14 +202,14 @@ Partial Class FrmPedidos
 		Me.lblTitulo.Text = "Pedidos  TorumPaper"
 		Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
-		'dataGridView1
+		'dGVPedidos
 		'
-		Me.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		Me.dataGridView1.Location = New System.Drawing.Point(48, 282)
-		Me.dataGridView1.Name = "dataGridView1"
-		Me.dataGridView1.Size = New System.Drawing.Size(606, 180)
-		Me.dataGridView1.TabIndex = 89
+		Me.dGVPedidos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.dGVPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+		Me.dGVPedidos.Location = New System.Drawing.Point(48, 282)
+		Me.dGVPedidos.Name = "dGVPedidos"
+		Me.dGVPedidos.Size = New System.Drawing.Size(606, 180)
+		Me.dGVPedidos.TabIndex = 89
 		'
 		'btnEliminar
 		'
@@ -239,16 +239,16 @@ Partial Class FrmPedidos
 		Me.btnActualizar.Text = "   Actualizar"
 		Me.btnActualizar.UseVisualStyleBackColor = false
 		'
-		'label1
+		'lbltBuscar
 		'
-		Me.label1.Font = New System.Drawing.Font("Agency FB", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.label1.ForeColor = System.Drawing.Color.White
-		Me.label1.Location = New System.Drawing.Point(48, 242)
-		Me.label1.Name = "label1"
-		Me.label1.Size = New System.Drawing.Size(98, 37)
-		Me.label1.TabIndex = 92
-		Me.label1.Text = "Buscar"
-		Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.lbltBuscar.Font = New System.Drawing.Font("Agency FB", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.lbltBuscar.ForeColor = System.Drawing.Color.White
+		Me.lbltBuscar.Location = New System.Drawing.Point(48, 242)
+		Me.lbltBuscar.Name = "lbltBuscar"
+		Me.lbltBuscar.Size = New System.Drawing.Size(98, 37)
+		Me.lbltBuscar.TabIndex = 92
+		Me.lbltBuscar.Text = "Buscar"
+		Me.lbltBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
 		'cmbBusqueda
 		'
@@ -276,29 +276,29 @@ Partial Class FrmPedidos
 		Me.btnBuscar.Text = "  Buscar"
 		Me.btnBuscar.UseVisualStyleBackColor = false
 		'
-		'dateTimePicker1
+		'dTPBFecha
 		'
-		Me.dateTimePicker1.CalendarFont = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.dateTimePicker1.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.dateTimePicker1.Location = New System.Drawing.Point(402, 247)
-		Me.dateTimePicker1.Name = "dateTimePicker1"
-		Me.dateTimePicker1.Size = New System.Drawing.Size(252, 33)
-		Me.dateTimePicker1.TabIndex = 95
+		Me.dTPBFecha.CalendarFont = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.dTPBFecha.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.dTPBFecha.Location = New System.Drawing.Point(402, 247)
+		Me.dTPBFecha.Name = "dTPBFecha"
+		Me.dTPBFecha.Size = New System.Drawing.Size(252, 33)
+		Me.dTPBFecha.TabIndex = 95
 		'
 		'FrmPedidos
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(867, 465)
-		Me.Controls.Add(Me.dateTimePicker1)
+		Me.Controls.Add(Me.dTPBFecha)
 		Me.Controls.Add(Me.btnBuscar)
 		Me.Controls.Add(Me.cmbBusqueda)
-		Me.Controls.Add(Me.label1)
+		Me.Controls.Add(Me.lbltBuscar)
 		Me.Controls.Add(Me.btnActualizar)
 		Me.Controls.Add(Me.btnEliminar)
-		Me.Controls.Add(Me.dataGridView1)
+		Me.Controls.Add(Me.dGVPedidos)
 		Me.Controls.Add(Me.lblTitulo)
-		Me.Controls.Add(Me.labelCantidad)
+		Me.Controls.Add(Me.lbltCantidad)
 		Me.Controls.Add(Me.dTpFecha)
 		Me.Controls.Add(Me.numUDCantidadPedido)
 		Me.Controls.Add(Me.cmBTipoProducto)
@@ -312,17 +312,17 @@ Partial Class FrmPedidos
 		Me.Name = "FrmPedidos"
 		Me.Text = "FrmPedidos"
 		CType(Me.numUDCantidadPedido,System.ComponentModel.ISupportInitialize).EndInit
-		CType(Me.dataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.dGVPedidos,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
-	Private dateTimePicker1 As System.Windows.Forms.DateTimePicker
+	Private dTPBFecha As System.Windows.Forms.DateTimePicker
 	Private btnBuscar As System.Windows.Forms.Button
 	Private cmbBusqueda As System.Windows.Forms.ComboBox
-	Private label1 As System.Windows.Forms.Label
+	Private lbltBuscar As System.Windows.Forms.Label
 	Private btnActualizar As System.Windows.Forms.Button
 	Private btnEliminar As System.Windows.Forms.Button
-	Private dataGridView1 As System.Windows.Forms.DataGridView
+	Private dGVPedidos As System.Windows.Forms.DataGridView
 	Private lblTitulo As System.Windows.Forms.Label
 	Private txtClave As System.Windows.Forms.TextBox
 	Private txtPrecio As System.Windows.Forms.TextBox
@@ -334,5 +334,5 @@ Partial Class FrmPedidos
 	Private cmBTipoProducto As System.Windows.Forms.ComboBox
 	Private numUDCantidadPedido As System.Windows.Forms.NumericUpDown
 	Private dTpFecha As System.Windows.Forms.DateTimePicker
-	Private labelCantidad As System.Windows.Forms.Label
+	Private lbltCantidad As System.Windows.Forms.Label
 End Class

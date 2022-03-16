@@ -115,6 +115,10 @@
       <DependentUpon>FrmVentas.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Ventas\FrmVentas.vb" />
+    <Compile Include="Formularios\Ventas\FrmVerVentas.Designer.vb">
+      <DependentUpon>FrmVerVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\FrmVerVentas.vb" />
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>

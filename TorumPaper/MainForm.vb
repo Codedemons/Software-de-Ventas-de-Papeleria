@@ -123,24 +123,17 @@ Public Partial Class MainForm
 	End Sub
 	
 	Sub BtnProductosClick(sender As Object, e As EventArgs)
-		AbrirFormEnPanel(Of FrmRegistroPedido)()	
-	End Sub
-	
-	Sub BtnTProductosClick(sender As Object, e As EventArgs)
-		
+		AbrirFormEnPanel(Of FrmProductos)()	
 	End Sub
 	
 	Sub BtnVentasClick(sender As Object, e As EventArgs)
-		
+		AbrirFormEnPanel(Of FrmVerVentas)()	
 	End Sub
 	
 	Sub BtnProveedoresClick(sender As Object, e As EventArgs)
-		
+		AbrirFormEnPanel(Of FrmProveedores)()	
 	End Sub
 	
-	Sub BtnEmpleadosClick(sender As Object, e As EventArgs)
-		
-	End Sub
 	
 	#End Region
 	
