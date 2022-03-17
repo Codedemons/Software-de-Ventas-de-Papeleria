@@ -34,22 +34,22 @@ Partial Class FrmProductos
 	''' </summary>
 	Private Sub InitializeComponent()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProductos))
-		Me.labelStockDisponible = New System.Windows.Forms.Label()
-		Me.labelStockMaximo = New System.Windows.Forms.Label()
-		Me.labelStockMinimo = New System.Windows.Forms.Label()
-		Me.numericUpDown2 = New System.Windows.Forms.NumericUpDown()
-		Me.numericUpDown1 = New System.Windows.Forms.NumericUpDown()
-		Me.numUDCantidadPedido = New System.Windows.Forms.NumericUpDown()
-		Me.coBoxMarca = New System.Windows.Forms.ComboBox()
-		Me.coBoxTipo = New System.Windows.Forms.ComboBox()
+		Me.lblStockDisponible = New System.Windows.Forms.Label()
+		Me.lblStockMaximo = New System.Windows.Forms.Label()
+		Me.lblStockMinimo = New System.Windows.Forms.Label()
+		Me.nUDdis = New System.Windows.Forms.NumericUpDown()
+		Me.nUDSmax = New System.Windows.Forms.NumericUpDown()
+		Me.nUDSmin = New System.Windows.Forms.NumericUpDown()
+		Me.cmbMarca = New System.Windows.Forms.ComboBox()
+		Me.cmbTipo = New System.Windows.Forms.ComboBox()
 		Me.txtPrecio = New System.Windows.Forms.TextBox()
 		Me.txtDescripcion = New System.Windows.Forms.TextBox()
 		Me.txtClaveProducto = New System.Windows.Forms.TextBox()
 		Me.lblTitulo = New System.Windows.Forms.Label()
-		Me.comboBox4 = New System.Windows.Forms.ComboBox()
-		Me.comboBox5 = New System.Windows.Forms.ComboBox()
-		Me.textBox1 = New System.Windows.Forms.TextBox()
-		Me.comboBox6 = New System.Windows.Forms.ComboBox()
+		Me.cmbBMarca = New System.Windows.Forms.ComboBox()
+		Me.cmbBTipo = New System.Windows.Forms.ComboBox()
+		Me.txtBPrecio = New System.Windows.Forms.TextBox()
+		Me.cmbBSmin = New System.Windows.Forms.ComboBox()
 		Me.btnRegistrar = New System.Windows.Forms.Button()
 		Me.btnLimpiar = New System.Windows.Forms.Button()
 		Me.dGVProductos = New System.Windows.Forms.DataGridView()
@@ -57,106 +57,106 @@ Partial Class FrmProductos
 		Me.btnActualizar = New System.Windows.Forms.Button()
 		Me.lbltBuscar = New System.Windows.Forms.Label()
 		Me.btnBuscar = New System.Windows.Forms.Button()
-		CType(Me.numericUpDown2,System.ComponentModel.ISupportInitialize).BeginInit
-		CType(Me.numericUpDown1,System.ComponentModel.ISupportInitialize).BeginInit
-		CType(Me.numUDCantidadPedido,System.ComponentModel.ISupportInitialize).BeginInit
+		CType(Me.nUDdis,System.ComponentModel.ISupportInitialize).BeginInit
+		CType(Me.nUDSmax,System.ComponentModel.ISupportInitialize).BeginInit
+		CType(Me.nUDSmin,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.dGVProductos,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
-		'labelStockDisponible
+		'lblStockDisponible
 		'
-		Me.labelStockDisponible.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.labelStockDisponible.ForeColor = System.Drawing.Color.White
-		Me.labelStockDisponible.Location = New System.Drawing.Point(367, 189)
-		Me.labelStockDisponible.Name = "labelStockDisponible"
-		Me.labelStockDisponible.Size = New System.Drawing.Size(115, 30)
-		Me.labelStockDisponible.TabIndex = 88
-		Me.labelStockDisponible.Text = "Stock Disponible"
+		Me.lblStockDisponible.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.lblStockDisponible.ForeColor = System.Drawing.Color.White
+		Me.lblStockDisponible.Location = New System.Drawing.Point(367, 189)
+		Me.lblStockDisponible.Name = "lblStockDisponible"
+		Me.lblStockDisponible.Size = New System.Drawing.Size(115, 30)
+		Me.lblStockDisponible.TabIndex = 88
+		Me.lblStockDisponible.Text = "Stock Disponible"
 		'
-		'labelStockMaximo
+		'lblStockMaximo
 		'
-		Me.labelStockMaximo.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.labelStockMaximo.ForeColor = System.Drawing.Color.White
-		Me.labelStockMaximo.Location = New System.Drawing.Point(30, 186)
-		Me.labelStockMaximo.Name = "labelStockMaximo"
-		Me.labelStockMaximo.Size = New System.Drawing.Size(100, 30)
-		Me.labelStockMaximo.TabIndex = 87
-		Me.labelStockMaximo.Text = "Stock Máximo"
+		Me.lblStockMaximo.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.lblStockMaximo.ForeColor = System.Drawing.Color.White
+		Me.lblStockMaximo.Location = New System.Drawing.Point(30, 186)
+		Me.lblStockMaximo.Name = "lblStockMaximo"
+		Me.lblStockMaximo.Size = New System.Drawing.Size(100, 30)
+		Me.lblStockMaximo.TabIndex = 87
+		Me.lblStockMaximo.Text = "Stock Máximo"
 		'
-		'labelStockMinimo
+		'lblStockMinimo
 		'
-		Me.labelStockMinimo.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.labelStockMinimo.ForeColor = System.Drawing.Color.White
-		Me.labelStockMinimo.Location = New System.Drawing.Point(367, 153)
-		Me.labelStockMinimo.Name = "labelStockMinimo"
-		Me.labelStockMinimo.Size = New System.Drawing.Size(115, 30)
-		Me.labelStockMinimo.TabIndex = 86
-		Me.labelStockMinimo.Text = "Stock Mínimo"
+		Me.lblStockMinimo.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.lblStockMinimo.ForeColor = System.Drawing.Color.White
+		Me.lblStockMinimo.Location = New System.Drawing.Point(367, 153)
+		Me.lblStockMinimo.Name = "lblStockMinimo"
+		Me.lblStockMinimo.Size = New System.Drawing.Size(115, 30)
+		Me.lblStockMinimo.TabIndex = 86
+		Me.lblStockMinimo.Text = "Stock Mínimo"
 		'
-		'numericUpDown2
+		'nUDdis
 		'
-		Me.numericUpDown2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.numericUpDown2.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.numericUpDown2.ForeColor = System.Drawing.Color.White
-		Me.numericUpDown2.Location = New System.Drawing.Point(488, 189)
-		Me.numericUpDown2.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-		Me.numericUpDown2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-		Me.numericUpDown2.Name = "numericUpDown2"
-		Me.numericUpDown2.Size = New System.Drawing.Size(173, 30)
-		Me.numericUpDown2.TabIndex = 85
-		Me.numericUpDown2.Value = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDdis.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.nUDdis.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.nUDdis.ForeColor = System.Drawing.Color.White
+		Me.nUDdis.Location = New System.Drawing.Point(488, 189)
+		Me.nUDdis.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.nUDdis.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDdis.Name = "nUDdis"
+		Me.nUDdis.Size = New System.Drawing.Size(173, 30)
+		Me.nUDdis.TabIndex = 85
+		Me.nUDdis.Value = New Decimal(New Integer() {1, 0, 0, 0})
 		'
-		'numericUpDown1
+		'nUDSmax
 		'
-		Me.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.numericUpDown1.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.numericUpDown1.ForeColor = System.Drawing.Color.White
-		Me.numericUpDown1.Location = New System.Drawing.Point(151, 185)
-		Me.numericUpDown1.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-		Me.numericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-		Me.numericUpDown1.Name = "numericUpDown1"
-		Me.numericUpDown1.Size = New System.Drawing.Size(200, 30)
-		Me.numericUpDown1.TabIndex = 84
-		Me.numericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDSmax.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.nUDSmax.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.nUDSmax.ForeColor = System.Drawing.Color.White
+		Me.nUDSmax.Location = New System.Drawing.Point(151, 185)
+		Me.nUDSmax.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.nUDSmax.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDSmax.Name = "nUDSmax"
+		Me.nUDSmax.Size = New System.Drawing.Size(200, 30)
+		Me.nUDSmax.TabIndex = 84
+		Me.nUDSmax.Value = New Decimal(New Integer() {1, 0, 0, 0})
 		'
-		'numUDCantidadPedido
+		'nUDSmin
 		'
-		Me.numUDCantidadPedido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.numUDCantidadPedido.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.numUDCantidadPedido.ForeColor = System.Drawing.Color.White
-		Me.numUDCantidadPedido.Location = New System.Drawing.Point(488, 153)
-		Me.numUDCantidadPedido.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-		Me.numUDCantidadPedido.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-		Me.numUDCantidadPedido.Name = "numUDCantidadPedido"
-		Me.numUDCantidadPedido.Size = New System.Drawing.Size(173, 30)
-		Me.numUDCantidadPedido.TabIndex = 83
-		Me.numUDCantidadPedido.Value = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDSmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.nUDSmin.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.nUDSmin.ForeColor = System.Drawing.Color.White
+		Me.nUDSmin.Location = New System.Drawing.Point(488, 153)
+		Me.nUDSmin.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.nUDSmin.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDSmin.Name = "nUDSmin"
+		Me.nUDSmin.Size = New System.Drawing.Size(173, 30)
+		Me.nUDSmin.TabIndex = 83
+		Me.nUDSmin.Value = New Decimal(New Integer() {1, 0, 0, 0})
 		'
-		'coBoxMarca
+		'cmbMarca
 		'
-		Me.coBoxMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.coBoxMarca.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.coBoxMarca.ForeColor = System.Drawing.Color.LightGray
-		Me.coBoxMarca.FormattingEnabled = true
-		Me.coBoxMarca.Items.AddRange(New Object() {"BIC", "AZOR", "CRAYOLA", "MAPITA"})
-		Me.coBoxMarca.Location = New System.Drawing.Point(30, 111)
-		Me.coBoxMarca.Name = "coBoxMarca"
-		Me.coBoxMarca.Size = New System.Drawing.Size(321, 33)
-		Me.coBoxMarca.TabIndex = 82
-		Me.coBoxMarca.Text = "Marca"
+		Me.cmbMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbMarca.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.cmbMarca.ForeColor = System.Drawing.Color.LightGray
+		Me.cmbMarca.FormattingEnabled = true
+		Me.cmbMarca.Items.AddRange(New Object() {"BIC", "AZOR", "CRAYOLA", "MAPITA"})
+		Me.cmbMarca.Location = New System.Drawing.Point(30, 111)
+		Me.cmbMarca.Name = "cmbMarca"
+		Me.cmbMarca.Size = New System.Drawing.Size(321, 33)
+		Me.cmbMarca.TabIndex = 82
+		Me.cmbMarca.Text = "Marca"
 		'
-		'coBoxTipo
+		'cmbTipo
 		'
-		Me.coBoxTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.coBoxTipo.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.coBoxTipo.ForeColor = System.Drawing.Color.LightGray
-		Me.coBoxTipo.FormattingEnabled = true
-		Me.coBoxTipo.Items.AddRange(New Object() {"LÁPIZ", "BOLÍGRAFO", "CARPETA", "GRAPA", "HOJA BLANCA"})
-		Me.coBoxTipo.Location = New System.Drawing.Point(367, 72)
-		Me.coBoxTipo.Name = "coBoxTipo"
-		Me.coBoxTipo.Size = New System.Drawing.Size(294, 33)
-		Me.coBoxTipo.TabIndex = 81
-		Me.coBoxTipo.Text = "Tipo"
+		Me.cmbTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbTipo.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.cmbTipo.ForeColor = System.Drawing.Color.LightGray
+		Me.cmbTipo.FormattingEnabled = true
+		Me.cmbTipo.Items.AddRange(New Object() {"LÁPIZ", "BOLÍGRAFO", "CARPETA", "GRAPA", "HOJA BLANCA"})
+		Me.cmbTipo.Location = New System.Drawing.Point(367, 72)
+		Me.cmbTipo.Name = "cmbTipo"
+		Me.cmbTipo.Size = New System.Drawing.Size(294, 33)
+		Me.cmbTipo.TabIndex = 81
+		Me.cmbTipo.Text = "Tipo"
 		'
 		'txtPrecio
 		'
@@ -203,56 +203,56 @@ Partial Class FrmProductos
 		Me.lblTitulo.Text = "Productos TorumPaper"
 		Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
-		'comboBox4
+		'cmbBMarca
 		'
-		Me.comboBox4.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.comboBox4.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.comboBox4.ForeColor = System.Drawing.Color.White
-		Me.comboBox4.FormattingEnabled = true
-		Me.comboBox4.Items.AddRange(New Object() {"Stock Mínimo", "Stock Disponible", "Stock Máximo"})
-		Me.comboBox4.Location = New System.Drawing.Point(151, 245)
-		Me.comboBox4.Name = "comboBox4"
-		Me.comboBox4.Size = New System.Drawing.Size(106, 32)
-		Me.comboBox4.TabIndex = 107
-		Me.comboBox4.Text = "Marca"
+		Me.cmbBMarca.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbBMarca.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.cmbBMarca.ForeColor = System.Drawing.Color.White
+		Me.cmbBMarca.FormattingEnabled = true
+		Me.cmbBMarca.Items.AddRange(New Object() {"Stock Mínimo", "Stock Disponible", "Stock Máximo"})
+		Me.cmbBMarca.Location = New System.Drawing.Point(151, 245)
+		Me.cmbBMarca.Name = "cmbBMarca"
+		Me.cmbBMarca.Size = New System.Drawing.Size(106, 32)
+		Me.cmbBMarca.TabIndex = 107
+		Me.cmbBMarca.Text = "Marca"
 		'
-		'comboBox5
+		'cmbBTipo
 		'
-		Me.comboBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.comboBox5.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.comboBox5.ForeColor = System.Drawing.Color.White
-		Me.comboBox5.FormattingEnabled = true
-		Me.comboBox5.Items.AddRange(New Object() {"Stock Mínimo", "Stock Disponible", "Stock Máximo"})
-		Me.comboBox5.Location = New System.Drawing.Point(263, 245)
-		Me.comboBox5.Name = "comboBox5"
-		Me.comboBox5.Size = New System.Drawing.Size(115, 32)
-		Me.comboBox5.TabIndex = 106
-		Me.comboBox5.Text = "Tipo"
+		Me.cmbBTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbBTipo.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.cmbBTipo.ForeColor = System.Drawing.Color.White
+		Me.cmbBTipo.FormattingEnabled = true
+		Me.cmbBTipo.Items.AddRange(New Object() {"Stock Mínimo", "Stock Disponible", "Stock Máximo"})
+		Me.cmbBTipo.Location = New System.Drawing.Point(263, 245)
+		Me.cmbBTipo.Name = "cmbBTipo"
+		Me.cmbBTipo.Size = New System.Drawing.Size(115, 32)
+		Me.cmbBTipo.TabIndex = 106
+		Me.cmbBTipo.Text = "Tipo"
 		'
-		'textBox1
+		'txtBPrecio
 		'
-		Me.textBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.textBox1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.textBox1.ForeColor = System.Drawing.Color.White
-		Me.textBox1.Location = New System.Drawing.Point(384, 247)
-		Me.textBox1.Name = "textBox1"
-		Me.textBox1.Size = New System.Drawing.Size(130, 30)
-		Me.textBox1.TabIndex = 105
-		Me.textBox1.Text = "Precio"
-		Me.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+		Me.txtBPrecio.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.txtBPrecio.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.txtBPrecio.ForeColor = System.Drawing.Color.White
+		Me.txtBPrecio.Location = New System.Drawing.Point(384, 247)
+		Me.txtBPrecio.Name = "txtBPrecio"
+		Me.txtBPrecio.Size = New System.Drawing.Size(130, 30)
+		Me.txtBPrecio.TabIndex = 105
+		Me.txtBPrecio.Text = "Precio"
+		Me.txtBPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
 		'
-		'comboBox6
+		'cmbBSmin
 		'
-		Me.comboBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.comboBox6.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.comboBox6.ForeColor = System.Drawing.Color.White
-		Me.comboBox6.FormattingEnabled = true
-		Me.comboBox6.Items.AddRange(New Object() {"Stock Mínimo", "Stock Disponible", "Stock Máximo"})
-		Me.comboBox6.Location = New System.Drawing.Point(520, 247)
-		Me.comboBox6.Name = "comboBox6"
-		Me.comboBox6.Size = New System.Drawing.Size(114, 32)
-		Me.comboBox6.TabIndex = 104
-		Me.comboBox6.Text = "Stock Mínimo"
+		Me.cmbBSmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbBSmin.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.cmbBSmin.ForeColor = System.Drawing.Color.White
+		Me.cmbBSmin.FormattingEnabled = true
+		Me.cmbBSmin.Items.AddRange(New Object() {"Stock Mínimo", "Stock Disponible", "Stock Máximo"})
+		Me.cmbBSmin.Location = New System.Drawing.Point(520, 247)
+		Me.cmbBSmin.Name = "cmbBSmin"
+		Me.cmbBSmin.Size = New System.Drawing.Size(114, 32)
+		Me.cmbBSmin.TabIndex = 104
+		Me.cmbBSmin.Text = "Stock Mínimo"
 		'
 		'btnRegistrar
 		'
@@ -349,10 +349,10 @@ Partial Class FrmProductos
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(857, 465)
-		Me.Controls.Add(Me.comboBox4)
-		Me.Controls.Add(Me.comboBox5)
-		Me.Controls.Add(Me.textBox1)
-		Me.Controls.Add(Me.comboBox6)
+		Me.Controls.Add(Me.cmbBMarca)
+		Me.Controls.Add(Me.cmbBTipo)
+		Me.Controls.Add(Me.txtBPrecio)
+		Me.Controls.Add(Me.cmbBSmin)
 		Me.Controls.Add(Me.btnBuscar)
 		Me.Controls.Add(Me.lbltBuscar)
 		Me.Controls.Add(Me.btnActualizar)
@@ -361,30 +361,30 @@ Partial Class FrmProductos
 		Me.Controls.Add(Me.btnLimpiar)
 		Me.Controls.Add(Me.btnRegistrar)
 		Me.Controls.Add(Me.lblTitulo)
-		Me.Controls.Add(Me.labelStockDisponible)
-		Me.Controls.Add(Me.labelStockMaximo)
-		Me.Controls.Add(Me.labelStockMinimo)
-		Me.Controls.Add(Me.numericUpDown2)
-		Me.Controls.Add(Me.numericUpDown1)
-		Me.Controls.Add(Me.numUDCantidadPedido)
-		Me.Controls.Add(Me.coBoxMarca)
-		Me.Controls.Add(Me.coBoxTipo)
+		Me.Controls.Add(Me.lblStockDisponible)
+		Me.Controls.Add(Me.lblStockMaximo)
+		Me.Controls.Add(Me.lblStockMinimo)
+		Me.Controls.Add(Me.nUDdis)
+		Me.Controls.Add(Me.nUDSmax)
+		Me.Controls.Add(Me.nUDSmin)
+		Me.Controls.Add(Me.cmbMarca)
+		Me.Controls.Add(Me.cmbTipo)
 		Me.Controls.Add(Me.txtPrecio)
 		Me.Controls.Add(Me.txtDescripcion)
 		Me.Controls.Add(Me.txtClaveProducto)
 		Me.Name = "FrmProductos"
 		Me.Text = "FrmProductos"
-		CType(Me.numericUpDown2,System.ComponentModel.ISupportInitialize).EndInit
-		CType(Me.numericUpDown1,System.ComponentModel.ISupportInitialize).EndInit
-		CType(Me.numUDCantidadPedido,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.nUDdis,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.nUDSmax,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.nUDSmin,System.ComponentModel.ISupportInitialize).EndInit
 		CType(Me.dGVProductos,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
-	Private comboBox6 As System.Windows.Forms.ComboBox
-	Private textBox1 As System.Windows.Forms.TextBox
-	Private comboBox5 As System.Windows.Forms.ComboBox
-	Private comboBox4 As System.Windows.Forms.ComboBox
+	Private cmbBSmin As System.Windows.Forms.ComboBox
+	Private txtBPrecio As System.Windows.Forms.TextBox
+	Private cmbBTipo As System.Windows.Forms.ComboBox
+	Private cmbBMarca As System.Windows.Forms.ComboBox
 	Private dGVProductos As System.Windows.Forms.DataGridView
 	Private btnEliminar As System.Windows.Forms.Button
 	Private btnActualizar As System.Windows.Forms.Button
@@ -396,12 +396,12 @@ Partial Class FrmProductos
 	Private txtPrecio As System.Windows.Forms.TextBox
 	Private btnRegistrar As System.Windows.Forms.Button
 	Private btnLimpiar As System.Windows.Forms.Button
-	Private coBoxTipo As System.Windows.Forms.ComboBox
-	Private coBoxMarca As System.Windows.Forms.ComboBox
-	Private numUDCantidadPedido As System.Windows.Forms.NumericUpDown
-	Private numericUpDown1 As System.Windows.Forms.NumericUpDown
-	Private numericUpDown2 As System.Windows.Forms.NumericUpDown
-	Private labelStockMinimo As System.Windows.Forms.Label
-	Private labelStockMaximo As System.Windows.Forms.Label
-	Private labelStockDisponible As System.Windows.Forms.Label
+	Private cmbTipo As System.Windows.Forms.ComboBox
+	Private cmbMarca As System.Windows.Forms.ComboBox
+	Private nUDSmin As System.Windows.Forms.NumericUpDown
+	Private nUDSmax As System.Windows.Forms.NumericUpDown
+	Private nUDdis As System.Windows.Forms.NumericUpDown
+	Private lblStockMinimo As System.Windows.Forms.Label
+	Private lblStockMaximo As System.Windows.Forms.Label
+	Private lblStockDisponible As System.Windows.Forms.Label
 End Class

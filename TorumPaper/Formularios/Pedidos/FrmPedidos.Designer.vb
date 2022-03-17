@@ -36,7 +36,7 @@ Partial Class FrmPedidos
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPedidos))
 		Me.lbltCantidad = New System.Windows.Forms.Label()
 		Me.dTpFecha = New System.Windows.Forms.DateTimePicker()
-		Me.numUDCantidadPedido = New System.Windows.Forms.NumericUpDown()
+		Me.nUDCantidadPedido = New System.Windows.Forms.NumericUpDown()
 		Me.cmBTipoProducto = New System.Windows.Forms.ComboBox()
 		Me.cmBMarca = New System.Windows.Forms.ComboBox()
 		Me.cmbProductos = New System.Windows.Forms.ComboBox()
@@ -53,7 +53,7 @@ Partial Class FrmPedidos
 		Me.cmbBusqueda = New System.Windows.Forms.ComboBox()
 		Me.btnBuscar = New System.Windows.Forms.Button()
 		Me.dTPBFecha = New System.Windows.Forms.DateTimePicker()
-		CType(Me.numUDCantidadPedido,System.ComponentModel.ISupportInitialize).BeginInit
+		CType(Me.nUDCantidadPedido,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.dGVPedidos,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
@@ -76,18 +76,18 @@ Partial Class FrmPedidos
 		Me.dTpFecha.Size = New System.Drawing.Size(287, 33)
 		Me.dTpFecha.TabIndex = 86
 		'
-		'numUDCantidadPedido
+		'nUDCantidadPedido
 		'
-		Me.numUDCantidadPedido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.numUDCantidadPedido.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.numUDCantidadPedido.ForeColor = System.Drawing.Color.White
-		Me.numUDCantidadPedido.Location = New System.Drawing.Point(460, 148)
-		Me.numUDCantidadPedido.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-		Me.numUDCantidadPedido.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-		Me.numUDCantidadPedido.Name = "numUDCantidadPedido"
-		Me.numUDCantidadPedido.Size = New System.Drawing.Size(194, 30)
-		Me.numUDCantidadPedido.TabIndex = 85
-		Me.numUDCantidadPedido.Value = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDCantidadPedido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.nUDCantidadPedido.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.nUDCantidadPedido.ForeColor = System.Drawing.Color.White
+		Me.nUDCantidadPedido.Location = New System.Drawing.Point(460, 148)
+		Me.nUDCantidadPedido.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.nUDCantidadPedido.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDCantidadPedido.Name = "nUDCantidadPedido"
+		Me.nUDCantidadPedido.Size = New System.Drawing.Size(194, 30)
+		Me.nUDCantidadPedido.TabIndex = 85
+		Me.nUDCantidadPedido.Value = New Decimal(New Integer() {1, 0, 0, 0})
 		'
 		'cmBTipoProducto
 		'
@@ -300,7 +300,7 @@ Partial Class FrmPedidos
 		Me.Controls.Add(Me.lblTitulo)
 		Me.Controls.Add(Me.lbltCantidad)
 		Me.Controls.Add(Me.dTpFecha)
-		Me.Controls.Add(Me.numUDCantidadPedido)
+		Me.Controls.Add(Me.nUDCantidadPedido)
 		Me.Controls.Add(Me.cmBTipoProducto)
 		Me.Controls.Add(Me.cmBMarca)
 		Me.Controls.Add(Me.cmbProductos)
@@ -311,7 +311,7 @@ Partial Class FrmPedidos
 		Me.Controls.Add(Me.txtClave)
 		Me.Name = "FrmPedidos"
 		Me.Text = "FrmPedidos"
-		CType(Me.numUDCantidadPedido,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.nUDCantidadPedido,System.ComponentModel.ISupportInitialize).EndInit
 		CType(Me.dGVPedidos,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
@@ -332,7 +332,7 @@ Partial Class FrmPedidos
 	Private cmbProductos As System.Windows.Forms.ComboBox
 	Private cmBMarca As System.Windows.Forms.ComboBox
 	Private cmBTipoProducto As System.Windows.Forms.ComboBox
-	Private numUDCantidadPedido As System.Windows.Forms.NumericUpDown
+	Private nUDCantidadPedido As System.Windows.Forms.NumericUpDown
 	Private dTpFecha As System.Windows.Forms.DateTimePicker
 	Private lbltCantidad As System.Windows.Forms.Label
 End Class

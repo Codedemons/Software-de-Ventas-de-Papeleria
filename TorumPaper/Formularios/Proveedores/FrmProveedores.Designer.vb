@@ -35,8 +35,8 @@ Partial Class FrmProveedores
 	Private Sub InitializeComponent()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProveedores))
 		Me.lblTitulo = New System.Windows.Forms.Label()
-		Me.labelCalificacion = New System.Windows.Forms.Label()
-		Me.numUDCalificacion = New System.Windows.Forms.NumericUpDown()
+		Me.lblCalificacion = New System.Windows.Forms.Label()
+		Me.nUDCalificacion = New System.Windows.Forms.NumericUpDown()
 		Me.txtTelefono = New System.Windows.Forms.TextBox()
 		Me.txtCorreo = New System.Windows.Forms.TextBox()
 		Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -48,10 +48,10 @@ Partial Class FrmProveedores
 		Me.dGVProveedores = New System.Windows.Forms.DataGridView()
 		Me.btnLimpiar = New System.Windows.Forms.Button()
 		Me.btnRegistrar = New System.Windows.Forms.Button()
-		Me.textBox1 = New System.Windows.Forms.TextBox()
-		Me.comboBox1 = New System.Windows.Forms.ComboBox()
-		Me.textBoxFiltroNombreProveedor = New System.Windows.Forms.TextBox()
-		CType(Me.numUDCalificacion,System.ComponentModel.ISupportInitialize).BeginInit
+		Me.txtBRFC = New System.Windows.Forms.TextBox()
+		Me.cmbCalifAsc = New System.Windows.Forms.ComboBox()
+		Me.txtNombreProv = New System.Windows.Forms.TextBox()
+		CType(Me.nUDCalificacion,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.dGVProveedores,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
@@ -67,26 +67,26 @@ Partial Class FrmProveedores
 		Me.lblTitulo.Text = "Proveedores  TorumPaper"
 		Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
-		'labelCalificacion
+		'lblCalificacion
 		'
-		Me.labelCalificacion.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.labelCalificacion.ForeColor = System.Drawing.Color.White
-		Me.labelCalificacion.Location = New System.Drawing.Point(21, 154)
-		Me.labelCalificacion.Name = "labelCalificacion"
-		Me.labelCalificacion.Size = New System.Drawing.Size(100, 30)
-		Me.labelCalificacion.TabIndex = 95
-		Me.labelCalificacion.Text = "Calificacion"
+		Me.lblCalificacion.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.lblCalificacion.ForeColor = System.Drawing.Color.White
+		Me.lblCalificacion.Location = New System.Drawing.Point(21, 154)
+		Me.lblCalificacion.Name = "lblCalificacion"
+		Me.lblCalificacion.Size = New System.Drawing.Size(100, 30)
+		Me.lblCalificacion.TabIndex = 95
+		Me.lblCalificacion.Text = "Calificacion"
 		'
-		'numUDCalificacion
+		'nUDCalificacion
 		'
-		Me.numUDCalificacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.numUDCalificacion.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.numUDCalificacion.ForeColor = System.Drawing.Color.White
-		Me.numUDCalificacion.Location = New System.Drawing.Point(138, 153)
-		Me.numUDCalificacion.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
-		Me.numUDCalificacion.Name = "numUDCalificacion"
-		Me.numUDCalificacion.Size = New System.Drawing.Size(184, 30)
-		Me.numUDCalificacion.TabIndex = 94
+		Me.nUDCalificacion.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.nUDCalificacion.Font = New System.Drawing.Font("Agency FB", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.nUDCalificacion.ForeColor = System.Drawing.Color.White
+		Me.nUDCalificacion.Location = New System.Drawing.Point(138, 153)
+		Me.nUDCalificacion.Maximum = New Decimal(New Integer() {10, 0, 0, 0})
+		Me.nUDCalificacion.Name = "nUDCalificacion"
+		Me.nUDCalificacion.Size = New System.Drawing.Size(184, 30)
+		Me.nUDCalificacion.TabIndex = 94
 		'
 		'txtTelefono
 		'
@@ -223,52 +223,52 @@ Partial Class FrmProveedores
 		Me.btnRegistrar.UseVisualStyleBackColor = false
 		AddHandler Me.btnRegistrar.Click, AddressOf Me.BtnRegistrarClick
 		'
-		'textBox1
+		'txtBRFC
 		'
-		Me.textBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.textBox1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.textBox1.ForeColor = System.Drawing.Color.White
-		Me.textBox1.Location = New System.Drawing.Point(129, 211)
-		Me.textBox1.Name = "textBox1"
-		Me.textBox1.Size = New System.Drawing.Size(177, 30)
-		Me.textBox1.TabIndex = 113
-		Me.textBox1.Text = "RFC"
-		Me.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+		Me.txtBRFC.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.txtBRFC.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.txtBRFC.ForeColor = System.Drawing.Color.White
+		Me.txtBRFC.Location = New System.Drawing.Point(129, 211)
+		Me.txtBRFC.Name = "txtBRFC"
+		Me.txtBRFC.Size = New System.Drawing.Size(177, 30)
+		Me.txtBRFC.TabIndex = 113
+		Me.txtBRFC.Text = "RFC"
+		Me.txtBRFC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
 		'
-		'comboBox1
+		'cmbCalifAsc
 		'
-		Me.comboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.comboBox1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.comboBox1.ForeColor = System.Drawing.Color.White
-		Me.comboBox1.FormattingEnabled = true
-		Me.comboBox1.Items.AddRange(New Object() {"Calificación Ascendente", "Calificación Descendente"})
-		Me.comboBox1.Location = New System.Drawing.Point(465, 211)
-		Me.comboBox1.Name = "comboBox1"
-		Me.comboBox1.Size = New System.Drawing.Size(175, 32)
-		Me.comboBox1.TabIndex = 112
-		Me.comboBox1.Text = "Calificación Ascendente"
+		Me.cmbCalifAsc.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbCalifAsc.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.cmbCalifAsc.ForeColor = System.Drawing.Color.White
+		Me.cmbCalifAsc.FormattingEnabled = true
+		Me.cmbCalifAsc.Items.AddRange(New Object() {"Calificación Ascendente", "Calificación Descendente"})
+		Me.cmbCalifAsc.Location = New System.Drawing.Point(465, 211)
+		Me.cmbCalifAsc.Name = "cmbCalifAsc"
+		Me.cmbCalifAsc.Size = New System.Drawing.Size(175, 32)
+		Me.cmbCalifAsc.TabIndex = 112
+		Me.cmbCalifAsc.Text = "Calificación Ascendente"
 		'
-		'textBoxFiltroNombreProveedor
+		'txtNombreProv
 		'
-		Me.textBoxFiltroNombreProveedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.textBoxFiltroNombreProveedor.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.textBoxFiltroNombreProveedor.ForeColor = System.Drawing.Color.White
-		Me.textBoxFiltroNombreProveedor.Location = New System.Drawing.Point(312, 211)
-		Me.textBoxFiltroNombreProveedor.Name = "textBoxFiltroNombreProveedor"
-		Me.textBoxFiltroNombreProveedor.Size = New System.Drawing.Size(147, 30)
-		Me.textBoxFiltroNombreProveedor.TabIndex = 111
-		Me.textBoxFiltroNombreProveedor.Text = "Nombre"
-		Me.textBoxFiltroNombreProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-		AddHandler Me.textBoxFiltroNombreProveedor.TextChanged, AddressOf Me.TextBoxFiltroNombreProveedorTextChanged
+		Me.txtNombreProv.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.txtNombreProv.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.txtNombreProv.ForeColor = System.Drawing.Color.White
+		Me.txtNombreProv.Location = New System.Drawing.Point(312, 211)
+		Me.txtNombreProv.Name = "txtNombreProv"
+		Me.txtNombreProv.Size = New System.Drawing.Size(147, 30)
+		Me.txtNombreProv.TabIndex = 111
+		Me.txtNombreProv.Text = "Nombre"
+		Me.txtNombreProv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+		AddHandler Me.txtNombreProv.TextChanged, AddressOf Me.TextBoxFiltroNombreProveedorTextChanged
 		'
 		'FrmProveedores
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(886, 465)
-		Me.Controls.Add(Me.textBox1)
-		Me.Controls.Add(Me.comboBox1)
-		Me.Controls.Add(Me.textBoxFiltroNombreProveedor)
+		Me.Controls.Add(Me.txtBRFC)
+		Me.Controls.Add(Me.cmbCalifAsc)
+		Me.Controls.Add(Me.txtNombreProv)
 		Me.Controls.Add(Me.btnBuscar)
 		Me.Controls.Add(Me.lbltBuscar)
 		Me.Controls.Add(Me.btnActualizar)
@@ -276,8 +276,8 @@ Partial Class FrmProveedores
 		Me.Controls.Add(Me.dGVProveedores)
 		Me.Controls.Add(Me.btnLimpiar)
 		Me.Controls.Add(Me.btnRegistrar)
-		Me.Controls.Add(Me.labelCalificacion)
-		Me.Controls.Add(Me.numUDCalificacion)
+		Me.Controls.Add(Me.lblCalificacion)
+		Me.Controls.Add(Me.nUDCalificacion)
 		Me.Controls.Add(Me.txtTelefono)
 		Me.Controls.Add(Me.txtCorreo)
 		Me.Controls.Add(Me.txtNombre)
@@ -286,14 +286,14 @@ Partial Class FrmProveedores
 		Me.Name = "FrmProveedores"
 		Me.Text = "FrmProveedores"
 		AddHandler Load, AddressOf Me.FrmProveedoresLoad
-		CType(Me.numUDCalificacion,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.nUDCalificacion,System.ComponentModel.ISupportInitialize).EndInit
 		CType(Me.dGVProveedores,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
-	Private textBoxFiltroNombreProveedor As System.Windows.Forms.TextBox
-	Private comboBox1 As System.Windows.Forms.ComboBox
-	Private textBox1 As System.Windows.Forms.TextBox
+	Private txtNombreProv As System.Windows.Forms.TextBox
+	Private cmbCalifAsc As System.Windows.Forms.ComboBox
+	Private txtBRFC As System.Windows.Forms.TextBox
 	Private btnRegistrar As System.Windows.Forms.Button
 	Private btnLimpiar As System.Windows.Forms.Button
 	Private dGVProveedores As System.Windows.Forms.DataGridView
@@ -305,7 +305,7 @@ Partial Class FrmProveedores
 	Private txtNombre As System.Windows.Forms.TextBox
 	Private txtCorreo As System.Windows.Forms.TextBox
 	Private txtTelefono As System.Windows.Forms.TextBox
-	Private numUDCalificacion As System.Windows.Forms.NumericUpDown
-	Private labelCalificacion As System.Windows.Forms.Label
+	Private nUDCalificacion As System.Windows.Forms.NumericUpDown
+	Private lblCalificacion As System.Windows.Forms.Label
 	Private lblTitulo As System.Windows.Forms.Label
 End Class

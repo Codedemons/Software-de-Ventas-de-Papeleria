@@ -37,15 +37,15 @@ Partial Class FrmTipoProducto
 		Me.lblTitulo = New System.Windows.Forms.Label()
 		Me.txtDescripcion = New System.Windows.Forms.TextBox()
 		Me.txtClaveMarca = New System.Windows.Forms.TextBox()
-		Me.comboBox5 = New System.Windows.Forms.ComboBox()
+		Me.cmbDescripcion = New System.Windows.Forms.ComboBox()
 		Me.btnBuscar = New System.Windows.Forms.Button()
 		Me.lbltBuscar = New System.Windows.Forms.Label()
 		Me.btnActualizar = New System.Windows.Forms.Button()
 		Me.btnEliminar = New System.Windows.Forms.Button()
-		Me.dGVProductos = New System.Windows.Forms.DataGridView()
+		Me.dGVTipProductos = New System.Windows.Forms.DataGridView()
 		Me.btnLimpiar = New System.Windows.Forms.Button()
 		Me.btnRegistrar = New System.Windows.Forms.Button()
-		CType(Me.dGVProductos,System.ComponentModel.ISupportInitialize).BeginInit
+		CType(Me.dGVTipProductos,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
 		'lblTitulo
@@ -83,18 +83,18 @@ Partial Class FrmTipoProducto
 		Me.txtClaveMarca.Text = "Clave"
 		AddHandler Me.txtClaveMarca.TextChanged, AddressOf Me.TxtClaveMarcaTextChanged
 		'
-		'comboBox5
+		'cmbDescripcion
 		'
-		Me.comboBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.comboBox5.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.comboBox5.ForeColor = System.Drawing.Color.White
-		Me.comboBox5.FormattingEnabled = true
-		Me.comboBox5.Items.AddRange(New Object() {"Stock Mínimo", "Stock Disponible", "Stock Máximo"})
-		Me.comboBox5.Location = New System.Drawing.Point(118, 210)
-		Me.comboBox5.Name = "comboBox5"
-		Me.comboBox5.Size = New System.Drawing.Size(513, 32)
-		Me.comboBox5.TabIndex = 114
-		Me.comboBox5.Text = "Descripcion"
+		Me.cmbDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbDescripcion.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.cmbDescripcion.ForeColor = System.Drawing.Color.White
+		Me.cmbDescripcion.FormattingEnabled = true
+		Me.cmbDescripcion.Items.AddRange(New Object() {"Stock Mínimo", "Stock Disponible", "Stock Máximo"})
+		Me.cmbDescripcion.Location = New System.Drawing.Point(118, 210)
+		Me.cmbDescripcion.Name = "cmbDescripcion"
+		Me.cmbDescripcion.Size = New System.Drawing.Size(513, 32)
+		Me.cmbDescripcion.TabIndex = 114
+		Me.cmbDescripcion.Text = "Descripcion"
 		'
 		'btnBuscar
 		'
@@ -149,14 +149,14 @@ Partial Class FrmTipoProducto
 		Me.btnEliminar.Text = "Eliminar"
 		Me.btnEliminar.UseVisualStyleBackColor = false
 		'
-		'dGVProductos
+		'dGVTipProductos
 		'
-		Me.dGVProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.dGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		Me.dGVProductos.Location = New System.Drawing.Point(25, 248)
-		Me.dGVProductos.Name = "dGVProductos"
-		Me.dGVProductos.Size = New System.Drawing.Size(606, 180)
-		Me.dGVProductos.TabIndex = 109
+		Me.dGVTipProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.dGVTipProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+		Me.dGVTipProductos.Location = New System.Drawing.Point(25, 248)
+		Me.dGVTipProductos.Name = "dGVTipProductos"
+		Me.dGVTipProductos.Size = New System.Drawing.Size(606, 180)
+		Me.dGVTipProductos.TabIndex = 109
 		'
 		'btnLimpiar
 		'
@@ -191,12 +191,12 @@ Partial Class FrmTipoProducto
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(867, 465)
-		Me.Controls.Add(Me.comboBox5)
+		Me.Controls.Add(Me.cmbDescripcion)
 		Me.Controls.Add(Me.btnBuscar)
 		Me.Controls.Add(Me.lbltBuscar)
 		Me.Controls.Add(Me.btnActualizar)
 		Me.Controls.Add(Me.btnEliminar)
-		Me.Controls.Add(Me.dGVProductos)
+		Me.Controls.Add(Me.dGVTipProductos)
 		Me.Controls.Add(Me.btnLimpiar)
 		Me.Controls.Add(Me.btnRegistrar)
 		Me.Controls.Add(Me.txtDescripcion)
@@ -204,18 +204,18 @@ Partial Class FrmTipoProducto
 		Me.Controls.Add(Me.lblTitulo)
 		Me.Name = "FrmTipoProducto"
 		Me.Text = "FrmTipoProducto"
-		CType(Me.dGVProductos,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.dGVTipProductos,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
 	Private btnRegistrar As System.Windows.Forms.Button
 	Private btnLimpiar As System.Windows.Forms.Button
-	Private dGVProductos As System.Windows.Forms.DataGridView
+	Private dGVTipProductos As System.Windows.Forms.DataGridView
 	Private btnEliminar As System.Windows.Forms.Button
 	Private btnActualizar As System.Windows.Forms.Button
 	Private lbltBuscar As System.Windows.Forms.Label
 	Private btnBuscar As System.Windows.Forms.Button
-	Private comboBox5 As System.Windows.Forms.ComboBox
+	Private cmbDescripcion As System.Windows.Forms.ComboBox
 	Private txtClaveMarca As System.Windows.Forms.TextBox
 	Private txtDescripcion As System.Windows.Forms.TextBox
 	Private lblTitulo As System.Windows.Forms.Label
