@@ -35,17 +35,19 @@ Partial Class FrmTipoProducto
 	Private Sub InitializeComponent()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoProducto))
 		Dim dataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
 		Me.lblTitulo = New System.Windows.Forms.Label()
 		Me.txtDescripcion = New System.Windows.Forms.TextBox()
 		Me.txtClaveTipo = New System.Windows.Forms.TextBox()
-		Me.btnLimpiar = New System.Windows.Forms.Button()
 		Me.btnRegistrar = New System.Windows.Forms.Button()
 		Me.btnEliminar = New System.Windows.Forms.Button()
-		Me.btnActualizar = New System.Windows.Forms.Button()
 		Me.lbltBuscar = New System.Windows.Forms.Label()
-		Me.btnBuscar = New System.Windows.Forms.Button()
+		Me.btnModificar = New System.Windows.Forms.Button()
 		Me.dGVTipProductos = New System.Windows.Forms.DataGridView()
 		Me.textBclave = New System.Windows.Forms.TextBox()
+		Me.txtDesc = New System.Windows.Forms.TextBox()
 		CType(Me.dGVTipProductos,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
@@ -71,6 +73,7 @@ Partial Class FrmTipoProducto
 		Me.txtDescripcion.Size = New System.Drawing.Size(606, 33)
 		Me.txtDescripcion.TabIndex = 91
 		Me.txtDescripcion.Text = "Descripcion"
+		AddHandler Me.txtDescripcion.Click, AddressOf Me.TxtDescripcionClick
 		'
 		'txtClaveTipo
 		'
@@ -82,21 +85,8 @@ Partial Class FrmTipoProducto
 		Me.txtClaveTipo.Size = New System.Drawing.Size(606, 33)
 		Me.txtClaveTipo.TabIndex = 90
 		Me.txtClaveTipo.Text = "Clave"
+		AddHandler Me.txtClaveTipo.Click, AddressOf Me.TxtClaveTipoClick
 		AddHandler Me.txtClaveTipo.TextChanged, AddressOf Me.TxtClaveMarcaTextChanged
-		'
-		'btnLimpiar
-		'
-		Me.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.btnLimpiar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.btnLimpiar.ForeColor = System.Drawing.Color.White
-		Me.btnLimpiar.Image = CType(resources.GetObject("btnLimpiar.Image"),System.Drawing.Image)
-		Me.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnLimpiar.Location = New System.Drawing.Point(650, 135)
-		Me.btnLimpiar.Name = "btnLimpiar"
-		Me.btnLimpiar.Size = New System.Drawing.Size(191, 55)
-		Me.btnLimpiar.TabIndex = 108
-		Me.btnLimpiar.Text = "    LIMPIAR"
-		Me.btnLimpiar.UseVisualStyleBackColor = false
 		'
 		'btnRegistrar
 		'
@@ -120,27 +110,13 @@ Partial Class FrmTipoProducto
 		Me.btnEliminar.ForeColor = System.Drawing.Color.White
 		Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"),System.Drawing.Image)
 		Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnEliminar.Location = New System.Drawing.Point(650, 316)
+		Me.btnEliminar.Location = New System.Drawing.Point(650, 191)
 		Me.btnEliminar.Name = "btnEliminar"
 		Me.btnEliminar.Size = New System.Drawing.Size(191, 51)
 		Me.btnEliminar.TabIndex = 110
 		Me.btnEliminar.Text = "Eliminar"
 		Me.btnEliminar.UseVisualStyleBackColor = false
-		'
-		'btnActualizar
-		'
-		Me.btnActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.btnActualizar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.btnActualizar.ForeColor = System.Drawing.Color.White
-		Me.btnActualizar.Image = CType(resources.GetObject("btnActualizar.Image"),System.Drawing.Image)
-		Me.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnActualizar.Location = New System.Drawing.Point(650, 381)
-		Me.btnActualizar.Name = "btnActualizar"
-		Me.btnActualizar.Size = New System.Drawing.Size(191, 47)
-		Me.btnActualizar.TabIndex = 111
-		Me.btnActualizar.Text = "   Actualizar"
-		Me.btnActualizar.UseVisualStyleBackColor = false
-		AddHandler Me.btnActualizar.Click, AddressOf Me.BtnActualizarClick
+		AddHandler Me.btnEliminar.Click, AddressOf Me.BtnEliminarClick
 		'
 		'lbltBuscar
 		'
@@ -153,37 +129,66 @@ Partial Class FrmTipoProducto
 		Me.lbltBuscar.Text = "Buscar"
 		Me.lbltBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		'
-		'btnBuscar
+		'btnModificar
 		'
-		Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.btnBuscar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.btnBuscar.ForeColor = System.Drawing.Color.White
-		Me.btnBuscar.Image = CType(resources.GetObject("btnBuscar.Image"),System.Drawing.Image)
-		Me.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnBuscar.Location = New System.Drawing.Point(650, 248)
-		Me.btnBuscar.Name = "btnBuscar"
-		Me.btnBuscar.Size = New System.Drawing.Size(191, 47)
-		Me.btnBuscar.TabIndex = 113
-		Me.btnBuscar.Text = " Editar"
-		Me.btnBuscar.UseVisualStyleBackColor = false
+		Me.btnModificar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.btnModificar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnModificar.ForeColor = System.Drawing.Color.White
+		Me.btnModificar.Image = CType(resources.GetObject("btnModificar.Image"),System.Drawing.Image)
+		Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnModificar.Location = New System.Drawing.Point(650, 135)
+		Me.btnModificar.Name = "btnModificar"
+		Me.btnModificar.Size = New System.Drawing.Size(191, 47)
+		Me.btnModificar.TabIndex = 113
+		Me.btnModificar.Text = " Editar"
+		Me.btnModificar.UseVisualStyleBackColor = false
+		AddHandler Me.btnModificar.Click, AddressOf Me.BtnModificarClick
 		'
 		'dGVTipProductos
 		'
-		Me.dGVTipProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+		dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+		dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver
+		dataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!)
+		dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke
+		dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray
+		dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Silver
+		dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.dGVTipProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1
+		Me.dGVTipProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
 		Me.dGVTipProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
 		Me.dGVTipProductos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.dGVTipProductos.BorderStyle = System.Windows.Forms.BorderStyle.None
+		dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+		dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonShadow
+		dataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InactiveCaption
+		dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.GradientInactiveCaption
+		dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.dGVTipProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2
 		Me.dGVTipProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-		dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver
-		dataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-		dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White
-		dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black
-		dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-		Me.dGVTipProductos.DefaultCellStyle = dataGridViewCellStyle1
+		dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+		dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red
+		dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue
+		dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Gray
+		dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+		Me.dGVTipProductos.DefaultCellStyle = dataGridViewCellStyle3
+		Me.dGVTipProductos.GridColor = System.Drawing.SystemColors.Control
 		Me.dGVTipProductos.Location = New System.Drawing.Point(25, 259)
 		Me.dGVTipProductos.Name = "dGVTipProductos"
-		Me.dGVTipProductos.Size = New System.Drawing.Size(606, 180)
+		dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+		dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.WindowFrame
+		dataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+		dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+		dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.GradientInactiveCaption
+		dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.dGVTipProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4
+		Me.dGVTipProductos.RowHeadersVisible = false
+		Me.dGVTipProductos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+		Me.dGVTipProductos.Size = New System.Drawing.Size(816, 200)
 		Me.dGVTipProductos.TabIndex = 115
 		AddHandler Me.dGVTipProductos.CellClick, AddressOf Me.DGVTipProductosCellClick
 		'
@@ -194,23 +199,36 @@ Partial Class FrmTipoProducto
 		Me.textBclave.ForeColor = System.Drawing.Color.LightGray
 		Me.textBclave.Location = New System.Drawing.Point(101, 210)
 		Me.textBclave.Name = "textBclave"
-		Me.textBclave.Size = New System.Drawing.Size(530, 33)
+		Me.textBclave.Size = New System.Drawing.Size(257, 33)
 		Me.textBclave.TabIndex = 116
-		Me.textBclave.Text = "Buscar por clave"
+		Me.textBclave.Text = "Clave"
+		AddHandler Me.textBclave.Click, AddressOf Me.TextBclaveClick
 		AddHandler Me.textBclave.TextChanged, AddressOf Me.TextBox1TextChanged
+		'
+		'txtDesc
+		'
+		Me.txtDesc.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.txtDesc.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.txtDesc.ForeColor = System.Drawing.Color.LightGray
+		Me.txtDesc.Location = New System.Drawing.Point(374, 210)
+		Me.txtDesc.Name = "txtDesc"
+		Me.txtDesc.Size = New System.Drawing.Size(257, 33)
+		Me.txtDesc.TabIndex = 117
+		Me.txtDesc.Text = "Descripcion"
+		AddHandler Me.txtDesc.Click, AddressOf Me.TxtDescClick
+		AddHandler Me.txtDesc.TextChanged, AddressOf Me.TxtDescTextChanged
 		'
 		'FrmTipoProducto
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(867, 465)
+		Me.Controls.Add(Me.txtDesc)
 		Me.Controls.Add(Me.textBclave)
 		Me.Controls.Add(Me.dGVTipProductos)
-		Me.Controls.Add(Me.btnBuscar)
+		Me.Controls.Add(Me.btnModificar)
 		Me.Controls.Add(Me.lbltBuscar)
-		Me.Controls.Add(Me.btnActualizar)
 		Me.Controls.Add(Me.btnEliminar)
-		Me.Controls.Add(Me.btnLimpiar)
 		Me.Controls.Add(Me.btnRegistrar)
 		Me.Controls.Add(Me.txtDescripcion)
 		Me.Controls.Add(Me.txtClaveTipo)
@@ -222,14 +240,13 @@ Partial Class FrmTipoProducto
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private txtDesc As System.Windows.Forms.TextBox
 	Private textBclave As System.Windows.Forms.TextBox
 	Private dGVTipProductos As System.Windows.Forms.DataGridView
 	Private btnRegistrar As System.Windows.Forms.Button
-	Private btnLimpiar As System.Windows.Forms.Button
 	Private btnEliminar As System.Windows.Forms.Button
-	Private btnActualizar As System.Windows.Forms.Button
 	Private lbltBuscar As System.Windows.Forms.Label
-	Private btnBuscar As System.Windows.Forms.Button
+	Private btnModificar As System.Windows.Forms.Button
 	Private txtClaveTipo As System.Windows.Forms.TextBox
 	Private txtDescripcion As System.Windows.Forms.TextBox
 	Private lblTitulo As System.Windows.Forms.Label

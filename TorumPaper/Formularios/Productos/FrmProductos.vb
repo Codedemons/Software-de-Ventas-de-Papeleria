@@ -81,7 +81,7 @@ Public Partial Class FrmProductos
 	Sub BtnRegistrarClick(sender As Object, e As EventArgs)
 		
 		Dim insertarRegistro As String 
-		insertarRegistro = "INSERT INTO producto (claveProducto, claveTipoProducto, descripcionProducto, marcaProducto, precioProducto, stockMinimo, stockMaximo, stockDisponible) VALUES ('" & Me.txtClave.Text & "','" & Me.cmbTipo.SelectedValue & "','" & Me.txtDescripcion.Text & "','" & Me.cmbMarca.Text & "','" & Me.textBox1.Text & "','" & Me.nUDSmin.Text & "','" & Me.nUDSmax.Text & "','" & Me.nUDdis.Text & "')"
+		insertarRegistro = "INSERT INTO producto (claveProducto, claveTipoProducto, descripcionProducto, marcaProducto, precioProducto, stockMinimo, stockMaximo, stockDisponible) VALUES ('" & Me.txtClave.Text & "','" & Me.cmbTipo.SelectedValue & "','" & Me.txtDescripcion.Text & "','" & Me.cmbMarca.Text & "','" & textBox1.Text & "','" & nUDSmin.Text & "','" & nUDSmax.Text & "','" & nUDdis.Text & "')"
 		'envia y valida si el registro se realizo
 		If Me.ctrl.insertarRegistro(insertarRegistro) Then
 				MsgBox("Se realizó el registro")
