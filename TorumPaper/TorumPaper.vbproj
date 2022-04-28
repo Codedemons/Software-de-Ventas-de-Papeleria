@@ -99,6 +99,10 @@
       <DependentUpon>FrmProveedores.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Proveedores\FrmProveedores.vb" />
+    <Compile Include="Formularios\Resgistro\FrmRegistroPedido.Designer.vb">
+      <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Resgistro\FrmRegistroPedido.vb" />
     <Compile Include="Formularios\Resgistro\FrmRegistroProducto.Designer.vb">
       <DependentUpon>FrmRegistroProducto.vb</DependentUpon>
     </Compile>
@@ -107,10 +111,6 @@
       <DependentUpon>FrmRegistroProveedor.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Resgistro\FrmRegistroProveedor.vb" />
-    <Compile Include="Formularios\Resgistro\FrmRegistroPedido.Designer.vb">
-      <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Resgistro\FrmRegistroPedido.vb" />
     <Compile Include="Formularios\Ventas\FrmVentas.Designer.vb">
       <DependentUpon>FrmVentas.vb</DependentUpon>
     </Compile>
@@ -173,14 +173,14 @@
     <EmbeddedResource Include="Formularios\Proveedores\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroPedido.resx">
+      <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroProducto.resx">
       <DependentUpon>FrmRegistroProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroProveedor.resx">
       <DependentUpon>FrmRegistroProveedor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroPedido.resx">
-      <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ventas\FrmVentas.resx">
       <DependentUpon>FrmVentas.vb</DependentUpon>

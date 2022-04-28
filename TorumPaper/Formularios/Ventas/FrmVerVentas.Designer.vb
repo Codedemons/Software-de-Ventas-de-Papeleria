@@ -135,6 +135,7 @@ Partial Class FrmVerVentas
 		Me.Controls.Add(Me.lblTitulo)
 		Me.Name = "FrmVerVentas"
 		Me.Text = "FrmVerVentas"
+		AddHandler Load, AddressOf Me.FrmVerVentasLoad
 		CType(Me.dGVventas,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
