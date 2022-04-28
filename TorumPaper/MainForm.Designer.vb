@@ -40,28 +40,25 @@ Partial Class MainForm
 		Me.lbName = New System.Windows.Forms.Label()
 		Me.pblogo = New System.Windows.Forms.PictureBox()
 		Me.PnlContenido = New System.Windows.Forms.Panel()
-		Me.msMenu = New System.Windows.Forms.MenuStrip()
-		Me.toolsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-		Me.registrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-		Me.mostrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-		Me.TSMIEliminarProducto = New System.Windows.Forms.ToolStripMenuItem()
-		Me.toolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-		Me.proveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-		Me.registrarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-		Me.mostrarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-		Me.TSMIEliminarProveedor = New System.Windows.Forms.ToolStripMenuItem()
-		Me.pedidosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-		Me.registrarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-		Me.mostrarToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-		Me.TSMIEliminarPedidos = New System.Windows.Forms.ToolStripMenuItem()
-		Me.toolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-		Me.toolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
-		Me.toolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-		Me.toolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+		Me.pnlMenu = New System.Windows.Forms.Panel()
+		Me.pbLogoMenu = New System.Windows.Forms.PictureBox()
+		Me.Panel6 = New System.Windows.Forms.Panel()
+		Me.btnEmpleados = New System.Windows.Forms.Button()
+		Me.Panel5 = New System.Windows.Forms.Panel()
+		Me.btnPedidos = New System.Windows.Forms.Button()
+		Me.pnlProveedores = New System.Windows.Forms.Panel()
+		Me.btnProveedores = New System.Windows.Forms.Button()
+		Me.Panel3 = New System.Windows.Forms.Panel()
+		Me.btnVentas = New System.Windows.Forms.Button()
+		Me.Panel2 = New System.Windows.Forms.Panel()
+		Me.Panel10 = New System.Windows.Forms.Panel()
+		Me.btnTProductos = New System.Windows.Forms.Button()
+		Me.btnProductos = New System.Windows.Forms.Button()
 		Me.pnlBarraTitulo.SuspendLayout
 		CType(Me.pblogo,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.PnlContenido.SuspendLayout
-		Me.msMenu.SuspendLayout
+		Me.pnlMenu.SuspendLayout
+		CType(Me.pbLogoMenu,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
 		'pnlBarraTitulo
@@ -74,7 +71,7 @@ Partial Class MainForm
 		Me.pnlBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
 		Me.pnlBarraTitulo.Location = New System.Drawing.Point(0, 0)
 		Me.pnlBarraTitulo.Name = "pnlBarraTitulo"
-		Me.pnlBarraTitulo.Size = New System.Drawing.Size(720, 40)
+		Me.pnlBarraTitulo.Size = New System.Drawing.Size(1070, 40)
 		Me.pnlBarraTitulo.TabIndex = 0
 		AddHandler Me.pnlBarraTitulo.MouseDown, AddressOf Me.PnlBarraTituloMouseDown
 		'
@@ -87,7 +84,7 @@ Partial Class MainForm
 		Me.btnMini.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(128,Byte),Integer), CType(CType(128,Byte),Integer), CType(CType(255,Byte),Integer))
 		Me.btnMini.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btnMini.Image = CType(resources.GetObject("btnMini.Image"),System.Drawing.Image)
-		Me.btnMini.Location = New System.Drawing.Point(616, 0)
+		Me.btnMini.Location = New System.Drawing.Point(966, 0)
 		Me.btnMini.Name = "btnMini"
 		Me.btnMini.Size = New System.Drawing.Size(52, 40)
 		Me.btnMini.TabIndex = 5
@@ -103,7 +100,7 @@ Partial Class MainForm
 		Me.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(128,Byte),Integer), CType(CType(128,Byte),Integer))
 		Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"),System.Drawing.Image)
-		Me.btnClose.Location = New System.Drawing.Point(668, 0)
+		Me.btnClose.Location = New System.Drawing.Point(1018, 0)
 		Me.btnClose.Name = "btnClose"
 		Me.btnClose.Size = New System.Drawing.Size(52, 40)
 		Me.btnClose.TabIndex = 4
@@ -140,7 +137,7 @@ Partial Class MainForm
 		Me.PnlContenido.AllowDrop = true
 		Me.PnlContenido.AutoSize = true
 		Me.PnlContenido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-		Me.PnlContenido.Controls.Add(Me.msMenu)
+		Me.PnlContenido.Controls.Add(Me.pnlMenu)
 		Me.PnlContenido.Cursor = System.Windows.Forms.Cursors.Hand
 		Me.PnlContenido.Dock = System.Windows.Forms.DockStyle.Fill
 		Me.PnlContenido.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
@@ -148,191 +145,214 @@ Partial Class MainForm
 		Me.PnlContenido.ImeMode = System.Windows.Forms.ImeMode.Off
 		Me.PnlContenido.Location = New System.Drawing.Point(0, 40)
 		Me.PnlContenido.Name = "PnlContenido"
-		Me.PnlContenido.Size = New System.Drawing.Size(720, 420)
+		Me.PnlContenido.Size = New System.Drawing.Size(1070, 510)
 		Me.PnlContenido.TabIndex = 1
 		'
-		'msMenu
+		'pnlMenu
 		'
-		Me.msMenu.AutoSize = false
-		Me.msMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(105,Byte),Integer), CType(CType(152,Byte),Integer), CType(CType(171,Byte),Integer))
-		Me.msMenu.Dock = System.Windows.Forms.DockStyle.Left
-		Me.msMenu.GripMargin = New System.Windows.Forms.Padding(10)
-		Me.msMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
-		Me.msMenu.ImageScalingSize = New System.Drawing.Size(26, 26)
-		Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolsToolStripMenuItem1, Me.toolStripMenuItem1, Me.proveedorToolStripMenuItem, Me.toolStripMenuItem2, Me.pedidosToolStripMenuItem})
-		Me.msMenu.Location = New System.Drawing.Point(0, 0)
-		Me.msMenu.Margin = New System.Windows.Forms.Padding(400)
-		Me.msMenu.Name = "msMenu"
-		Me.msMenu.Padding = New System.Windows.Forms.Padding(10)
-		Me.msMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-		Me.msMenu.Size = New System.Drawing.Size(138, 420)
-		Me.msMenu.TabIndex = 0
-		Me.msMenu.Text = "MenuPaper"
+		Me.pnlMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(110,Byte),Integer))
+		Me.pnlMenu.Controls.Add(Me.pbLogoMenu)
+		Me.pnlMenu.Controls.Add(Me.Panel6)
+		Me.pnlMenu.Controls.Add(Me.btnEmpleados)
+		Me.pnlMenu.Controls.Add(Me.Panel5)
+		Me.pnlMenu.Controls.Add(Me.btnPedidos)
+		Me.pnlMenu.Controls.Add(Me.pnlProveedores)
+		Me.pnlMenu.Controls.Add(Me.btnProveedores)
+		Me.pnlMenu.Controls.Add(Me.Panel3)
+		Me.pnlMenu.Controls.Add(Me.btnVentas)
+		Me.pnlMenu.Controls.Add(Me.Panel2)
+		Me.pnlMenu.Controls.Add(Me.Panel10)
+		Me.pnlMenu.Controls.Add(Me.btnTProductos)
+		Me.pnlMenu.Controls.Add(Me.btnProductos)
+		Me.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left
+		Me.pnlMenu.Location = New System.Drawing.Point(0, 0)
+		Me.pnlMenu.Name = "pnlMenu"
+		Me.pnlMenu.Size = New System.Drawing.Size(200, 510)
+		Me.pnlMenu.TabIndex = 0
 		'
-		'toolsToolStripMenuItem1
+		'pbLogoMenu
 		'
-		Me.toolsToolStripMenuItem1.Checked = true
-		Me.toolsToolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked
-		Me.toolsToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.registrarToolStripMenuItem, Me.mostrarToolStripMenuItem, Me.TSMIEliminarProducto})
-		Me.toolsToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.toolsToolStripMenuItem1.ForeColor = System.Drawing.Color.Black
-		Me.toolsToolStripMenuItem1.Image = CType(resources.GetObject("toolsToolStripMenuItem1.Image"),System.Drawing.Image)
-		Me.toolsToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.toolsToolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Cyan
-		Me.toolsToolStripMenuItem1.Name = "toolsToolStripMenuItem1"
-		Me.toolsToolStripMenuItem1.Size = New System.Drawing.Size(117, 30)
-		Me.toolsToolStripMenuItem1.Text = "Producto"
+		Me.pbLogoMenu.Dock = System.Windows.Forms.DockStyle.Top
+		Me.pbLogoMenu.Image = CType(resources.GetObject("pbLogoMenu.Image"),System.Drawing.Image)
+		Me.pbLogoMenu.Location = New System.Drawing.Point(0, 0)
+		Me.pbLogoMenu.Name = "pbLogoMenu"
+		Me.pbLogoMenu.Size = New System.Drawing.Size(200, 120)
+		Me.pbLogoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+		Me.pbLogoMenu.TabIndex = 28
+		Me.pbLogoMenu.TabStop = false
 		'
-		'registrarToolStripMenuItem
+		'Panel6
 		'
-		Me.registrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.registrarToolStripMenuItem.Image = CType(resources.GetObject("registrarToolStripMenuItem.Image"),System.Drawing.Image)
-		Me.registrarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black
-		Me.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem"
-		Me.registrarToolStripMenuItem.Size = New System.Drawing.Size(162, 32)
-		Me.registrarToolStripMenuItem.Text = "Registrar"
-		AddHandler Me.registrarToolStripMenuItem.Click, AddressOf Me.RegistrarToolStripMenuItemClick
+		Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel6.Location = New System.Drawing.Point(3, 405)
+		Me.Panel6.Name = "Panel6"
+		Me.Panel6.Size = New System.Drawing.Size(5, 50)
+		Me.Panel6.TabIndex = 26
 		'
-		'mostrarToolStripMenuItem
+		'btnEmpleados
 		'
-		Me.mostrarToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.mostrarToolStripMenuItem.Image = CType(resources.GetObject("mostrarToolStripMenuItem.Image"),System.Drawing.Image)
-		Me.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem"
-		Me.mostrarToolStripMenuItem.Size = New System.Drawing.Size(162, 32)
-		Me.mostrarToolStripMenuItem.Text = "Mostrar"
-		AddHandler Me.mostrarToolStripMenuItem.Click, AddressOf Me.MostrarToolStripMenuItemClick
+		Me.btnEmpleados.FlatAppearance.BorderSize = 0
+		Me.btnEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnEmpleados.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnEmpleados.ForeColor = System.Drawing.Color.White
+		Me.btnEmpleados.Image = CType(resources.GetObject("btnEmpleados.Image"),System.Drawing.Image)
+		Me.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnEmpleados.Location = New System.Drawing.Point(3, 405)
+		Me.btnEmpleados.Name = "btnEmpleados"
+		Me.btnEmpleados.Size = New System.Drawing.Size(200, 50)
+		Me.btnEmpleados.TabIndex = 25
+		Me.btnEmpleados.Text = "  Empleados"
+		Me.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnEmpleados.UseVisualStyleBackColor = true
 		'
-		'TSMIEliminarProducto
+		'Panel5
 		'
-		Me.TSMIEliminarProducto.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.TSMIEliminarProducto.Image = CType(resources.GetObject("TSMIEliminarProducto.Image"),System.Drawing.Image)
-		Me.TSMIEliminarProducto.Name = "TSMIEliminarProducto"
-		Me.TSMIEliminarProducto.Size = New System.Drawing.Size(162, 32)
-		Me.TSMIEliminarProducto.Text = "Eliminar"
-		AddHandler Me.TSMIEliminarProducto.Click, AddressOf Me.TSMIEliminarProductoClick
+		Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel5.Location = New System.Drawing.Point(3, 349)
+		Me.Panel5.Name = "Panel5"
+		Me.Panel5.Size = New System.Drawing.Size(5, 50)
+		Me.Panel5.TabIndex = 24
 		'
-		'toolStripMenuItem1
+		'btnPedidos
 		'
-		Me.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black
-		Me.toolStripMenuItem1.Name = "toolStripMenuItem1"
-		Me.toolStripMenuItem1.Size = New System.Drawing.Size(117, 4)
+		Me.btnPedidos.FlatAppearance.BorderSize = 0
+		Me.btnPedidos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnPedidos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnPedidos.ForeColor = System.Drawing.Color.White
+		Me.btnPedidos.Image = CType(resources.GetObject("btnPedidos.Image"),System.Drawing.Image)
+		Me.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnPedidos.Location = New System.Drawing.Point(1, 352)
+		Me.btnPedidos.Name = "btnPedidos"
+		Me.btnPedidos.Size = New System.Drawing.Size(200, 50)
+		Me.btnPedidos.TabIndex = 23
+		Me.btnPedidos.Text = "  Pedidos"
+		Me.btnPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnPedidos.UseVisualStyleBackColor = true
+		AddHandler Me.btnPedidos.Click, AddressOf Me.BtnPedidosClick
 		'
-		'proveedorToolStripMenuItem
+		'pnlProveedores
 		'
-		Me.proveedorToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.registrarToolStripMenuItem1, Me.mostrarToolStripMenuItem1, Me.TSMIEliminarProveedor})
-		Me.proveedorToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.proveedorToolStripMenuItem.ForeColor = System.Drawing.Color.Black
-		Me.proveedorToolStripMenuItem.Image = CType(resources.GetObject("proveedorToolStripMenuItem.Image"),System.Drawing.Image)
-		Me.proveedorToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem"
-		Me.proveedorToolStripMenuItem.Size = New System.Drawing.Size(117, 30)
-		Me.proveedorToolStripMenuItem.Text = "Proveedor "
+		Me.pnlProveedores.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.pnlProveedores.Location = New System.Drawing.Point(3, 293)
+		Me.pnlProveedores.Name = "pnlProveedores"
+		Me.pnlProveedores.Size = New System.Drawing.Size(5, 50)
+		Me.pnlProveedores.TabIndex = 22
 		'
-		'registrarToolStripMenuItem1
+		'btnProveedores
 		'
-		Me.registrarToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.registrarToolStripMenuItem1.Image = CType(resources.GetObject("registrarToolStripMenuItem1.Image"),System.Drawing.Image)
-		Me.registrarToolStripMenuItem1.Name = "registrarToolStripMenuItem1"
-		Me.registrarToolStripMenuItem1.Size = New System.Drawing.Size(143, 26)
-		Me.registrarToolStripMenuItem1.Text = "Registrar"
-		AddHandler Me.registrarToolStripMenuItem1.Click, AddressOf Me.RegistrarToolStripMenuItem1Click
+		Me.btnProveedores.FlatAppearance.BorderSize = 0
+		Me.btnProveedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnProveedores.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnProveedores.ForeColor = System.Drawing.Color.White
+		Me.btnProveedores.Image = CType(resources.GetObject("btnProveedores.Image"),System.Drawing.Image)
+		Me.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnProveedores.Location = New System.Drawing.Point(3, 293)
+		Me.btnProveedores.Name = "btnProveedores"
+		Me.btnProveedores.Size = New System.Drawing.Size(200, 50)
+		Me.btnProveedores.TabIndex = 21
+		Me.btnProveedores.Text = "Proveedores"
+		Me.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnProveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnProveedores.UseVisualStyleBackColor = true
+		AddHandler Me.btnProveedores.Click, AddressOf Me.BtnProveedoresClick
 		'
-		'mostrarToolStripMenuItem1
+		'Panel3
 		'
-		Me.mostrarToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.mostrarToolStripMenuItem1.Image = CType(resources.GetObject("mostrarToolStripMenuItem1.Image"),System.Drawing.Image)
-		Me.mostrarToolStripMenuItem1.Name = "mostrarToolStripMenuItem1"
-		Me.mostrarToolStripMenuItem1.Size = New System.Drawing.Size(143, 26)
-		Me.mostrarToolStripMenuItem1.Text = "Mostrar"
-		AddHandler Me.mostrarToolStripMenuItem1.Click, AddressOf Me.MostrarToolStripMenuItem1Click
+		Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel3.Location = New System.Drawing.Point(3, 237)
+		Me.Panel3.Name = "Panel3"
+		Me.Panel3.Size = New System.Drawing.Size(5, 50)
+		Me.Panel3.TabIndex = 20
 		'
-		'TSMIEliminarProveedor
+		'btnVentas
 		'
-		Me.TSMIEliminarProveedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.TSMIEliminarProveedor.Image = CType(resources.GetObject("TSMIEliminarProveedor.Image"),System.Drawing.Image)
-		Me.TSMIEliminarProveedor.Name = "TSMIEliminarProveedor"
-		Me.TSMIEliminarProveedor.Size = New System.Drawing.Size(143, 26)
-		Me.TSMIEliminarProveedor.Text = "Eliminar"
-		AddHandler Me.TSMIEliminarProveedor.Click, AddressOf Me.TSMIEliminarProveedorClick
+		Me.btnVentas.FlatAppearance.BorderSize = 0
+		Me.btnVentas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnVentas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnVentas.ForeColor = System.Drawing.Color.White
+		Me.btnVentas.Image = CType(resources.GetObject("btnVentas.Image"),System.Drawing.Image)
+		Me.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnVentas.Location = New System.Drawing.Point(-1, 237)
+		Me.btnVentas.Name = "btnVentas"
+		Me.btnVentas.Size = New System.Drawing.Size(200, 50)
+		Me.btnVentas.TabIndex = 19
+		Me.btnVentas.Text = "  Ventas"
+		Me.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnVentas.UseVisualStyleBackColor = true
+		AddHandler Me.btnVentas.Click, AddressOf Me.BtnVentasClick
 		'
-		'pedidosToolStripMenuItem
+		'Panel2
 		'
-		Me.pedidosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.registrarToolStripMenuItem2, Me.mostrarToolStripMenuItem2, Me.TSMIEliminarPedidos})
-		Me.pedidosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.pedidosToolStripMenuItem.ForeColor = System.Drawing.Color.Black
-		Me.pedidosToolStripMenuItem.Image = CType(resources.GetObject("pedidosToolStripMenuItem.Image"),System.Drawing.Image)
-		Me.pedidosToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem"
-		Me.pedidosToolStripMenuItem.Size = New System.Drawing.Size(117, 30)
-		Me.pedidosToolStripMenuItem.Text = "Pedidos"
+		Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel2.Location = New System.Drawing.Point(3, 181)
+		Me.Panel2.Name = "Panel2"
+		Me.Panel2.Size = New System.Drawing.Size(5, 50)
+		Me.Panel2.TabIndex = 18
 		'
-		'registrarToolStripMenuItem2
+		'Panel10
 		'
-		Me.registrarToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.registrarToolStripMenuItem2.Image = CType(resources.GetObject("registrarToolStripMenuItem2.Image"),System.Drawing.Image)
-		Me.registrarToolStripMenuItem2.Name = "registrarToolStripMenuItem2"
-		Me.registrarToolStripMenuItem2.Size = New System.Drawing.Size(162, 32)
-		Me.registrarToolStripMenuItem2.Text = "Registrar"
-		AddHandler Me.registrarToolStripMenuItem2.Click, AddressOf Me.RegistrarToolStripMenuItem2Click
+		Me.Panel10.BackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.Panel10.Location = New System.Drawing.Point(3, 125)
+		Me.Panel10.Name = "Panel10"
+		Me.Panel10.Size = New System.Drawing.Size(5, 50)
+		Me.Panel10.TabIndex = 16
 		'
-		'mostrarToolStripMenuItem2
+		'btnTProductos
 		'
-		Me.mostrarToolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.mostrarToolStripMenuItem2.Image = CType(resources.GetObject("mostrarToolStripMenuItem2.Image"),System.Drawing.Image)
-		Me.mostrarToolStripMenuItem2.Name = "mostrarToolStripMenuItem2"
-		Me.mostrarToolStripMenuItem2.Size = New System.Drawing.Size(162, 32)
-		Me.mostrarToolStripMenuItem2.Text = "Mostrar"
-		AddHandler Me.mostrarToolStripMenuItem2.Click, AddressOf Me.MostrarToolStripMenuItem2Click
+		Me.btnTProductos.FlatAppearance.BorderSize = 0
+		Me.btnTProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnTProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnTProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnTProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnTProductos.ForeColor = System.Drawing.Color.White
+		Me.btnTProductos.Image = CType(resources.GetObject("btnTProductos.Image"),System.Drawing.Image)
+		Me.btnTProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnTProductos.Location = New System.Drawing.Point(4, 181)
+		Me.btnTProductos.Name = "btnTProductos"
+		Me.btnTProductos.Size = New System.Drawing.Size(200, 50)
+		Me.btnTProductos.TabIndex = 15
+		Me.btnTProductos.Text = "  Tipos Productos"
+		Me.btnTProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnTProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnTProductos.UseVisualStyleBackColor = true
+		AddHandler Me.btnTProductos.Click, AddressOf Me.BtnTProductosClick
 		'
-		'TSMIEliminarPedidos
+		'btnProductos
 		'
-		Me.TSMIEliminarPedidos.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.TSMIEliminarPedidos.Image = CType(resources.GetObject("TSMIEliminarPedidos.Image"),System.Drawing.Image)
-		Me.TSMIEliminarPedidos.Name = "TSMIEliminarPedidos"
-		Me.TSMIEliminarPedidos.Size = New System.Drawing.Size(162, 32)
-		Me.TSMIEliminarPedidos.Text = "Eliminar"
-		AddHandler Me.TSMIEliminarPedidos.Click, AddressOf Me.TSMIEliminarPedidosClick
-		'
-		'toolStripMenuItem2
-		'
-		Me.toolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.toolStripMenuItem3, Me.toolStripMenuItem4, Me.toolStripMenuItem5})
-		Me.toolStripMenuItem2.Font = New System.Drawing.Font("Segoe UI", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.toolStripMenuItem2.ForeColor = System.Drawing.Color.Black
-		Me.toolStripMenuItem2.Image = CType(resources.GetObject("toolStripMenuItem2.Image"),System.Drawing.Image)
-		Me.toolStripMenuItem2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.toolStripMenuItem2.Name = "toolStripMenuItem2"
-		Me.toolStripMenuItem2.Size = New System.Drawing.Size(117, 30)
-		Me.toolStripMenuItem2.Text = "Pedidos"
-		'
-		'toolStripMenuItem3
-		'
-		Me.toolStripMenuItem3.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.toolStripMenuItem3.Image = CType(resources.GetObject("toolStripMenuItem3.Image"),System.Drawing.Image)
-		Me.toolStripMenuItem3.Name = "toolStripMenuItem3"
-		Me.toolStripMenuItem3.Size = New System.Drawing.Size(162, 32)
-		Me.toolStripMenuItem3.Text = "Registrar"
-		'
-		'toolStripMenuItem4
-		'
-		Me.toolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.toolStripMenuItem4.Image = CType(resources.GetObject("toolStripMenuItem4.Image"),System.Drawing.Image)
-		Me.toolStripMenuItem4.Name = "toolStripMenuItem4"
-		Me.toolStripMenuItem4.Size = New System.Drawing.Size(162, 32)
-		Me.toolStripMenuItem4.Text = "Mostrar"
-		'
-		'toolStripMenuItem5
-		'
-		Me.toolStripMenuItem5.BackColor = System.Drawing.Color.FromArgb(CType(CType(177,Byte),Integer), CType(CType(208,Byte),Integer), CType(CType(224,Byte),Integer))
-		Me.toolStripMenuItem5.Image = CType(resources.GetObject("toolStripMenuItem5.Image"),System.Drawing.Image)
-		Me.toolStripMenuItem5.Name = "toolStripMenuItem5"
-		Me.toolStripMenuItem5.Size = New System.Drawing.Size(162, 32)
-		Me.toolStripMenuItem5.Text = "Eliminar"
+		Me.btnProductos.FlatAppearance.BorderSize = 0
+		Me.btnProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(145,Byte),Integer), CType(CType(110,Byte),Integer), CType(CType(21,Byte),Integer))
+		Me.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(44,Byte),Integer), CType(CType(55,Byte),Integer), CType(CType(70,Byte),Integer))
+		Me.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.btnProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnProductos.ForeColor = System.Drawing.Color.White
+		Me.btnProductos.Image = CType(resources.GetObject("btnProductos.Image"),System.Drawing.Image)
+		Me.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnProductos.Location = New System.Drawing.Point(0, 126)
+		Me.btnProductos.Name = "btnProductos"
+		Me.btnProductos.Size = New System.Drawing.Size(200, 50)
+		Me.btnProductos.TabIndex = 17
+		Me.btnProductos.Text = "  Productos"
+		Me.btnProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+		Me.btnProductos.UseVisualStyleBackColor = true
+		AddHandler Me.btnProductos.Click, AddressOf Me.BtnProductosClick
 		'
 		'MainForm
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.ClientSize = New System.Drawing.Size(720, 460)
+		Me.ClientSize = New System.Drawing.Size(1070, 550)
 		Me.Controls.Add(Me.PnlContenido)
 		Me.Controls.Add(Me.pnlBarraTitulo)
 		Me.ForeColor = System.Drawing.Color.White
@@ -343,31 +363,27 @@ Partial Class MainForm
 		Me.pnlBarraTitulo.ResumeLayout(false)
 		CType(Me.pblogo,System.ComponentModel.ISupportInitialize).EndInit
 		Me.PnlContenido.ResumeLayout(false)
-		Me.msMenu.ResumeLayout(false)
-		Me.msMenu.PerformLayout
+		Me.pnlMenu.ResumeLayout(false)
+		CType(Me.pbLogoMenu,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
-	Private toolStripMenuItem5 As System.Windows.Forms.ToolStripMenuItem
-	Private toolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
-	Private toolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
-	Private toolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+	Private pbLogoMenu As System.Windows.Forms.PictureBox
+	Friend btnTProductos As System.Windows.Forms.Button
+	Friend Panel10 As System.Windows.Forms.Panel
+	Friend btnProductos As System.Windows.Forms.Button
+	Friend Panel2 As System.Windows.Forms.Panel
+	Friend btnVentas As System.Windows.Forms.Button
+	Friend Panel3 As System.Windows.Forms.Panel
+	Friend btnProveedores As System.Windows.Forms.Button
+	Friend pnlProveedores As System.Windows.Forms.Panel
+	Friend btnPedidos As System.Windows.Forms.Button
+	Friend Panel5 As System.Windows.Forms.Panel
+	Friend btnEmpleados As System.Windows.Forms.Button
+	Friend Panel6 As System.Windows.Forms.Panel
+	Private pnlMenu As System.Windows.Forms.Panel
 	Private btnMini As System.Windows.Forms.Button
 	Private btnClose As System.Windows.Forms.Button
-	Private TSMIEliminarPedidos As System.Windows.Forms.ToolStripMenuItem
-	Private mostrarToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
-	Private registrarToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
-	Private TSMIEliminarProveedor As System.Windows.Forms.ToolStripMenuItem
-	Private mostrarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-	Private registrarToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-	Private TSMIEliminarProducto As System.Windows.Forms.ToolStripMenuItem
-	Private mostrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-	Private registrarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-	Private pedidosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-	Private proveedorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-	Private toolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-	Private toolsToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-	Private msMenu As System.Windows.Forms.MenuStrip
 	Private pblogo As System.Windows.Forms.PictureBox
 	Private lbName As System.Windows.Forms.Label
 	Private PnlContenido As System.Windows.Forms.Panel

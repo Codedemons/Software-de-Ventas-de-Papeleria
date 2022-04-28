@@ -49,7 +49,7 @@ Partial Class FrmVentas
 		Me.lblTitulo.ForeColor = System.Drawing.Color.White
 		Me.lblTitulo.Location = New System.Drawing.Point(0, 0)
 		Me.lblTitulo.Name = "lblTitulo"
-		Me.lblTitulo.Size = New System.Drawing.Size(595, 62)
+		Me.lblTitulo.Size = New System.Drawing.Size(867, 62)
 		Me.lblTitulo.TabIndex = 32
 		Me.lblTitulo.Text = "Sistema de Venta TorumPaper"
 		Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -103,7 +103,7 @@ Partial Class FrmVentas
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.ClientSize = New System.Drawing.Size(595, 420)
+		Me.ClientSize = New System.Drawing.Size(867, 465)
 		Me.Controls.Add(Me.comboBox1)
 		Me.Controls.Add(Me.button2)
 		Me.Controls.Add(Me.label1)

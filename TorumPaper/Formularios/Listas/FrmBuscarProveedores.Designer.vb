@@ -35,9 +35,9 @@ Partial Class FrmBuscarProveedores
 	Private Sub InitializeComponent()
 		Me.lblListaProveedores = New System.Windows.Forms.Label()
 		Me.dataGridView1 = New System.Windows.Forms.DataGridView()
-		Me.textBoxFiltroNombreProveedor = New System.Windows.Forms.TextBox()
-		Me.comboBox1 = New System.Windows.Forms.ComboBox()
 		Me.textBox1 = New System.Windows.Forms.TextBox()
+		Me.comboBox1 = New System.Windows.Forms.ComboBox()
+		Me.textBoxFiltroNombreProveedor = New System.Windows.Forms.TextBox()
 		CType(Me.dataGridView1,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
@@ -62,17 +62,17 @@ Partial Class FrmBuscarProveedores
 		Me.dataGridView1.Size = New System.Drawing.Size(478, 260)
 		Me.dataGridView1.TabIndex = 1
 		'
-		'textBoxFiltroNombreProveedor
+		'textBox1
 		'
-		Me.textBoxFiltroNombreProveedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.textBoxFiltroNombreProveedor.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.textBoxFiltroNombreProveedor.ForeColor = System.Drawing.Color.White
-		Me.textBoxFiltroNombreProveedor.Location = New System.Drawing.Point(178, 75)
-		Me.textBoxFiltroNombreProveedor.Name = "textBoxFiltroNombreProveedor"
-		Me.textBoxFiltroNombreProveedor.Size = New System.Drawing.Size(132, 30)
-		Me.textBoxFiltroNombreProveedor.TabIndex = 2
-		Me.textBoxFiltroNombreProveedor.Text = "Nombre"
-		Me.textBoxFiltroNombreProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+		Me.textBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.textBox1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.textBox1.ForeColor = System.Drawing.Color.White
+		Me.textBox1.Location = New System.Drawing.Point(74, 176)
+		Me.textBox1.Name = "textBox1"
+		Me.textBox1.Size = New System.Drawing.Size(160, 30)
+		Me.textBox1.TabIndex = 7
+		Me.textBox1.Text = "RFC"
+		Me.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
 		'
 		'comboBox1
 		'
@@ -81,23 +81,23 @@ Partial Class FrmBuscarProveedores
 		Me.comboBox1.ForeColor = System.Drawing.Color.White
 		Me.comboBox1.FormattingEnabled = true
 		Me.comboBox1.Items.AddRange(New Object() {"Calificación Ascendente", "Calificación Descendente"})
-		Me.comboBox1.Location = New System.Drawing.Point(316, 73)
+		Me.comboBox1.Location = New System.Drawing.Point(378, 174)
 		Me.comboBox1.Name = "comboBox1"
 		Me.comboBox1.Size = New System.Drawing.Size(174, 32)
-		Me.comboBox1.TabIndex = 3
+		Me.comboBox1.TabIndex = 6
 		Me.comboBox1.Text = "Calificación Ascendente"
 		'
-		'textBox1
+		'textBoxFiltroNombreProveedor
 		'
-		Me.textBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.textBox1.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.textBox1.ForeColor = System.Drawing.Color.White
-		Me.textBox1.Location = New System.Drawing.Point(12, 75)
-		Me.textBox1.Name = "textBox1"
-		Me.textBox1.Size = New System.Drawing.Size(160, 30)
-		Me.textBox1.TabIndex = 4
-		Me.textBox1.Text = "RFC"
-		Me.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+		Me.textBoxFiltroNombreProveedor.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.textBoxFiltroNombreProveedor.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.textBoxFiltroNombreProveedor.ForeColor = System.Drawing.Color.White
+		Me.textBoxFiltroNombreProveedor.Location = New System.Drawing.Point(240, 176)
+		Me.textBoxFiltroNombreProveedor.Name = "textBoxFiltroNombreProveedor"
+		Me.textBoxFiltroNombreProveedor.Size = New System.Drawing.Size(132, 30)
+		Me.textBoxFiltroNombreProveedor.TabIndex = 5
+		Me.textBoxFiltroNombreProveedor.Text = "Nombre"
+		Me.textBoxFiltroNombreProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
 		'
 		'FrmBuscarProveedores
 		'
@@ -115,9 +115,9 @@ Partial Class FrmBuscarProveedores
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
-	Private textBox1 As System.Windows.Forms.TextBox
-	Private comboBox1 As System.Windows.Forms.ComboBox
 	Private textBoxFiltroNombreProveedor As System.Windows.Forms.TextBox
+	Private comboBox1 As System.Windows.Forms.ComboBox
+	Private textBox1 As System.Windows.Forms.TextBox
 	Private dataGridView1 As System.Windows.Forms.DataGridView
 	Private lblListaProveedores As System.Windows.Forms.Label
 End Class

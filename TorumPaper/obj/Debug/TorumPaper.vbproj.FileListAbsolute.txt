@@ -38,3 +38,4 @@ C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\Software-de-Ventas-de
 C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.vbproj.GenerateResource.Cache
 C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.exe
 C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.pdb
+C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmVerVentas.resources

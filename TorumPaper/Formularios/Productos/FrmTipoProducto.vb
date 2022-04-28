@@ -15,4 +15,8 @@ Public Partial Class FrmTipoProducto
 		' TODO : Add constructor code after InitializeComponents
 		'
 	End Sub
+	
+	Sub TxtClaveMarcaTextChanged(sender As Object, e As EventArgs)
+		
+	End Sub
 End Class
