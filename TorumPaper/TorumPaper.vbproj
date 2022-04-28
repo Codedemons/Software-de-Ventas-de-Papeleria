@@ -59,30 +59,6 @@
   <ItemGroup>
     <Compile Include="Formularios\ClsAdicionalConfig.vb" />
     <Compile Include="Formularios\ClsTorumPaper.vb" />
-    <Compile Include="Formularios\Eliminar\FrmEliminarPedidos.Designer.vb">
-      <DependentUpon>FrmEliminarPedidos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Eliminar\FrmEliminarPedidos.vb" />
-    <Compile Include="Formularios\Eliminar\FrmEliminarProductos.Designer.vb">
-      <DependentUpon>FrmEliminarProductos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Eliminar\FrmEliminarProductos.vb" />
-    <Compile Include="Formularios\Eliminar\FrmEliminarProveedor.Designer.vb">
-      <DependentUpon>FrmEliminarProveedor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Eliminar\FrmEliminarProveedor.vb" />
-    <Compile Include="Formularios\Listas\FrmBuscarPedido.Designer.vb">
-      <DependentUpon>FrmBuscarPedido.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listas\FrmBuscarPedido.vb" />
-    <Compile Include="Formularios\Listas\FrmBuscarProducto.Designer.vb">
-      <DependentUpon>FrmBuscarProducto.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listas\FrmBuscarProducto.vb" />
-    <Compile Include="Formularios\Listas\FrmBuscarProveedores.Designer.vb">
-      <DependentUpon>FrmBuscarProveedores.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Listas\FrmBuscarProveedores.vb" />
     <Compile Include="Formularios\Pedidos\FrmPedidos.Designer.vb">
       <DependentUpon>FrmPedidos.vb</DependentUpon>
     </Compile>
@@ -99,18 +75,6 @@
       <DependentUpon>FrmProveedores.vb</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Proveedores\FrmProveedores.vb" />
-    <Compile Include="Formularios\Resgistro\FrmRegistroPedido.Designer.vb">
-      <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Resgistro\FrmRegistroPedido.vb" />
-    <Compile Include="Formularios\Resgistro\FrmRegistroProducto.Designer.vb">
-      <DependentUpon>FrmRegistroProducto.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Resgistro\FrmRegistroProducto.vb" />
-    <Compile Include="Formularios\Resgistro\FrmRegistroProveedor.Designer.vb">
-      <DependentUpon>FrmRegistroProveedor.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Resgistro\FrmRegistroProveedor.vb" />
     <Compile Include="Formularios\Ventas\FrmVentas.Designer.vb">
       <DependentUpon>FrmVentas.vb</DependentUpon>
     </Compile>
@@ -134,33 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Formularios" />
-    <Folder Include="Formularios\Listas" />
-    <Folder Include="Formularios\Eliminar" />
     <Folder Include="Formularios\Pedidos" />
     <Folder Include="Formularios\Proveedores" />
     <Folder Include="Formularios\Productos" />
     <Folder Include="Formularios\Ventas" />
-    <Folder Include="Formularios\Resgistro" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\Eliminar\FrmEliminarPedidos.resx">
-      <DependentUpon>FrmEliminarPedidos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Eliminar\FrmEliminarProductos.resx">
-      <DependentUpon>FrmEliminarProductos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Eliminar\FrmEliminarProveedor.resx">
-      <DependentUpon>FrmEliminarProveedor.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listas\FrmBuscarPedido.resx">
-      <DependentUpon>FrmBuscarPedido.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listas\FrmBuscarProducto.resx">
-      <DependentUpon>FrmBuscarProducto.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Listas\FrmBuscarProveedores.resx">
-      <DependentUpon>FrmBuscarProveedores.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Pedidos\FrmPedidos.resx">
       <DependentUpon>FrmPedidos.vb</DependentUpon>
     </EmbeddedResource>
@@ -172,15 +115,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Proveedores\FrmProveedores.resx">
       <DependentUpon>FrmProveedores.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroPedido.resx">
-      <DependentUpon>FrmRegistroPedido.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroProducto.resx">
-      <DependentUpon>FrmRegistroProducto.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Resgistro\FrmRegistroProveedor.resx">
-      <DependentUpon>FrmRegistroProveedor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Ventas\FrmVentas.resx">
       <DependentUpon>FrmVentas.vb</DependentUpon>
