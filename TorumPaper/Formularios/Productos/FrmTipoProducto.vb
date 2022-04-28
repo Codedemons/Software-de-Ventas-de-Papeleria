@@ -35,8 +35,14 @@ Public Partial Class FrmTipoProducto
 		
 		'envia y valida si el registro se realizo
 		If Me.ctrl.insertarRegistro(insertarRegistro) Then
-				MsgBox("Se realizó el registro")
-			End If
+			MsgBox("Se realizó el registro")
+			Dim consultaString As String = "select * from tipoproducto;"
+			Dim ctrl As New ClsTorumPaper
+			Me.t=ctrl.traerDatos(consultaString)
+			Me.v=New Data.DataView(t)
+			Me.dGVTipProductos.DataSource =Me.v.ToTable	
+			
+		End If
 	End Sub
 	
 	Sub FrmTipoProductoLoad(sender As Object, e As EventArgs)
@@ -52,11 +58,7 @@ Public Partial Class FrmTipoProducto
 	
 	Sub BtnActualizarClick(sender As Object, e As EventArgs)
 		
-		Dim consultaString As String = "select * from tipoproducto;"
-		Dim ctrl As New ClsTorumPaper
-		Me.t=ctrl.traerDatos(consultaString)
-		Me.v=New Data.DataView(t)
-		Me.dGVTipProductos.DataSource =Me.v.ToTable	
+		
 		
 	End Sub
 	
@@ -65,6 +67,16 @@ Public Partial Class FrmTipoProducto
 		Me.v=New Data.DataView(t)
 		Me.v.RowFilter="claveTipoProducto like '%" & Me.textBclave.Text & "%'"
 		Me.dGVTipProductos.DataSource = Me.v.ToTable	
+		
+	End Sub
+	
+	Sub DGVTipProductosCellClick(sender As Object, e As DataGridViewCellEventArgs)
+		Dim i As Integer = dGVTipProductos.CurrentRow.Index 
+		
+		txtClaveTipo.Text = dGVTipProductos(0,i).Value
+		txtDescripcion.Text = dGVTipProductos(1,i).Value
+		
+		
 		
 	End Sub
 End Class
