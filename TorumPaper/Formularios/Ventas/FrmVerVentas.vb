@@ -7,12 +7,30 @@
 ' To change this template use Tools | Options | Coding | Edit Standard Headers.
 '
 Public Partial Class FrmVerVentas
+	
+	Private ctrl As ClsTorumPaper
+	
+	Private t As New Data.DataTable
+	Private v As New Data.DataView
+	
 	Public Sub New()
 		' The Me.InitializeComponent call is required for Windows Forms designer support.
-		Me.InitializeComponent()
-		
+		Me.InitializeComponent()			
+		Me.ctrl = New ClsTorumPaper
 		'
 		' TODO : Add constructor code after InitializeComponents
 		'
 	End Sub
+	
+	Sub FrmVerVentasLoad(sender As Object, e As EventArgs)
+			
+		Dim consultaString As String = "select * from venta ;"
+		Dim ctrl As New ClsTorumPaper
+		Me.t=ctrl.traerDatos(consultaString)
+		Me.v=New Data.DataView(t)		
+		Me.dGVventas.DataSource =Me.v.ToTable	
+		
+	End Sub
+	
+	
 End Class

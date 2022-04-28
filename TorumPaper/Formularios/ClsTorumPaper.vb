@@ -15,6 +15,8 @@ Public Class ClsTorumPaper
 		MysqlConector = New MySqlConnection("server = localhost; database = torumpaper; uid = root; pwd = ''")
 	End Sub
 	
+	
+	
 	Public Function insertarRegistro(insertarDato As String) As Boolean
 		Try
 			Dim sqlQuery As MySqlCommand
@@ -25,12 +27,11 @@ Public Class ClsTorumPaper
 			Return True
 		Catch e As Exception
 			Return False
-			
-			
 		End Try
 		Return False
 	End Function
-
+	
+	
 	
 	Public Function traerDatos (ConsultaString As String) As Data.DataTable
 		
@@ -57,6 +58,4 @@ Public Class ClsTorumPaper
 		MysqlConector.Close
 		Return tablaQuery
 	End Function
-	
-	
 End Class

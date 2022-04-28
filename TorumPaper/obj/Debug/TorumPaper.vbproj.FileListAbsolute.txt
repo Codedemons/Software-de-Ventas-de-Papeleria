@@ -39,3 +39,26 @@ C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\Software-de-Ventas-de
 C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.exe
 C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.pdb
 C:\Users\MIGUEL\Documents\SharpDevelop Projects\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmVerVentas.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.vbprojResolveAssemblyReference.cache
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmEliminarPedidos.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmEliminarProductos.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmEliminarProveedor.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmBuscarPedido.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmBuscarProducto.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmBuscarProveedores.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmPedidos.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmProductos.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmTipoProducto.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmProveedores.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmRegistroProducto.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmRegistroProveedor.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmRegistroPedido.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmVentas.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmVerVentas.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.MainForm.resources
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.vbproj.GenerateResource.Cache
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.exe
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.pdb
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\bin\Debug\TorumPaper.exe.config
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\bin\Debug\TorumPaper.exe
+C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\bin\Debug\TorumPaper.pdb
