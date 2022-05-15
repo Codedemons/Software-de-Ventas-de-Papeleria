@@ -33,6 +33,7 @@ Partial Class FrmTipoProducto
 	''' not be able to load this method if it was changed manually.
 	''' </summary>
 	Private Sub InitializeComponent()
+		Me.components = New System.ComponentModel.Container()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoProducto))
 		Dim dataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
 		Dim dataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -52,7 +53,9 @@ Partial Class FrmTipoProducto
 		Me.lblBClave = New System.Windows.Forms.Label()
 		Me.lblBDes = New System.Windows.Forms.Label()
 		Me.txtBDes = New System.Windows.Forms.TextBox()
+		Me.ErrorP = New System.Windows.Forms.ErrorProvider(Me.components)
 		CType(Me.dGVTipProductos,System.ComponentModel.ISupportInitialize).BeginInit
+		CType(Me.ErrorP,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
 		'lblTitulo
@@ -210,6 +213,7 @@ Partial Class FrmTipoProducto
 		Me.textBclave.Text = "Clave"
 		AddHandler Me.textBclave.Click, AddressOf Me.TextBclaveClick
 		AddHandler Me.textBclave.TextChanged, AddressOf Me.TextBclaveTextChanged
+		AddHandler Me.textBclave.KeyPress, AddressOf Me.TextBclaveKeyPress
 		'
 		'lblClave
 		'
@@ -272,6 +276,10 @@ Partial Class FrmTipoProducto
 		AddHandler Me.txtBDes.Click, AddressOf Me.TxtBDesClick
 		AddHandler Me.txtBDes.TextChanged, AddressOf Me.TxtBDesTextChanged
 		'
+		'ErrorP
+		'
+		Me.ErrorP.ContainerControl = Me
+		'
 		'FrmTipoProducto
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -295,9 +303,11 @@ Partial Class FrmTipoProducto
 		Me.Text = "FrmTipoProducto"
 		AddHandler Load, AddressOf Me.FrmTipoProductoLoad
 		CType(Me.dGVTipProductos,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.ErrorP,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private ErrorP As System.Windows.Forms.ErrorProvider
 	Private txtBDes As System.Windows.Forms.TextBox
 	Private lblBDes As System.Windows.Forms.Label
 	Private lblBClave As System.Windows.Forms.Label

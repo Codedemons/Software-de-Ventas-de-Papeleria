@@ -116,6 +116,14 @@ Public Class ClsTorumPaper
 				Return False	
 			Case "Descripcion"
 				Return False	
+			Case "RFC"
+				Return False
+			Case "Nombre"
+				Return False
+			Case "Correo"
+				Return False
+			Case "Telefono"
+				Return False
 			Case Else
 				Return True
 		End Select
@@ -143,5 +151,10 @@ Public Class ClsTorumPaper
 	
 	Public sub MsgFalt()  
 		MessageBox.Show("Los Campos no se encuentran en la base de datos","Campos No Existente",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
-	End sub
+	End Sub
+	
+	Public sub MsgDError()  
+		MessageBox.Show("Los Datos han sido erroneos","No Erroneos",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
+	End Sub
+	
 End Class
