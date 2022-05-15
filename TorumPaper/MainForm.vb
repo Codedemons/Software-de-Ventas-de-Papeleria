@@ -96,7 +96,7 @@ Public Partial Class MainForm
         'Si form no fue econtrado/ no existe
         If Formulario Is Nothing Then
             Formulario = New Miform()
-            Formulario.TopLevel = False
+             Formulario.TopLevel = False
 
             Formulario.FormBorderStyle = FormBorderStyle.None
             Formulario.Dock = DockStyle.Fill

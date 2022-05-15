@@ -15,31 +15,28 @@ Public Partial Class FrmTipoProducto
 	
 	Public Sub New()
 		' The Me.InitializeComponent call is required for Windows Forms designer support.
-		Me.InitializeComponent()
-		
+		Me.InitializeComponent()	
 		Me.ctrl = New ClsTorumPaper
 		
 		'
 		' TODO : Add constructor code after InitializeComponents
 		'
 	End Sub
-	
-	Sub TxtClaveMarcaTextChanged(sender As Object, e As EventArgs)
-		
-	End Sub
-	
-	Sub FrmTipoProductoLoad(sender As Object, e As EventArgs)
-		
+	#Region "Cargar Datos"
+	Public Sub CargarDatos()
 		Dim consultaString As String = Consulta 
 		Dim ctrl As New ClsTorumPaper
 		Me.t=ctrl.traerDatos(consultaString)
 		Me.v=New Data.DataView(t)
 		Me.dGVTipProductos.DataSource =Me.v.ToTable
-		
+	end Sub
+	
+	#End Region
+	
+	Sub FrmTipoProductoLoad(sender As Object, e As EventArgs)
+		CargarDatos()
 	End Sub
-	
 
-	
 	Sub TextBox1TextChanged(sender As Object, e As EventArgs)
 		
 		Me.v=New Data.DataView(t)
@@ -49,11 +46,9 @@ Public Partial Class FrmTipoProducto
 	End Sub
 	
 	Sub DGVTipProductosCellClick(sender As Object, e As DataGridViewCellEventArgs)
-		Dim i As Integer = dGVTipProductos.CurrentRow.Index 
-		
-		txtClaveTipo.Text = dGVTipProductos(0,i).Value
-		txtDescripcion.Text = dGVTipProductos(1,i).Value
-		
+		Dim i As Integer = dGVTipProductos.CurrentRow.Index		
+		txtClaveTipo.Text = dGVTipProductos(0,i).Value.ToString
+		txtDescripcion.Text = dGVTipProductos(1,i).Value.ToString		
 	End Sub
 	
 	Sub TxtDescTextChanged(sender As Object, e As EventArgs)
@@ -64,27 +59,11 @@ Public Partial Class FrmTipoProducto
 	
 	
 	Sub BtnRegistrarClick(sender As Object, e As EventArgs)
-		
-		'Guarda la sentencia en un string 
-		Dim insertarRegistro As String = "INSERT INTO tipoproducto (claveTipoProducto, descripcionTipoProducto) VALUES ('" & Me.txtClaveTipo.Text & "', '" & Me.txtDescripcion.text & "');"
-		
-		'envia y valida si el registro se realizo
-		If txtDescripcion.Text <> ""  Then
-			If Me.ctrl.insertarRegistro(insertarRegistro) Then				
-				MessageBox.Show("Se han Insertado los datos De manera correcta","Registrar Datos",MessageBoxButtons.OK,MessageBoxIcon.Information)
-				Dim consultaString As String = Consulta
-				Dim ctrl As New ClsTorumPaper
-				Me.t=ctrl.traerDatos(consultaString)
-				Me.v=New Data.DataView(t)
-				Me.dGVTipProductos.DataSource =Me.v.ToTable				
-			End If			
-			txtClaveTipo.Text = "Clave"
-			txtDescripcion.Text = "Descripcion"
-		Else
-			MsgBox("Debe de llenar todas las casillas")
-		End If
+		If(ctrl.Funcdatos(txtDescripcion)=True) Then
 			
-		
+		Else 
+			ctrl.MsgtxtV() 
+		End If
 	End Sub
 	
 	Sub BtnModificarClick(sender As Object, e As EventArgs)
@@ -128,28 +107,24 @@ Public Partial Class FrmTipoProducto
 		End If 
 	End Sub
 	
-	Sub TxtClaveTipoClick(sender As Object, e As EventArgs)
-		Dim config As New ClsAdicionalConfig
-		txtClaveTipo.Text = ""
-		config.txtVacio(txtClaveTipo)
+	
+	#Region "Eventos clik de la ventana"
+	Sub TxtClaveTipoClick(sender As Object, e As EventArgs)	
+		ctrl.Funciontxt(txtClaveTipo,lblClave)		
 	End Sub
-	
-	
-	
+		
 	Sub TxtDescripcionClick(sender As Object, e As EventArgs)
-		Dim config As New ClsAdicionalConfig
-		txtDescripcion.Text = ""
+		ctrl.Funciontxt(txtDescripcion,lblDes)		
 	End Sub
 	
 	Sub TextBclaveClick(sender As Object, e As EventArgs)
-		textBclave.Text = ""
+		ctrl.Funciontxt(textBclave,lblBClave)
 	End Sub
 	
 	Sub TxtDescClick(sender As Object, e As EventArgs)
-		txtDesc.Text = ""
+		ctrl.Funciontxt(txtDesc,lblBDes)
 	End Sub
-	
-	
+	#End Region
 	
 	
 End Class

@@ -59,4 +59,56 @@ Public Class ClsTorumPaper
 		Return tablaQuery
 	End Function
 	
+	
+	
+	Public Function VExistencia(buscarRegistro As String) As Integer
+		Dim sqlQuery As MySqlCommand
+		sqlQuery = New MySqlCommand(buscarRegistro, MysqlConector)			
+		Dim resultadoConsulta As MySqlDataReader
+		MysqlConector.Open
+		resultadoConsulta = sqlQuery.ExecuteReader
+		resultadoConsulta.Read
+		Dim numeroRegistros As Integer = Convert.ToUInt16(resultadoConsulta.Item("COUNT(*)").ToString)
+		resultadoConsulta.Close
+		MysqlConector.Close			
+		Return numeroRegistros
+	End Function
+	
+	
+	
+	Public sub Funciontxt(txt As TextBox, lbl As Label)  
+		txt.Text = ""
+		lbl.Visible = True
+	End Sub
+	
+	Public Function Funcdatos(txt As TextBox) As Boolean  
+		Select txt.Text
+			Case ""
+				Return False	
+			Case " "
+				Return False	
+			Case "Clave"
+				Return False	
+			Case "Descripcion"
+				Return False	
+			Case Else
+				Return True
+		End Select
+	End Function
+	
+	Public sub MsgAcept()  
+		MessageBox.Show("Se han aceptado los datos De manera correcta","Datos",MessageBoxButtons.OK,MessageBoxIcon.Information)
+	End sub
+	
+	Public sub MsgAler()  
+		'MessageBox.Show("Se han Eliminado los datos De manera correcta","Eliminar Datos",MessageBoxButtons.OK,MessageBoxIcon.Information)
+	End Sub
+	
+	Public sub MsgError()  
+		'MessageBox.Show("Se han Eliminado los datos De manera correcta","Eliminar Datos",MessageBoxButtons.OK,MessageBoxIcon.Information)
+	End sub
+	
+	Public sub MsgtxtV()  
+		MessageBox.Show("Los Campos se encuentran Vacios","Campos Vacios",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
+	End sub
 End Class

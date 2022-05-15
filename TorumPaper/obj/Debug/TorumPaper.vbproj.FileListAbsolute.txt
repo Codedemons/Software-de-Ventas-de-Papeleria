@@ -53,3 +53,17 @@ C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\Toru
 C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\bin\Debug\TorumPaper.exe.config
 C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\bin\Debug\TorumPaper.exe
 C:\Proyectos\Papeleria\Software-de-Ventas-de-Papeleria\TorumPaper\bin\Debug\TorumPaper.pdb
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.vbprojResolveAssemblyReference.cache
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmPedidos.resources
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmProductos.resources
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmTipoProducto.resources
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmProveedores.resources
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmVentas.resources
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.FrmVerVentas.resources
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.MainForm.resources
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.vbproj.GenerateResource.Cache
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.exe
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\obj\Debug\TorumPaper.pdb
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\bin\Debug\TorumPaper.exe.config
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\bin\Debug\TorumPaper.exe
+C:\Users\LENOVO\Documents\Proyectos\TorumPaper\Software-de-Ventas-de-Papeleria\TorumPaper\bin\Debug\TorumPaper.pdb
