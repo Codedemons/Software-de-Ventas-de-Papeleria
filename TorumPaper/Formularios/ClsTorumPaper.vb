@@ -58,4 +58,5 @@ Public Class ClsTorumPaper
 		MysqlConector.Close
 		Return tablaQuery
 	End Function
+	
 End Class
