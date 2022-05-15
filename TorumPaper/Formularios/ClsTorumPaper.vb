@@ -15,8 +15,6 @@ Public Class ClsTorumPaper
 		MysqlConector = New MySqlConnection("server = localhost; database = torumpaper; uid = root; pwd = ''")
 	End Sub
 	
-	
-	
 	Public Function insertarRegistro(insertarDato As String) As Boolean
 		Try
 			Dim sqlQuery As MySqlCommand
@@ -31,6 +29,33 @@ Public Class ClsTorumPaper
 		Return False
 	End Function
 	
+	Public Function ModificarRegistro(insertarDato As String) As Boolean
+		Try
+			Dim sqlQuery As MySqlCommand
+			sqlQuery = New MySqlCommand(insertarDato, MysqlConector)
+			MysqlConector.Open()
+			sqlQuery.ExecuteNonQuery
+			MysqlConector.Close()
+			Return True
+		Catch e As Exception
+			Return False
+		End Try
+		Return False
+	End Function
+	
+	Public Function EliminarRegistro(insertarDato As String) As Boolean
+		Try
+			Dim sqlQuery As MySqlCommand
+			sqlQuery = New MySqlCommand(insertarDato, MysqlConector)
+			MysqlConector.Open()
+			sqlQuery.ExecuteNonQuery
+			MysqlConector.Close()
+			Return True
+		Catch e As Exception
+			Return False
+		End Try
+		Return False
+	End Function
 	
 	
 	Public Function traerDatos (ConsultaString As String) As Data.DataTable
@@ -97,18 +122,26 @@ Public Class ClsTorumPaper
 	End Function
 	
 	Public sub MsgAcept()  
-		MessageBox.Show("Se han aceptado los datos De manera correcta","Datos",MessageBoxButtons.OK,MessageBoxIcon.Information)
+		MessageBox.Show("Se han aceptado insertado los datos De manera correcta","Datos Insertados",MessageBoxButtons.OK,MessageBoxIcon.Information)
 	End sub
 	
 	Public sub MsgAler()  
-		'MessageBox.Show("Se han Eliminado los datos De manera correcta","Eliminar Datos",MessageBoxButtons.OK,MessageBoxIcon.Information)
+		MessageBox.Show("Se han Actualizado los datos De manera correcta","Actualizar Datos",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
 	End Sub
 	
 	Public sub MsgError()  
-		'MessageBox.Show("Se han Eliminado los datos De manera correcta","Eliminar Datos",MessageBoxButtons.OK,MessageBoxIcon.Information)
+		MessageBox.Show("Se han Eliminado los datos De manera correcta","Eliminar Datos",MessageBoxButtons.OK,MessageBoxIcon.Error)
 	End sub
 	
 	Public sub MsgtxtV()  
 		MessageBox.Show("Los Campos se encuentran Vacios","Campos Vacios",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
+	End Sub
+	
+	Public sub MsgRepit()  
+		MessageBox.Show("Los Campos se encuentran Repetidos","Campos Existente",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
+	End Sub
+	
+	Public sub MsgFalt()  
+		MessageBox.Show("Los Campos no se encuentran en la base de datos","Campos No Existente",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
 	End sub
 End Class

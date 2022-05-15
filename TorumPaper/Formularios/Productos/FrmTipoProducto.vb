@@ -37,76 +37,96 @@ Public Partial Class FrmTipoProducto
 		CargarDatos()
 	End Sub
 
-	Sub TextBox1TextChanged(sender As Object, e As EventArgs)
-		
-		Me.v=New Data.DataView(t)
-		Me.v.RowFilter="Clave like '%" & Me.textBclave.Text & "%'"
-		Me.dGVTipProductos.DataSource = Me.v.ToTable	
-		
-	End Sub
-	
 	Sub DGVTipProductosCellClick(sender As Object, e As DataGridViewCellEventArgs)
 		Dim i As Integer = dGVTipProductos.CurrentRow.Index		
 		txtClaveTipo.Text = dGVTipProductos(0,i).Value.ToString
 		txtDescripcion.Text = dGVTipProductos(1,i).Value.ToString		
 	End Sub
 	
-	Sub TxtDescTextChanged(sender As Object, e As EventArgs)
+	
+	#Region "Buscadores"
+	Sub TextBclaveTextChanged(sender As Object, e As EventArgs)
 		Me.v=New Data.DataView(t)
-		Me.v.RowFilter="Descripcion like '%" & txtDescripcion.Text & "%'"
-		Me.dGVTipProductos.DataSource = Me.v.ToTable	
-	End Sub
+		Me.v.RowFilter="Clave like '%" & Me.textBclave.Text & "%'"
+		Me.dGVTipProductos.DataSource = Me.v.ToTable					
+	End Sub	
 	
-	
-	Sub BtnRegistrarClick(sender As Object, e As EventArgs)
-		If(ctrl.Funcdatos(txtDescripcion)=True) Then
-			
-		Else 
-			ctrl.MsgtxtV() 
-		End If
-	End Sub
-	
-	Sub BtnModificarClick(sender As Object, e As EventArgs)
-				
-		'Guarda la sentencia en un string 
-		Dim insertarRegistro As String = "UPDATE tipoproducto SET claveTipoProducto = '" & txtClaveTipo.Text & "', descripcionTipoProducto = '" & Me.txtDescripcion.text & "' WHERE claveTipoProducto = '" & txtClaveTipo.Text & "';"
+	Sub TxtBDesTextChanged(sender As Object, e As EventArgs)
 		
-		'envia y valida si el registro se realizo
-		If txtDescripcion.Text <> "" Then
-		If Me.ctrl.insertarRegistro(insertarRegistro) Then
-			MessageBox.Show("Se han Actualizado los datos De manera correcta","Actualizar Datos",MessageBoxButtons.OK,MessageBoxIcon.Warning)
-			Dim consultaString As String = Consulta
-			Dim ctrl As New ClsTorumPaper
-			Me.t=ctrl.traerDatos(consultaString)
-			Me.v=New Data.DataView(t)
-			Me.dGVTipProductos.DataSource =Me.v.ToTable	
-			
-		End If
+		Me.v=New Data.DataView(t)
+		Me.v.RowFilter="Descripcion like '%" & txtBDes.Text & "%'"
+		Me.dGVTipProductos.DataSource = Me.v.ToTable	
+		
+	End Sub
+	#End region
+	
+	#Region "Rellenar Datos"
+	Public Sub RellenarDatos()
 		txtClaveTipo.Text = "Clave"
 		txtDescripcion.Text = "Descripcion"
+	end Sub 
+		
+ 	#End region 
+	#Region "Botones Principales"
+	Sub BtnRegistrarClick(sender As Object, e As EventArgs)
+		If(ctrl.Funcdatos(txtDescripcion)=True) Then
+			Dim buscarRegistro As String = "SELECT COUNT(*) FROM tipoproducto WHERE claveTipoProducto = '" & txtClaveTipo.Text & "' OR descripcionTipoProducto = '" & txtDescripcion.Text & "';"
+			If ctrl.VExistencia(buscarRegistro) = 0 Then
+					Dim insertarRegistro As String = "INSERT INTO tipoproducto (claveTipoProducto, descripcionTipoProducto) VALUES ('" & txtClaveTipo.Text & "', '" & txtDescripcion.Text & "');"
+					If ctrl.insertarRegistro(insertarRegistro) Then
+						insertarRegistro = ""
+						ctrl.MsgAcept()
+						CargarDatos()
+						RellenarDatos()
+					End If		
+			Else
+				ctrl.MsgRepit()'Manda un mensaje si los campos se repiten en la base de datos 
+			End If
+		Else 
+			ctrl.MsgtxtV()'Manda un mensaje si los campos estan vacios 
+		End If
+	End Sub
+	
+	Sub BtnModificarClick(sender As Object, e As EventArgs)		
+		'Guarda la sentencia en un string		
+		If(ctrl.Funcdatos(txtDescripcion)=True) Then
+			Dim buscarRegistro As String = "SELECT COUNT(*) FROM tipoproducto WHERE claveTipoProducto = '" & txtClaveTipo.Text & "' OR descripcionTipoProducto = '" & txtDescripcion.Text & "';"
+			If ctrl.VExistencia(buscarRegistro) = 0 Then
+				ctrl.MsgFalt()'Manda un mensaje si no existe en la base de datos		
+			Else
+				Dim ModificarRegistro As String = "UPDATE tipoproducto SET claveTipoProducto = '" & txtClaveTipo.Text & "', descripcionTipoProducto = '" & Me.txtDescripcion.text & "' WHERE claveTipoProducto = '" & txtClaveTipo.Text & "';"
+					If ctrl.ModificarRegistro(ModificarRegistro) Then
+						ModificarRegistro = ""
+						ctrl.MsgAler
+						CargarDatos()
+						RellenarDatos()
+					End If		
+			End If
+		Else 
+			ctrl.MsgtxtV()'Manda un mensaje si los campos estan vacios 
 		End If
 	End Sub
 	
 	Sub BtnEliminarClick(sender As Object, e As EventArgs)
-		'Guarda la sentencia en un string 
-		Dim insertarRegistro As String = "DELETE FROM tipoproducto WHERE claveTipoProducto = '" & txtClaveTipo.Text & "';"
-		
-		'envia y valida si el registro se realizo
-		If txtDescripcion.Text <> "" Then
-		If Me.ctrl.insertarRegistro(insertarRegistro) Then
-			MessageBox.Show("Se han Eliminado los datos De manera correcta","Eliminar Datos",MessageBoxButtons.OK,MessageBoxIcon.Error)
-			Dim consultaString As String = Consulta
-			Dim ctrl As New ClsTorumPaper
-			Me.t=ctrl.traerDatos(consultaString)
-			Me.v=New Data.DataView(t)
-			Me.dGVTipProductos.DataSource =Me.v.ToTable	
-			
+		'Guarda la sentencia en un string		
+		If(ctrl.Funcdatos(txtDescripcion)=True) Then
+			Dim buscarRegistro As String = "SELECT COUNT(*) FROM tipoproducto WHERE claveTipoProducto = '" & txtClaveTipo.Text & "' OR descripcionTipoProducto = '" & txtDescripcion.Text & "';"
+			If ctrl.VExistencia(buscarRegistro) = 0 Then
+				ctrl.MsgFalt()'Manda un mensaje si no existe en la base de datos		
+			Else
+				Dim EliminarRegistro As String = "DELETE FROM tipoproducto WHERE claveTipoProducto = '" & txtClaveTipo.Text & "';"
+					If ctrl.EliminarRegistro(EliminarRegistro) Then
+						EliminarRegistro = ""
+						ctrl.MsgError()
+						CargarDatos()
+						RellenarDatos()
+					End If		
+			End If
+		Else 
+			ctrl.MsgtxtV()'Manda un mensaje si los campos estan vacios 
 		End If
-		txtClaveTipo.Text = "Clave"
-		txtDescripcion.Text = "Descripcion"
-		End If 
 	End Sub
-	
+	#End Region
 	
 	#Region "Eventos clik de la ventana"
 	Sub TxtClaveTipoClick(sender As Object, e As EventArgs)	
@@ -121,10 +141,11 @@ Public Partial Class FrmTipoProducto
 		ctrl.Funciontxt(textBclave,lblBClave)
 	End Sub
 	
-	Sub TxtDescClick(sender As Object, e As EventArgs)
-		ctrl.Funciontxt(txtDesc,lblBDes)
+	Sub TxtBDesClick(sender As Object, e As EventArgs)
+		ctrl.Funciontxt(txtBDes,lblBDes)
 	End Sub
 	#End Region
+
 	
 	
 End Class
