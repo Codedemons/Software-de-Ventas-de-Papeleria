@@ -106,6 +106,12 @@ Public Class ClsTorumPaper
 		lbl.Visible = True
 	End Sub
 	
+	
+	Public sub Funcioncmb(cmb As ComboBox, lbl As Label)  
+		cmb.Text = ""
+		lbl.Visible = True
+	End Sub
+	
 	Public Function Funcdatos(txt As TextBox) As Boolean  
 		Select txt.Text
 			Case ""
@@ -123,6 +129,37 @@ Public Class ClsTorumPaper
 			Case "Correo"
 				Return False
 			Case "Telefono"
+				Return False
+			Case "Precio"
+				Return False
+			Case "Marca"
+				Return False
+			Case Else
+				Return True
+		End Select
+	End Function
+	
+	Public Function FuncdatosCmb(cmb As ComboBox) As Boolean  
+		Select cmb.Text
+			Case ""
+				Return False	
+			Case " "
+				Return False	
+			Case "Clave"
+				Return False	
+			Case "Descripcion"
+				Return False	
+			Case "RFC"
+				Return False
+			Case "Nombre"
+				Return False
+			Case "Correo"
+				Return False
+			Case "Telefono"
+				Return False
+			Case "Precio"
+				Return False
+			Case "Marca"
 				Return False
 			Case Else
 				Return True

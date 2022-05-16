@@ -267,8 +267,7 @@ Public Partial Class FrmProveedores
 	End Sub
 	#End Region
 	
-	
-	
+
 	
 	Sub TxtTelefonoKeyPress(sender As Object, e As KeyPressEventArgs)
 		If Char.IsDigit(e.KeyChar) Then

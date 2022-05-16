@@ -54,7 +54,6 @@ Public Partial Class FrmTipoProducto
 		Me.v=New Data.DataView(t)
 		Me.v.RowFilter="Descripcion like '%" & txtBDes.Text & "%'"
 		Me.dGVTipProductos.DataSource = Me.v.ToTable	
-		
 	End Sub
 	#End region
 	
