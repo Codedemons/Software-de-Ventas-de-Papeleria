@@ -90,6 +90,7 @@ Public Class ClsTorumPaper
 		Dim sqlQuery As MySqlCommand
 		sqlQuery = New MySqlCommand(buscarRegistro, MysqlConector)			
 		Dim resultadoConsulta As MySqlDataReader
+		
 		MysqlConector.Open
 		resultadoConsulta = sqlQuery.ExecuteReader
 		resultadoConsulta.Read
@@ -161,6 +162,10 @@ Public Class ClsTorumPaper
 				Return False
 			Case "Marca"
 				Return False
+			Case "Producto"
+				Return False
+			Case "Proveedores"
+				Return False				
 			Case Else
 				Return True
 		End Select

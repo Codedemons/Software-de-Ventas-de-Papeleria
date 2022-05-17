@@ -11,7 +11,7 @@ Public Partial Class FrmProductos
 	Private ctrl As ClsTorumPaper		
 	Private t As New Data.DataTable
 	Private v As New Data.DataView
-	Dim Consulta As String = "	SELECT * FROM v_productos;"
+	Dim Consulta As String = "	SELECT * FROM v_productos_modif;"
 	
 	Public Sub New()
 		' The Me.InitializeComponent call is required for Windows Forms designer support.
@@ -49,14 +49,7 @@ Public Partial Class FrmProductos
 		Dim i As Integer = dGVProductos.CurrentRow.Index		
 		Dim buscarRegistro As String = "SELECT COUNT(*) FROM tipoproducto WHERE claveTipoProducto = '" & txtClave.Text & "' ;"
 		txtClave.Text	= dGVProductos(0,i).Value.ToString
-		If ctrl.VExistencia(buscarRegistro) = 0 Then
-			Dim consulta As String = "SELECT claveTipoProducto, descripcionTipoProducto FROM tipoproducto;"
-			cmbTipo.DataSource = ctrl.consultasSql(Consulta)
-			Me.cmbTipo.ValueMember = "claveTipoProducto"
-			Me.cmbTipo.DisplayMember = "descripcionTipoProducto"
-		Else
-			ctrl.MsgFalt()
-		End If
+		cmbTipo.Text = dGVProductos(1,i).Value.ToString
 		txtDescripcion.Text = dGVProductos(2,i).Value.ToString
 		cmbMarca.Text = dGVProductos(3,i).Value.ToString
 		txtPrecio.Text = dGVProductos(4,i).Value.ToString

@@ -33,13 +33,17 @@ Partial Class FrmVerVentas
 	''' not be able to load this method if it was changed manually.
 	''' </summary>
 	Private Sub InitializeComponent()
+		Dim dataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
 		Me.lblTitulo = New System.Windows.Forms.Label()
 		Me.lbltBuscar = New System.Windows.Forms.Label()
-		Me.dGVventas = New System.Windows.Forms.DataGridView()
 		Me.dTPBFecha = New System.Windows.Forms.DateTimePicker()
 		Me.txtBPrecio = New System.Windows.Forms.TextBox()
 		Me.cmbProductos = New System.Windows.Forms.ComboBox()
 		Me.textBox1 = New System.Windows.Forms.TextBox()
+		Me.dGVventas = New System.Windows.Forms.DataGridView()
 		CType(Me.dGVventas,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
@@ -65,15 +69,6 @@ Partial Class FrmVerVentas
 		Me.lbltBuscar.TabIndex = 112
 		Me.lbltBuscar.Text = "Buscar"
 		Me.lbltBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		'
-		'dGVventas
-		'
-		Me.dGVventas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.dGVventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		Me.dGVventas.Location = New System.Drawing.Point(25, 120)
-		Me.dGVventas.Name = "dGVventas"
-		Me.dGVventas.Size = New System.Drawing.Size(781, 333)
-		Me.dGVventas.TabIndex = 109
 		'
 		'dTPBFecha
 		'
@@ -121,17 +116,66 @@ Partial Class FrmVerVentas
 		Me.textBox1.Text = "Total Venta"
 		Me.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
 		'
+		'dGVventas
+		'
+		Me.dGVventas.AllowUserToAddRows = false
+		dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+		dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray
+		dataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!)
+		dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+		dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray
+		dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+		dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.dGVventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1
+		Me.dGVventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+		Me.dGVventas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+		Me.dGVventas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.dGVventas.BorderStyle = System.Windows.Forms.BorderStyle.None
+		dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+		dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+		dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray
+		dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.dGVventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2
+		Me.dGVventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+		dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+		dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+		dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue
+		dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+		dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+		Me.dGVventas.DefaultCellStyle = dataGridViewCellStyle3
+		Me.dGVventas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+		Me.dGVventas.GridColor = System.Drawing.SystemColors.Control
+		Me.dGVventas.Location = New System.Drawing.Point(25, 112)
+		Me.dGVventas.Name = "dGVventas"
+		dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+		dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.WindowFrame
+		dataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+		dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+		dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+		dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.dGVventas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4
+		Me.dGVventas.RowHeadersVisible = false
+		Me.dGVventas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+		Me.dGVventas.Size = New System.Drawing.Size(781, 324)
+		Me.dGVventas.TabIndex = 119
+		'
 		'FrmVerVentas
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(867, 465)
+		Me.Controls.Add(Me.dGVventas)
 		Me.Controls.Add(Me.textBox1)
 		Me.Controls.Add(Me.cmbProductos)
 		Me.Controls.Add(Me.txtBPrecio)
 		Me.Controls.Add(Me.dTPBFecha)
 		Me.Controls.Add(Me.lbltBuscar)
-		Me.Controls.Add(Me.dGVventas)
 		Me.Controls.Add(Me.lblTitulo)
 		Me.Name = "FrmVerVentas"
 		Me.Text = "FrmVerVentas"

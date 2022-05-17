@@ -203,10 +203,11 @@ Partial Class MainForm
 		Me.btnEmpleados.Name = "btnEmpleados"
 		Me.btnEmpleados.Size = New System.Drawing.Size(200, 50)
 		Me.btnEmpleados.TabIndex = 25
-		Me.btnEmpleados.Text = "  Empleados"
+		Me.btnEmpleados.Text = " Cajero Ventas"
 		Me.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
 		Me.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
 		Me.btnEmpleados.UseVisualStyleBackColor = true
+		AddHandler Me.btnEmpleados.Click, AddressOf Me.BtnEmpleadosClick
 		'
 		'Panel5
 		'

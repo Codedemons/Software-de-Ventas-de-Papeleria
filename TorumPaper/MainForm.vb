@@ -129,9 +129,11 @@ Public Partial Class MainForm
 	Sub BtnTProductosClick(sender As Object, e As EventArgs)
 		AbrirFormEnPanel(Of FrmTipoProducto)()	
 	End Sub
+	
+	Sub BtnEmpleadosClick(sender As Object, e As EventArgs)
+		AbrirFormEnPanel(Of FrmVentas)()	
+	End Sub
 	#End Region
 	
 	
-	
-
 End Class
