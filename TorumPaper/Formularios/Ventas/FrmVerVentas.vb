@@ -35,4 +35,8 @@ Public Partial Class FrmVerVentas
 	
 	
 	
+	
+	Sub DGVventasCellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+		
+	End Sub
 End Class

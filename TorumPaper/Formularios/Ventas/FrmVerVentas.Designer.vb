@@ -164,6 +164,7 @@ Partial Class FrmVerVentas
 		Me.dGVventas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
 		Me.dGVventas.Size = New System.Drawing.Size(781, 324)
 		Me.dGVventas.TabIndex = 119
+		AddHandler Me.dGVventas.CellContentClick, AddressOf Me.DGVventasCellContentClick
 		'
 		'FrmVerVentas
 		'

@@ -51,7 +51,6 @@ Partial Class FrmPedidos
 		Me.btnEditar = New System.Windows.Forms.Button()
 		Me.dTPBFecha = New System.Windows.Forms.DateTimePicker()
 		Me.dTpFecha = New System.Windows.Forms.DateTimePicker()
-		Me.cmbProductos = New System.Windows.Forms.ComboBox()
 		Me.txtBClave = New System.Windows.Forms.TextBox()
 		Me.dGVPedidos = New System.Windows.Forms.DataGridView()
 		Me.lblProveedores = New System.Windows.Forms.Label()
@@ -64,6 +63,7 @@ Partial Class FrmPedidos
 		Me.ErrorPProv = New System.Windows.Forms.ErrorProvider(Me.components)
 		Me.ErrorPProduct = New System.Windows.Forms.ErrorProvider(Me.components)
 		Me.ErrorPPrec = New System.Windows.Forms.ErrorProvider(Me.components)
+		Me.cmbProductos = New System.Windows.Forms.ComboBox()
 		CType(Me.nUDCantidadPedido,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.dGVPedidos,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.ErrorPClave,System.ComponentModel.ISupportInitialize).BeginInit
@@ -219,20 +219,6 @@ Partial Class FrmPedidos
 		Me.dTpFecha.Size = New System.Drawing.Size(287, 33)
 		Me.dTpFecha.TabIndex = 96
 		'
-		'cmbProductos
-		'
-		Me.cmbProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.cmbProductos.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
-		Me.cmbProductos.ForeColor = System.Drawing.Color.Gainsboro
-		Me.cmbProductos.FormattingEnabled = true
-		Me.cmbProductos.Items.AddRange(New Object() {"Producto"})
-		Me.cmbProductos.Location = New System.Drawing.Point(354, 77)
-		Me.cmbProductos.Name = "cmbProductos"
-		Me.cmbProductos.Size = New System.Drawing.Size(300, 33)
-		Me.cmbProductos.TabIndex = 100
-		Me.cmbProductos.Text = "Producto"
-		AddHandler Me.cmbProductos.Click, AddressOf Me.CmbProductosClick
-		'
 		'txtBClave
 		'
 		Me.txtBClave.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
@@ -382,6 +368,20 @@ Partial Class FrmPedidos
 		'ErrorPPrec
 		'
 		Me.ErrorPPrec.ContainerControl = Me
+		'
+		'cmbProductos
+		'
+		Me.cmbProductos.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.cmbProductos.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
+		Me.cmbProductos.ForeColor = System.Drawing.Color.Gainsboro
+		Me.cmbProductos.FormattingEnabled = true
+		Me.cmbProductos.Items.AddRange(New Object() {"Producto"})
+		Me.cmbProductos.Location = New System.Drawing.Point(354, 77)
+		Me.cmbProductos.Name = "cmbProductos"
+		Me.cmbProductos.Size = New System.Drawing.Size(300, 33)
+		Me.cmbProductos.TabIndex = 100
+		Me.cmbProductos.Text = "Producto"
+		AddHandler Me.cmbProductos.Click, AddressOf Me.CmbProductosClick
 		'
 		'FrmPedidos
 		'
