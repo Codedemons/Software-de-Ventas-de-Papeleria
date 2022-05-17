@@ -34,10 +34,10 @@ Partial Class FrmVentas
 	''' </summary>
 	Private Sub InitializeComponent()
 		Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmVentas))
-		Dim dataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-		Dim dataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-		Dim dataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-		Dim dataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+		Dim dataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
 		Me.lblTitulo = New System.Windows.Forms.Label()
 		Me.label1 = New System.Windows.Forms.Label()
 		Me.cmbProductos = New System.Windows.Forms.ComboBox()
@@ -45,20 +45,21 @@ Partial Class FrmVentas
 		Me.btnEliminar = New System.Windows.Forms.Button()
 		Me.btnAgregar = New System.Windows.Forms.Button()
 		Me.lbltCantidad = New System.Windows.Forms.Label()
-		Me.nUDCantidadPedido = New System.Windows.Forms.NumericUpDown()
+		Me.nUDCantidad = New System.Windows.Forms.NumericUpDown()
 		Me.dGVventas = New System.Windows.Forms.DataGridView()
 		Me.Producto = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.Fecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-		Me.button1 = New System.Windows.Forms.Button()
+		Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
+		Me.btnPagar = New System.Windows.Forms.Button()
 		Me.label2 = New System.Windows.Forms.Label()
 		Me.label3 = New System.Windows.Forms.Label()
-		Me.txtPrecio = New System.Windows.Forms.TextBox()
-		Me.lblPrecio = New System.Windows.Forms.Label()
+		Me.txtPago = New System.Windows.Forms.TextBox()
+		Me.lblPago = New System.Windows.Forms.Label()
 		Me.label4 = New System.Windows.Forms.Label()
 		Me.label5 = New System.Windows.Forms.Label()
-		CType(Me.nUDCantidadPedido,System.ComponentModel.ISupportInitialize).BeginInit
+		CType(Me.nUDCantidad,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.dGVventas,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
 		'
@@ -112,6 +113,7 @@ Partial Class FrmVentas
 		Me.btnEditar.TabIndex = 126
 		Me.btnEditar.Text = "Editar"
 		Me.btnEditar.UseVisualStyleBackColor = false
+		AddHandler Me.btnEditar.Click, AddressOf Me.BtnEditarClick
 		'
 		'btnEliminar
 		'
@@ -126,6 +128,7 @@ Partial Class FrmVentas
 		Me.btnEliminar.TabIndex = 125
 		Me.btnEliminar.Text = "Eliminar"
 		Me.btnEliminar.UseVisualStyleBackColor = false
+		AddHandler Me.btnEliminar.Click, AddressOf Me.BtnEliminarClick
 		'
 		'btnAgregar
 		'
@@ -140,6 +143,7 @@ Partial Class FrmVentas
 		Me.btnAgregar.TabIndex = 124
 		Me.btnAgregar.Text = "Agregar"
 		Me.btnAgregar.UseVisualStyleBackColor = false
+		AddHandler Me.btnAgregar.Click, AddressOf Me.BtnAgregarClick
 		'
 		'lbltCantidad
 		'
@@ -151,67 +155,68 @@ Partial Class FrmVentas
 		Me.lbltCantidad.TabIndex = 128
 		Me.lbltCantidad.Text = "Cantidad"
 		'
-		'nUDCantidadPedido
+		'nUDCantidad
 		'
-		Me.nUDCantidadPedido.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.nUDCantidadPedido.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
-		Me.nUDCantidadPedido.ForeColor = System.Drawing.Color.White
-		Me.nUDCantidadPedido.Location = New System.Drawing.Point(97, 182)
-		Me.nUDCantidadPedido.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
-		Me.nUDCantidadPedido.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-		Me.nUDCantidadPedido.Name = "nUDCantidadPedido"
-		Me.nUDCantidadPedido.Size = New System.Drawing.Size(194, 33)
-		Me.nUDCantidadPedido.TabIndex = 127
-		Me.nUDCantidadPedido.Value = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDCantidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.nUDCantidad.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
+		Me.nUDCantidad.ForeColor = System.Drawing.Color.White
+		Me.nUDCantidad.Location = New System.Drawing.Point(97, 182)
+		Me.nUDCantidad.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
+		Me.nUDCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+		Me.nUDCantidad.Name = "nUDCantidad"
+		Me.nUDCantidad.Size = New System.Drawing.Size(194, 33)
+		Me.nUDCantidad.TabIndex = 127
+		Me.nUDCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
 		'
 		'dGVventas
 		'
 		Me.dGVventas.AllowUserToAddRows = false
-		dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-		dataGridViewCellStyle5.BackColor = System.Drawing.Color.DimGray
-		dataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!)
-		dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-		dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray
-		dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
-		dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-		Me.dGVventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5
+		dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+		dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray
+		dataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!)
+		dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+		dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray
+		dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+		dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.dGVventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1
 		Me.dGVventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
 		Me.dGVventas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
 		Me.dGVventas.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-		dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Highlight
-		dataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-		dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.DimGray
-		dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-		Me.dGVventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6
+		dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+		dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+		dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray
+		dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.dGVventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2
 		Me.dGVventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-		Me.dGVventas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Producto, Me.Cantidad, Me.Fecha, Me.Precio})
-		dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-		dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Highlight
-		dataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
-		dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSkyBlue
-		dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White
-		dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-		Me.dGVventas.DefaultCellStyle = dataGridViewCellStyle7
+		Me.dGVventas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Producto, Me.Cantidad, Me.Fecha, Me.Precio, Me.Total})
+		dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+		dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+		dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue
+		dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+		dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+		Me.dGVventas.DefaultCellStyle = dataGridViewCellStyle3
 		Me.dGVventas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
 		Me.dGVventas.GridColor = System.Drawing.SystemColors.Control
 		Me.dGVventas.Location = New System.Drawing.Point(311, 143)
 		Me.dGVventas.Name = "dGVventas"
-		dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-		dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.WindowFrame
-		dataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
-		dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-		dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-		dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-		dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-		Me.dGVventas.RowHeadersDefaultCellStyle = dataGridViewCellStyle8
+		dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+		dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.WindowFrame
+		dataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!)
+		dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+		dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+		dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+		dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+		Me.dGVventas.RowHeadersDefaultCellStyle = dataGridViewCellStyle4
 		Me.dGVventas.RowHeadersVisible = false
 		Me.dGVventas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
 		Me.dGVventas.Size = New System.Drawing.Size(544, 251)
 		Me.dGVventas.TabIndex = 129
+		AddHandler Me.dGVventas.CellClick, AddressOf Me.DGVventasCellClick
 		'
 		'Producto
 		'
@@ -230,22 +235,27 @@ Partial Class FrmVentas
 		'
 		'Precio
 		'
-		Me.Precio.HeaderText = "Precio"
+		Me.Precio.HeaderText = "Precio Unitario"
 		Me.Precio.Name = "Precio"
 		'
-		'button1
+		'Total
 		'
-		Me.button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.button1.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.button1.ForeColor = System.Drawing.Color.White
-		Me.button1.Image = CType(resources.GetObject("button1.Image"),System.Drawing.Image)
-		Me.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.button1.Location = New System.Drawing.Point(307, 405)
-		Me.button1.Name = "button1"
-		Me.button1.Size = New System.Drawing.Size(224, 51)
-		Me.button1.TabIndex = 130
-		Me.button1.Text = "Pagar"
-		Me.button1.UseVisualStyleBackColor = false
+		Me.Total.HeaderText = "Total"
+		Me.Total.Name = "Total"
+		'
+		'btnPagar
+		'
+		Me.btnPagar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.btnPagar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.btnPagar.ForeColor = System.Drawing.Color.White
+		Me.btnPagar.Image = CType(resources.GetObject("btnPagar.Image"),System.Drawing.Image)
+		Me.btnPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.btnPagar.Location = New System.Drawing.Point(307, 405)
+		Me.btnPagar.Name = "btnPagar"
+		Me.btnPagar.Size = New System.Drawing.Size(224, 51)
+		Me.btnPagar.TabIndex = 130
+		Me.btnPagar.Text = "Pagar"
+		Me.btnPagar.UseVisualStyleBackColor = false
 		'
 		'label2
 		'
@@ -257,7 +267,6 @@ Partial Class FrmVentas
 		Me.label2.TabIndex = 131
 		Me.label2.Text = "Total"
 		Me.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-		'AddHandler Me.label2.Click, AddressOf Me.Label2Click
 		'
 		'label3
 		'
@@ -270,29 +279,28 @@ Partial Class FrmVentas
 		Me.label3.Text = "0.0"
 		Me.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
-		'txtPrecio
+		'txtPago
 		'
-		Me.txtPrecio.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.txtPrecio.Font = New System.Drawing.Font("Agency FB", 20.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
-		Me.txtPrecio.ForeColor = System.Drawing.Color.Gainsboro
-		Me.txtPrecio.Location = New System.Drawing.Point(22, 417)
-		Me.txtPrecio.Name = "txtPrecio"
-		Me.txtPrecio.Size = New System.Drawing.Size(269, 41)
-		Me.txtPrecio.TabIndex = 133
-		Me.txtPrecio.Text = "Pago"
+		Me.txtPago.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
+		Me.txtPago.Font = New System.Drawing.Font("Agency FB", 20.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
+		Me.txtPago.ForeColor = System.Drawing.Color.Gainsboro
+		Me.txtPago.Location = New System.Drawing.Point(22, 417)
+		Me.txtPago.Name = "txtPago"
+		Me.txtPago.Size = New System.Drawing.Size(269, 41)
+		Me.txtPago.TabIndex = 133
+		Me.txtPago.Text = "Pago"
 		'
-		'lblPrecio
+		'lblPago
 		'
-		Me.lblPrecio.Font = New System.Drawing.Font("Agency FB", 13.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
-		Me.lblPrecio.ForeColor = System.Drawing.Color.White
-		Me.lblPrecio.Location = New System.Drawing.Point(22, 380)
-		Me.lblPrecio.Name = "lblPrecio"
-		Me.lblPrecio.Size = New System.Drawing.Size(67, 37)
-		Me.lblPrecio.TabIndex = 134
-		Me.lblPrecio.Text = "Pago"
-		Me.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.lblPrecio.Visible = false
-		'AddHandler Me.lblPrecio.Click, AddressOf Me.LblPrecioClick
+		Me.lblPago.Font = New System.Drawing.Font("Agency FB", 13.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
+		Me.lblPago.ForeColor = System.Drawing.Color.White
+		Me.lblPago.Location = New System.Drawing.Point(22, 386)
+		Me.lblPago.Name = "lblPago"
+		Me.lblPago.Size = New System.Drawing.Size(67, 37)
+		Me.lblPago.TabIndex = 134
+		Me.lblPago.Text = "Pago"
+		Me.lblPago.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.lblPago.Visible = false
 		'
 		'label4
 		'
@@ -324,13 +332,13 @@ Partial Class FrmVentas
 		Me.Controls.Add(Me.label4)
 		Me.Controls.Add(Me.label5)
 		Me.Controls.Add(Me.btnEliminar)
-		Me.Controls.Add(Me.txtPrecio)
-		Me.Controls.Add(Me.lblPrecio)
-		Me.Controls.Add(Me.button1)
+		Me.Controls.Add(Me.txtPago)
+		Me.Controls.Add(Me.lblPago)
+		Me.Controls.Add(Me.btnPagar)
 		Me.Controls.Add(Me.label3)
 		Me.Controls.Add(Me.label2)
 		Me.Controls.Add(Me.dGVventas)
-		Me.Controls.Add(Me.nUDCantidadPedido)
+		Me.Controls.Add(Me.nUDCantidad)
 		Me.Controls.Add(Me.lbltCantidad)
 		Me.Controls.Add(Me.btnEditar)
 		Me.Controls.Add(Me.btnAgregar)
@@ -341,24 +349,25 @@ Partial Class FrmVentas
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 		Me.Text = "FrmVentas"
 		AddHandler Load, AddressOf Me.FrmVentasLoad
-		CType(Me.nUDCantidadPedido,System.ComponentModel.ISupportInitialize).EndInit
+		CType(Me.nUDCantidad,System.ComponentModel.ISupportInitialize).EndInit
 		CType(Me.dGVventas,System.ComponentModel.ISupportInitialize).EndInit
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private Total As System.Windows.Forms.DataGridViewTextBoxColumn
 	Private label5 As System.Windows.Forms.Label
 	Private label4 As System.Windows.Forms.Label
-	Private lblPrecio As System.Windows.Forms.Label
-	Private txtPrecio As System.Windows.Forms.TextBox
+	Private lblPago As System.Windows.Forms.Label
+	Private txtPago As System.Windows.Forms.TextBox
 	Private label3 As System.Windows.Forms.Label
 	Private label2 As System.Windows.Forms.Label
-	Private button1 As System.Windows.Forms.Button
+	Private btnPagar As System.Windows.Forms.Button
 	Private Precio As System.Windows.Forms.DataGridViewTextBoxColumn
 	Private Fecha As System.Windows.Forms.DataGridViewTextBoxColumn
 	Private Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
 	Private Producto As System.Windows.Forms.DataGridViewTextBoxColumn
 	Private dGVventas As System.Windows.Forms.DataGridView
-	Private nUDCantidadPedido As System.Windows.Forms.NumericUpDown
+	Private nUDCantidad As System.Windows.Forms.NumericUpDown
 	Private lbltCantidad As System.Windows.Forms.Label
 	Private btnAgregar As System.Windows.Forms.Button
 	Private btnEliminar As System.Windows.Forms.Button
