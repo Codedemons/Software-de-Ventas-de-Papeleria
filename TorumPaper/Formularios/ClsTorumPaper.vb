@@ -12,7 +12,12 @@ Public Class ClsTorumPaper
 	Private MysqlConector As MySqlConnection
 	
 	Public Sub New()
-		MysqlConector = New MySqlConnection("server = localhost; database = torumpaper; uid = root; pwd = ''")
+		Try
+			MysqlConector = New MySqlConnection("server = localhost; database = torumpaper; uid = root; pwd = '' ")
+		Catch e As Exception
+			MsgBox(e.Message)
+		End Try
+		
 	End Sub
 	
 	Public Function insertarRegistro(insertarDato As String) As Boolean
@@ -24,7 +29,8 @@ Public Class ClsTorumPaper
 			MysqlConector.Close()
 			Return True
 		Catch e As Exception
-			Return False
+			MsgBox(e.Message)
+			Return False			
 		End Try
 		Return False
 	End Function
@@ -38,6 +44,7 @@ Public Class ClsTorumPaper
 			MysqlConector.Close()
 			Return True
 		Catch e As Exception
+			MsgBox(e.Message)
 			Return False
 		End Try
 		Return False
@@ -52,6 +59,7 @@ Public Class ClsTorumPaper
 			MysqlConector.Close()
 			Return True
 		Catch e As Exception
+			MsgBox(e.Message)
 			Return False
 		End Try
 		Return False
@@ -198,5 +206,11 @@ Public Class ClsTorumPaper
 	Public sub MsgDError()  
 		MessageBox.Show("Los Datos han sido erroneos","No Erroneos",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
 	End Sub
+	
+	Public sub MsgCancel()  
+		MessageBox.Show("Compra Cancelada","Datos Cancelados",MessageBoxButtons.OK,MessageBoxIcon.Exclamation)
+	End Sub
+	
+	
 	
 End Class

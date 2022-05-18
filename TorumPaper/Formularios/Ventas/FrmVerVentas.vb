@@ -12,7 +12,7 @@ Public Partial Class FrmVerVentas
 	
 	Private t As New Data.DataTable
 	Private v As New Data.DataView
-	Dim Consulta As String = "SELECT * FROM v_ventas;"
+	Dim Consulta As String = "SELECT * FROM v_venta;"
 	
 	Public Sub New()
 		' The Me.InitializeComponent call is required for Windows Forms designer support.

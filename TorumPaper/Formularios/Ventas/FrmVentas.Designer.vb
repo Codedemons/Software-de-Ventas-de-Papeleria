@@ -41,7 +41,6 @@ Partial Class FrmVentas
 		Me.lblTitulo = New System.Windows.Forms.Label()
 		Me.label1 = New System.Windows.Forms.Label()
 		Me.cmbProductos = New System.Windows.Forms.ComboBox()
-		Me.btnEditar = New System.Windows.Forms.Button()
 		Me.btnEliminar = New System.Windows.Forms.Button()
 		Me.btnAgregar = New System.Windows.Forms.Button()
 		Me.lbltCantidad = New System.Windows.Forms.Label()
@@ -54,11 +53,12 @@ Partial Class FrmVentas
 		Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
 		Me.btnPagar = New System.Windows.Forms.Button()
 		Me.label2 = New System.Windows.Forms.Label()
-		Me.label3 = New System.Windows.Forms.Label()
+		Me.lblTotal = New System.Windows.Forms.Label()
 		Me.txtPago = New System.Windows.Forms.TextBox()
 		Me.lblPago = New System.Windows.Forms.Label()
-		Me.label4 = New System.Windows.Forms.Label()
+		Me.lblCambio = New System.Windows.Forms.Label()
 		Me.label5 = New System.Windows.Forms.Label()
+		Me.dTpFecha = New System.Windows.Forms.DateTimePicker()
 		CType(Me.nUDCantidad,System.ComponentModel.ISupportInitialize).BeginInit
 		CType(Me.dGVventas,System.ComponentModel.ISupportInitialize).BeginInit
 		Me.SuspendLayout
@@ -100,21 +100,6 @@ Partial Class FrmVentas
 		Me.cmbProductos.TabIndex = 101
 		Me.cmbProductos.Text = "Producto"
 		'
-		'btnEditar
-		'
-		Me.btnEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
-		Me.btnEditar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-		Me.btnEditar.ForeColor = System.Drawing.Color.White
-		Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"),System.Drawing.Image)
-		Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnEditar.Location = New System.Drawing.Point(22, 285)
-		Me.btnEditar.Name = "btnEditar"
-		Me.btnEditar.Size = New System.Drawing.Size(271, 47)
-		Me.btnEditar.TabIndex = 126
-		Me.btnEditar.Text = "Editar"
-		Me.btnEditar.UseVisualStyleBackColor = false
-		AddHandler Me.btnEditar.Click, AddressOf Me.BtnEditarClick
-		'
 		'btnEliminar
 		'
 		Me.btnEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
@@ -122,7 +107,7 @@ Partial Class FrmVentas
 		Me.btnEliminar.ForeColor = System.Drawing.Color.White
 		Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"),System.Drawing.Image)
 		Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnEliminar.Location = New System.Drawing.Point(20, 338)
+		Me.btnEliminar.Location = New System.Drawing.Point(20, 285)
 		Me.btnEliminar.Name = "btnEliminar"
 		Me.btnEliminar.Size = New System.Drawing.Size(271, 51)
 		Me.btnEliminar.TabIndex = 125
@@ -248,14 +233,14 @@ Partial Class FrmVentas
 		Me.btnPagar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.btnPagar.Font = New System.Drawing.Font("Agency FB", 18!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
 		Me.btnPagar.ForeColor = System.Drawing.Color.White
-		Me.btnPagar.Image = CType(resources.GetObject("btnPagar.Image"),System.Drawing.Image)
 		Me.btnPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.btnPagar.Location = New System.Drawing.Point(307, 405)
+		Me.btnPagar.Location = New System.Drawing.Point(21, 406)
 		Me.btnPagar.Name = "btnPagar"
-		Me.btnPagar.Size = New System.Drawing.Size(224, 51)
+		Me.btnPagar.Size = New System.Drawing.Size(269, 51)
 		Me.btnPagar.TabIndex = 130
 		Me.btnPagar.Text = "Pagar"
 		Me.btnPagar.UseVisualStyleBackColor = false
+		AddHandler Me.btnPagar.Click, AddressOf Me.BtnPagarClick
 		'
 		'label2
 		'
@@ -268,50 +253,52 @@ Partial Class FrmVentas
 		Me.label2.Text = "Total"
 		Me.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
-		'label3
+		'lblTotal
 		'
-		Me.label3.Font = New System.Drawing.Font("Agency FB", 18.25!, System.Drawing.FontStyle.Bold)
-		Me.label3.ForeColor = System.Drawing.Color.White
-		Me.label3.Location = New System.Drawing.Point(712, 397)
-		Me.label3.Name = "label3"
-		Me.label3.Size = New System.Drawing.Size(143, 32)
-		Me.label3.TabIndex = 132
-		Me.label3.Text = "0.0"
-		Me.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+		Me.lblTotal.Font = New System.Drawing.Font("Agency FB", 18.25!, System.Drawing.FontStyle.Bold)
+		Me.lblTotal.ForeColor = System.Drawing.Color.White
+		Me.lblTotal.Location = New System.Drawing.Point(712, 397)
+		Me.lblTotal.Name = "lblTotal"
+		Me.lblTotal.Size = New System.Drawing.Size(143, 32)
+		Me.lblTotal.TabIndex = 132
+		Me.lblTotal.Text = "0.0"
+		Me.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'txtPago
 		'
 		Me.txtPago.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.txtPago.Font = New System.Drawing.Font("Agency FB", 20.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
 		Me.txtPago.ForeColor = System.Drawing.Color.Gainsboro
-		Me.txtPago.Location = New System.Drawing.Point(22, 417)
+		Me.txtPago.Location = New System.Drawing.Point(21, 359)
 		Me.txtPago.Name = "txtPago"
 		Me.txtPago.Size = New System.Drawing.Size(269, 41)
 		Me.txtPago.TabIndex = 133
-		Me.txtPago.Text = "Pago"
+		Me.txtPago.Text = "0.0"
+		AddHandler Me.txtPago.Click, AddressOf Me.TxtPagoClick
+		AddHandler Me.txtPago.TextChanged, AddressOf Me.TxtPagoTextChanged
+		AddHandler Me.txtPago.KeyPress, AddressOf Me.TxtPagoKeyPress
 		'
 		'lblPago
 		'
 		Me.lblPago.Font = New System.Drawing.Font("Agency FB", 13.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
 		Me.lblPago.ForeColor = System.Drawing.Color.White
-		Me.lblPago.Location = New System.Drawing.Point(22, 386)
+		Me.lblPago.Location = New System.Drawing.Point(20, 327)
 		Me.lblPago.Name = "lblPago"
 		Me.lblPago.Size = New System.Drawing.Size(67, 37)
 		Me.lblPago.TabIndex = 134
 		Me.lblPago.Text = "Pago"
 		Me.lblPago.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.lblPago.Visible = false
 		'
-		'label4
+		'lblCambio
 		'
-		Me.label4.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold)
-		Me.label4.ForeColor = System.Drawing.Color.White
-		Me.label4.Location = New System.Drawing.Point(712, 425)
-		Me.label4.Name = "label4"
-		Me.label4.Size = New System.Drawing.Size(143, 32)
-		Me.label4.TabIndex = 136
-		Me.label4.Text = "0.0"
-		Me.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+		Me.lblCambio.Font = New System.Drawing.Font("Agency FB", 14.25!, System.Drawing.FontStyle.Bold)
+		Me.lblCambio.ForeColor = System.Drawing.Color.White
+		Me.lblCambio.Location = New System.Drawing.Point(712, 425)
+		Me.lblCambio.Name = "lblCambio"
+		Me.lblCambio.Size = New System.Drawing.Size(143, 32)
+		Me.lblCambio.TabIndex = 136
+		Me.lblCambio.Text = "0.0"
+		Me.lblCambio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
 		'label5
 		'
@@ -324,27 +311,36 @@ Partial Class FrmVentas
 		Me.label5.Text = "Cambio"
 		Me.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
 		'
+		'dTpFecha
+		'
+		Me.dTpFecha.CalendarFont = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+		Me.dTpFecha.Font = New System.Drawing.Font("Agency FB", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle))
+		Me.dTpFecha.Location = New System.Drawing.Point(329, 178)
+		Me.dTpFecha.Name = "dTpFecha"
+		Me.dTpFecha.Size = New System.Drawing.Size(287, 33)
+		Me.dTpFecha.TabIndex = 137
+		'
 		'FrmVentas
 		'
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
 		Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(104,Byte),Integer), CType(CType(130,Byte),Integer))
 		Me.ClientSize = New System.Drawing.Size(867, 465)
-		Me.Controls.Add(Me.label4)
+		Me.Controls.Add(Me.lblCambio)
 		Me.Controls.Add(Me.label5)
 		Me.Controls.Add(Me.btnEliminar)
 		Me.Controls.Add(Me.txtPago)
 		Me.Controls.Add(Me.lblPago)
 		Me.Controls.Add(Me.btnPagar)
-		Me.Controls.Add(Me.label3)
+		Me.Controls.Add(Me.lblTotal)
 		Me.Controls.Add(Me.label2)
 		Me.Controls.Add(Me.dGVventas)
 		Me.Controls.Add(Me.nUDCantidad)
 		Me.Controls.Add(Me.lbltCantidad)
-		Me.Controls.Add(Me.btnEditar)
 		Me.Controls.Add(Me.btnAgregar)
 		Me.Controls.Add(Me.cmbProductos)
 		Me.Controls.Add(Me.label1)
 		Me.Controls.Add(Me.lblTitulo)
+		Me.Controls.Add(Me.dTpFecha)
 		Me.Name = "FrmVentas"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 		Me.Text = "FrmVentas"
@@ -354,12 +350,13 @@ Partial Class FrmVentas
 		Me.ResumeLayout(false)
 		Me.PerformLayout
 	End Sub
+	Private dTpFecha As System.Windows.Forms.DateTimePicker
 	Private Total As System.Windows.Forms.DataGridViewTextBoxColumn
 	Private label5 As System.Windows.Forms.Label
-	Private label4 As System.Windows.Forms.Label
+	Private lblCambio As System.Windows.Forms.Label
 	Private lblPago As System.Windows.Forms.Label
 	Private txtPago As System.Windows.Forms.TextBox
-	Private label3 As System.Windows.Forms.Label
+	Private lblTotal As System.Windows.Forms.Label
 	Private label2 As System.Windows.Forms.Label
 	Private btnPagar As System.Windows.Forms.Button
 	Private Precio As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -371,7 +368,6 @@ Partial Class FrmVentas
 	Private lbltCantidad As System.Windows.Forms.Label
 	Private btnAgregar As System.Windows.Forms.Button
 	Private btnEliminar As System.Windows.Forms.Button
-	Private btnEditar As System.Windows.Forms.Button
 	Private cmbProductos As System.Windows.Forms.ComboBox
 	Private label1 As System.Windows.Forms.Label
 	Private lblTitulo As System.Windows.Forms.Label
